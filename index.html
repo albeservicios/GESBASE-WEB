@@ -3,23 +3,23 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+<meta name="theme-color" content="#111827">
+<meta name="description" content="GESBASE: sistema de gestión empresarial para presupuestos, clientes, trabajos, empleados, fichaje GPS y administración.">
+<meta name="keywords" content="GESBASE, gestión empresarial, presupuestos, empleados, fichaje GPS, administración, empresas">
 
-<meta
-    name="theme-color"
-    content="#111827"
->
+<meta property="og:type" content="website">
+<meta property="og:title" content="GESBASE - Gestión empresarial simple">
+<meta property="og:description" content="Presupuestos, clientes, trabajos, empleados, fichaje GPS y administración en un solo lugar.">
+<meta property="og:url" content="https://albeservicios.github.io/GESBASE-WEB/">
+<meta property="og:site_name" content="GESBASE">
 
-<meta
-    name="description"
-    content="GESBASE: gestión empresarial para presupuestos, clientes, trabajos, empleados y fichaje con GPS."
->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GESBASE - Gestión empresarial simple">
+<meta name="twitter:description" content="Organizá tu empresa desde un solo lugar.">
 
-<title>GESBASE | Gestión para empresas</title>
+<title>GESBASE - Gestión empresarial</title>
 
 <style>
 
@@ -35,21 +35,18 @@ html{
 
 body{
     font-family:Arial,Helvetica,sans-serif;
-    background:#f8fafc;
+    background:#f3f4f6;
     color:#111827;
-    line-height:1.5;
+    line-height:1.6;
 }
 
 a{
     text-decoration:none;
-    color:inherit;
 }
 
 .contenedor{
     width:100%;
-    max-width:1150px;
-    margin:auto;
-    padding:0 20px;
+    overflow:hidden;
 }
 
 /* =========================
@@ -57,25 +54,27 @@ a{
 ========================= */
 
 header{
+    background:#111827;
+    color:white;
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(17,24,39,.97);
-    color:white;
-    border-bottom:1px solid rgba(255,255,255,.08);
+    box-shadow:0 2px 12px rgba(0,0,0,.15);
 }
 
-.nav{
-    min-height:70px;
+.navbar{
+    max-width:1100px;
+    margin:auto;
+    padding:15px 20px;
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
     gap:20px;
 }
 
 .logo{
-    font-size:27px;
-    font-weight:800;
+    font-size:28px;
+    font-weight:bold;
     letter-spacing:1px;
 }
 
@@ -85,26 +84,25 @@ header{
 
 .nav-links{
     display:flex;
+    gap:20px;
     align-items:center;
-    gap:24px;
-    font-size:14px;
 }
 
 .nav-links a{
     color:#d1d5db;
-    transition:.2s;
+    font-size:14px;
+    font-weight:bold;
 }
 
 .nav-links a:hover{
     color:white;
 }
 
-.btn-login{
-    background:white;
-    color:#111827 !important;
-    padding:10px 17px;
+.nav-boton{
+    background:#2563eb;
+    color:white !important;
+    padding:10px 16px;
     border-radius:9px;
-    font-weight:bold;
 }
 
 /* =========================
@@ -112,26 +110,26 @@ header{
 ========================= */
 
 .hero{
-    background:
-        radial-gradient(circle at 85% 20%,rgba(37,99,235,.25),transparent 35%),
-        linear-gradient(135deg,#111827,#1f2937);
+    background:#111827;
     color:white;
-    padding:85px 0 90px;
+    padding:80px 20px 90px;
 }
 
-.hero-grid{
+.hero-contenido{
+    max-width:1100px;
+    margin:auto;
     display:grid;
-    grid-template-columns:1.1fr .9fr;
-    align-items:center;
+    grid-template-columns:1.2fr .8fr;
     gap:50px;
+    align-items:center;
 }
 
 .etiqueta{
     display:inline-block;
-    background:rgba(96,165,250,.15);
-    border:1px solid rgba(96,165,250,.35);
+    background:#1f2937;
+    border:1px solid #374151;
     color:#93c5fd;
-    padding:7px 12px;
+    padding:7px 13px;
     border-radius:30px;
     font-size:13px;
     font-weight:bold;
@@ -139,19 +137,19 @@ header{
 }
 
 .hero h1{
-    font-size:clamp(38px,6vw,62px);
-    line-height:1.05;
-    margin-bottom:22px;
+    font-size:48px;
+    line-height:1.1;
+    margin-bottom:20px;
 }
 
 .hero h1 span{
     color:#60a5fa;
 }
 
-.hero-text{
-    max-width:650px;
+.hero p{
     color:#d1d5db;
-    font-size:18px;
+    font-size:19px;
+    max-width:650px;
     margin-bottom:30px;
 }
 
@@ -161,106 +159,63 @@ header{
     gap:12px;
 }
 
-.btn{
-    display:inline-flex;
-    justify-content:center;
-    align-items:center;
-    min-height:48px;
-    padding:0 22px;
+.boton{
+    display:inline-block;
     border-radius:10px;
+    padding:14px 22px;
     font-weight:bold;
-    border:none;
-    cursor:pointer;
+    font-size:15px;
     transition:.2s;
 }
 
-.btn:hover{
+.boton:hover{
     transform:translateY(-2px);
 }
 
-.btn-primary{
+.boton-principal{
     background:#2563eb;
     color:white;
 }
 
-.btn-primary:hover{
-    background:#1d4ed8;
-}
-
-.btn-light{
+.boton-secundario{
     background:white;
     color:#111827;
 }
 
-.btn-outline{
-    border:1px solid #374151;
-    color:white;
-    background:transparent;
-}
-
-/* =========================
-   MOCKUP
-========================= */
-
-.mockup{
-    background:#0b1220;
+.hero-tarjeta{
+    background:#1f2937;
     border:1px solid #374151;
     border-radius:20px;
-    padding:14px;
-    box-shadow:0 25px 60px rgba(0,0,0,.35);
+    padding:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
 }
 
-.mockup-bar{
+.hero-tarjeta h2{
+    font-size:20px;
+    margin-bottom:18px;
+}
+
+.hero-item{
     display:flex;
-    gap:6px;
-    margin-bottom:12px;
+    align-items:center;
+    gap:12px;
+    padding:12px 0;
+    border-bottom:1px solid #374151;
 }
 
-.circulo{
-    width:9px;
-    height:9px;
-    border-radius:50%;
-    background:#6b7280;
+.hero-item:last-child{
+    border-bottom:none;
 }
 
-.pantalla{
-    background:#f8fafc;
-    color:#111827;
-    border-radius:13px;
-    padding:18px;
-}
-
-.pantalla-titulo{
-    font-size:18px;
-    font-weight:bold;
-    margin-bottom:15px;
-}
-
-.tarjetas{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-}
-
-.mini-card{
-    background:white;
-    border:1px solid #e5e7eb;
+.hero-icono{
+    width:40px;
+    height:40px;
     border-radius:10px;
-    padding:13px;
-}
-
-.mini-icono{
-    font-size:23px;
-    margin-bottom:5px;
-}
-
-.mini-card strong{
-    display:block;
-    font-size:14px;
-}
-
-.mini-card small{
-    color:#6b7280;
+    background:#111827;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
 }
 
 /* =========================
@@ -268,26 +223,24 @@ header{
 ========================= */
 
 .seccion{
-    padding:80px 0;
+    max-width:1100px;
+    margin:auto;
+    padding:75px 20px;
 }
 
-.seccion-gris{
-    background:#f1f5f9;
-}
-
-.centrado{
+.seccion-titulo{
     text-align:center;
-}
-
-.seccion h2{
-    font-size:clamp(29px,4vw,42px);
-    margin-bottom:14px;
-}
-
-.subtitulo{
     max-width:700px;
     margin:0 auto 45px;
-    color:#64748b;
+}
+
+.seccion-titulo h2{
+    font-size:34px;
+    margin-bottom:12px;
+}
+
+.seccion-titulo p{
+    color:#6b7280;
     font-size:17px;
 }
 
@@ -295,7 +248,7 @@ header{
    FUNCIONES
 ========================= */
 
-.grid-funciones{
+.funciones{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:18px;
@@ -305,27 +258,22 @@ header{
     background:white;
     border:1px solid #e5e7eb;
     border-radius:15px;
-    padding:25px;
-    transition:.2s;
-}
-
-.funcion:hover{
-    transform:translateY(-4px);
-    box-shadow:0 12px 30px rgba(15,23,42,.08);
+    padding:23px;
+    box-shadow:0 4px 15px rgba(0,0,0,.05);
 }
 
 .funcion-icono{
-    font-size:32px;
-    margin-bottom:14px;
+    font-size:30px;
+    margin-bottom:12px;
 }
 
 .funcion h3{
-    font-size:19px;
-    margin-bottom:8px;
+    font-size:18px;
+    margin-bottom:7px;
 }
 
 .funcion p{
-    color:#64748b;
+    color:#6b7280;
     font-size:14px;
 }
 
@@ -334,93 +282,101 @@ header{
 ========================= */
 
 .gps{
+    background:#111827;
+    color:white;
+    border-radius:22px;
+    padding:45px;
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:50px;
+    gap:40px;
     align-items:center;
 }
 
-.lista{
-    list-style:none;
-    margin-top:25px;
+.gps h2{
+    font-size:32px;
+    margin-bottom:15px;
 }
 
-.lista li{
-    padding:10px 0;
-    font-size:16px;
-}
-
-.lista li::first-letter{
-    color:#2563eb;
-}
-
-.gps-panel{
-    background:#111827;
-    color:white;
-    border-radius:20px;
-    padding:30px;
-}
-
-.gps-panel h3{
-    font-size:24px;
+.gps p{
+    color:#d1d5db;
     margin-bottom:20px;
 }
 
-.gps-item{
-    display:flex;
-    justify-content:space-between;
-    gap:15px;
-    padding:15px 0;
-    border-bottom:1px solid #374151;
+.gps-lista{
+    list-style:none;
 }
 
-.gps-item:last-child{
-    border-bottom:none;
+.gps-lista li{
+    padding:8px 0;
 }
 
-.gps-verde{
-    color:#4ade80;
-}
-
-.gps-azul{
+.gps-lista li::before{
+    content:"✓";
     color:#60a5fa;
+    font-weight:bold;
+    margin-right:10px;
 }
 
 /* =========================
-   COMO FUNCIONA
+   PANEL
 ========================= */
 
-.pasos{
+.panel{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:1fr 1fr;
     gap:20px;
 }
 
-.paso{
-    text-align:center;
+.panel-card{
+    background:white;
+    border:1px solid #e5e7eb;
+    border-radius:16px;
     padding:25px;
 }
 
-.numero{
-    width:55px;
-    height:55px;
-    margin:0 auto 15px;
+.panel-card h3{
+    margin-bottom:10px;
+}
+
+.panel-card p{
+    color:#6b7280;
+    font-size:15px;
+}
+
+/* =========================
+   BENEFICIOS
+========================= */
+
+.beneficios{
+    background:#e5e7eb;
+}
+
+.beneficios .seccion{
+    padding-top:70px;
+}
+
+.beneficio-lista{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.beneficio{
+    background:white;
+    border-radius:12px;
+    padding:18px;
     display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    background:#111827;
-    color:white;
-    font-size:22px;
-    font-weight:bold;
+    gap:12px;
+    align-items:flex-start;
 }
 
-.paso h3{
-    margin-bottom:8px;
+.beneficio strong{
+    display:block;
+    margin-bottom:3px;
 }
 
-.paso p{
-    color:#64748b;
+.beneficio span{
+    color:#6b7280;
     font-size:14px;
 }
 
@@ -429,21 +385,21 @@ header{
 ========================= */
 
 .cta{
-    padding:80px 20px;
-    background:#111827;
+    background:#2563eb;
     color:white;
     text-align:center;
+    padding:70px 20px;
 }
 
 .cta h2{
-    font-size:clamp(30px,5vw,46px);
-    margin-bottom:15px;
+    font-size:36px;
+    margin-bottom:12px;
 }
 
 .cta p{
-    color:#d1d5db;
     max-width:650px;
-    margin:0 auto 28px;
+    margin:0 auto 25px;
+    color:#dbeafe;
 }
 
 /* =========================
@@ -451,27 +407,60 @@ header{
 ========================= */
 
 footer{
-    background:#0b1220;
-    color:#d1d5db;
-    padding:35px 0;
+    background:#111827;
+    color:white;
+    padding:35px 20px;
 }
 
-.footer-grid{
+.footer-contenido{
+    max-width:1100px;
+    margin:auto;
     display:flex;
     justify-content:space-between;
-    gap:20px;
-    align-items:center;
+    gap:25px;
+    flex-wrap:wrap;
 }
 
 .footer-logo{
     font-size:22px;
     font-weight:bold;
-    color:white;
 }
 
-.footer-text{
-    font-size:13px;
+.footer-texto{
     color:#9ca3af;
+    font-size:13px;
+    margin-top:5px;
+}
+
+.footer-links{
+    display:flex;
+    gap:18px;
+}
+
+.footer-links a{
+    color:#d1d5db;
+    font-size:14px;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    z-index:2000;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#16a34a;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
 }
 
 /* =========================
@@ -480,16 +469,23 @@ footer{
 
 @media(max-width:850px){
 
-    .hero-grid,
-    .gps{
+    .hero-contenido{
         grid-template-columns:1fr;
     }
 
-    .grid-funciones{
+    .hero{
+        padding:60px 20px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .funciones{
         grid-template-columns:1fr 1fr;
     }
 
-    .pasos{
+    .gps{
         grid-template-columns:1fr;
     }
 
@@ -497,49 +493,75 @@ footer{
 
 @media(max-width:600px){
 
-    .nav{
-        min-height:62px;
-    }
-
     .nav-links{
-        gap:8px;
-    }
-
-    .nav-links a:not(.btn-login){
         display:none;
     }
 
-    .hero{
-        padding:60px 0;
+    .navbar{
+        justify-content:center;
     }
 
-    .hero-text{
-        font-size:16px;
+    .hero{
+        padding:50px 18px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:17px;
     }
 
     .botones{
         flex-direction:column;
     }
 
-    .btn{
+    .boton{
+        text-align:center;
         width:100%;
     }
 
-    .grid-funciones{
+    .seccion{
+        padding:55px 18px;
+    }
+
+    .seccion-titulo h2{
+        font-size:28px;
+    }
+
+    .funciones{
         grid-template-columns:1fr;
     }
 
-    .seccion{
-        padding:60px 0;
+    .gps{
+        padding:28px 22px;
     }
 
-    .tarjetas{
-        grid-template-columns:1fr 1fr;
+    .gps h2{
+        font-size:27px;
     }
 
-    .footer-grid{
+    .panel{
+        grid-template-columns:1fr;
+    }
+
+    .beneficio-lista{
+        grid-template-columns:1fr;
+    }
+
+    .cta h2{
+        font-size:29px;
+    }
+
+    .footer-contenido{
         flex-direction:column;
         text-align:center;
+    }
+
+    .footer-links{
+        justify-content:center;
+        flex-wrap:wrap;
     }
 
 }
@@ -548,9 +570,9 @@ footer{
 
 </head>
 
-
 <body>
 
+<div class="contenedor">
 
 <!-- =========================
      HEADER
@@ -558,13 +580,13 @@ footer{
 
 <header>
 
-<div class="contenedor nav">
+<nav class="navbar">
 
 <div class="logo">
 GES<span>BASE</span>
 </div>
 
-<nav class="nav-links">
+<div class="nav-links">
 
 <a href="#funciones">
 Funciones
@@ -574,20 +596,20 @@ Funciones
 Fichaje GPS
 </a>
 
-<a href="#como-funciona">
-Cómo funciona
+<a href="#administracion">
+Administración
 </a>
 
 <a
-    href="login.html"
-    class="btn-login"
+    href="index.html"
+    class="nav-boton"
 >
 Ingresar
 </a>
 
-</nav>
-
 </div>
+
+</nav>
 
 </header>
 
@@ -598,7 +620,7 @@ Ingresar
 
 <section class="hero">
 
-<div class="contenedor hero-grid">
+<div class="hero-contenido">
 
 <div>
 
@@ -607,31 +629,31 @@ GESTIÓN EMPRESARIAL
 </div>
 
 <h1>
-La gestión de tu empresa,
-<span>en un solo lugar.</span>
+Tu empresa.
+<br>
+Todo <span>organizado.</span>
 </h1>
 
-<p class="hero-text">
-GESBASE te ayuda a organizar presupuestos,
-clientes, trabajos y empleados desde una
-sola plataforma, con control de fichaje y
-ubicación GPS.
+<p>
+GESBASE es una plataforma de gestión empresarial
+para organizar presupuestos, clientes, trabajos,
+empleados y administración desde un solo lugar.
 </p>
 
 <div class="botones">
 
 <a
     href="#contacto"
-    class="btn btn-primary"
+    class="boton boton-principal"
 >
-Solicitar demostración
+Quiero conocer GESBASE
 </a>
 
 <a
     href="#funciones"
-    class="btn btn-outline"
+    class="boton boton-secundario"
 >
-Conocer GESBASE
+Ver funciones
 </a>
 
 </div>
@@ -639,126 +661,64 @@ Conocer GESBASE
 </div>
 
 
-<div class="mockup">
+<div class="hero-tarjeta">
 
-<div class="mockup-bar">
+<h2>
+Todo en un solo sistema
+</h2>
 
-<div class="circulo"></div>
-<div class="circulo"></div>
-<div class="circulo"></div>
+<div class="hero-item">
 
-</div>
-
-
-<div class="pantalla">
-
-<div class="pantalla-titulo">
-Panel de gestión
-</div>
-
-<div class="tarjetas">
-
-<div class="mini-card">
-
-<div class="mini-icono">
+<div class="hero-icono">
 📋
 </div>
 
-<strong>
-Presupuestos
-</strong>
-
-<small>
-Gestioná tus cotizaciones
-</small>
+<div>
+<strong>Presupuestos</strong>
+<br>
+Crear y administrar presupuestos.
+</div>
 
 </div>
 
+<div class="hero-item">
 
-<div class="mini-card">
-
-<div class="mini-icono">
+<div class="hero-icono">
 👥
 </div>
 
-<strong>
-Clientes
-</strong>
-
-<small>
-Información organizada
-</small>
+<div>
+<strong>Clientes</strong>
+<br>
+Organizar información de clientes.
+</div>
 
 </div>
 
+<div class="hero-item">
 
-<div class="mini-card">
-
-<div class="mini-icono">
-🔧
-</div>
-
-<strong>
-Trabajos
-</strong>
-
-<small>
-Controlá tus servicios
-</small>
-
-</div>
-
-
-<div class="mini-card">
-
-<div class="mini-icono">
+<div class="hero-icono">
 👷
 </div>
 
-<strong>
-Empleados
-</strong>
-
-<small>
-Control de personal
-</small>
+<div>
+<strong>Empleados</strong>
+<br>
+Gestionar equipos de trabajo.
+</div>
 
 </div>
 
+<div class="hero-item">
 
-<div class="mini-card">
-
-<div class="mini-icono">
+<div class="hero-icono">
 📍
 </div>
 
-<strong>
-Fichaje GPS
-</strong>
-
-<small>
-Entrada y salida
-</small>
-
-</div>
-
-
-<div class="mini-card">
-
-<div class="mini-icono">
-📊
-</div>
-
-<strong>
-Administración
-</strong>
-
-<small>
-Toda la información
-</small>
-
-</div>
-
+<div>
+<strong>Fichaje GPS</strong>
+<br>
+Controlar entrada, salida y ubicación.
 </div>
 
 </div>
@@ -779,24 +739,21 @@ Toda la información
     class="seccion"
 >
 
-<div class="contenedor">
-
-<div class="centrado">
+<div class="seccion-titulo">
 
 <h2>
-Todo lo que necesitás para organizar tu empresa
+Todo lo que necesitás para gestionar tu empresa
 </h2>
 
-<p class="subtitulo">
-GESBASE centraliza las principales tareas de
-gestión para que puedas trabajar con mayor
-orden y control.
+<p>
+GESBASE reúne las principales herramientas de
+administración en una plataforma simple y accesible.
 </p>
 
 </div>
 
 
-<div class="grid-funciones">
+<div class="funciones">
 
 
 <div class="funcion">
@@ -810,8 +767,8 @@ Presupuestos
 </h3>
 
 <p>
-Creá y administrá presupuestos de manera
-rápida y ordenada.
+Creá, organizá y consultá tus presupuestos
+desde cualquier dispositivo.
 </p>
 
 </div>
@@ -828,8 +785,8 @@ Clientes
 </h3>
 
 <p>
-Mantené organizada la información de tus
-clientes y sus trabajos.
+Mantené organizada la información de tus clientes
+y sus trabajos.
 </p>
 
 </div>
@@ -846,8 +803,8 @@ Trabajos
 </h3>
 
 <p>
-Controlá los servicios y trabajos que realiza
-tu empresa.
+Organizá los trabajos de tu empresa y mantené
+un mejor control de cada servicio.
 </p>
 
 </div>
@@ -864,8 +821,8 @@ Empleados
 </h3>
 
 <p>
-Administrá empleados, puestos y datos
-relacionados con el trabajo.
+Administrá tus empleados y consultá la actividad
+registrada.
 </p>
 
 </div>
@@ -882,8 +839,8 @@ Gastos y cobros
 </h3>
 
 <p>
-Llevá un mejor control de los movimientos
-económicos de tu empresa.
+Llevá un control centralizado de los movimientos
+de tu empresa.
 </p>
 
 </div>
@@ -900,14 +857,66 @@ Facturación
 </h3>
 
 <p>
-Prepará la gestión de tus comprobantes desde
-un mismo sistema.
+Prepará la gestión de tus facturas desde un
+mismo entorno.
 </p>
 
 </div>
 
 
+<div class="funcion">
+
+<div class="funcion-icono">
+📸
 </div>
+
+<h3>
+Fotos
+</h3>
+
+<p>
+Registrá imágenes relacionadas con tus trabajos
+y servicios.
+</p>
+
+</div>
+
+
+<div class="funcion">
+
+<div class="funcion-icono">
+🏢
+</div>
+
+<h3>
+Mi empresa
+</h3>
+
+<p>
+Centralizá los datos principales de tu empresa
+en un solo lugar.
+</p>
+
+</div>
+
+
+<div class="funcion">
+
+<div class="funcion-icono">
+📊
+</div>
+
+<h3>
+Panel administrador
+</h3>
+
+<p>
+Consultá la información y actividad de tu empresa
+desde el panel de administración.
+</p>
+
+</div>
+
 
 </div>
 
@@ -920,113 +929,59 @@ un mismo sistema.
 
 <section
     id="gps"
-    class="seccion seccion-gris"
+    class="seccion"
 >
 
-<div class="contenedor gps">
+<div class="gps">
 
 <div>
-
-<div class="etiqueta">
-CONTROL DE PERSONAL
-</div>
 
 <h2>
 Fichaje con ubicación GPS
 </h2>
 
-<p class="subtitulo" style="margin:0;text-align:left;">
-Con GESBASE podés conocer cuándo y dónde
-se registran las entradas y salidas de tus
-empleados.
+<p>
+Controlá la jornada de tus empleados desde el celular
+y registrá la información de cada fichaje.
 </p>
 
-<ul class="lista">
+<a
+    href="#contacto"
+    class="boton boton-principal"
+>
+Consultar por GESBASE
+</a>
+
+</div>
+
+
+<ul class="gps-lista">
 
 <li>
-📍 Ubicación del fichaje
+Fecha del fichaje
 </li>
 
 <li>
-🟢 Hora de entrada
+Hora de entrada
 </li>
 
 <li>
-🔴 Hora de salida
+Hora de salida
 </li>
 
 <li>
-⏱️ Tiempo trabajado
+Tiempo trabajado
 </li>
 
 <li>
-📊 Consulta desde el Panel Administrador
+Ubicación GPS registrada
+</li>
+
+<li>
+Consulta desde el panel administrador
 </li>
 
 </ul>
-
-</div>
-
-
-<div class="gps-panel">
-
-<h3>
-Control de jornada
-</h3>
-
-
-<div class="gps-item">
-
-<span>
-Entrada
-</span>
-
-<strong class="gps-verde">
-🟢 Registrada
-</strong>
-
-</div>
-
-
-<div class="gps-item">
-
-<span>
-Ubicación
-</span>
-
-<strong class="gps-azul">
-📍 GPS
-</strong>
-
-</div>
-
-
-<div class="gps-item">
-
-<span>
-Salida
-</span>
-
-<strong>
-🔴 Registrada
-</strong>
-
-</div>
-
-
-<div class="gps-item">
-
-<span>
-Estado
-</span>
-
-<strong class="gps-verde">
-Jornada controlada
-</strong>
-
-</div>
-
-</div>
 
 </div>
 
@@ -1034,87 +989,86 @@ Jornada controlada
 
 
 <!-- =========================
-     COMO FUNCIONA
+     ADMINISTRACIÓN
 ========================= -->
 
 <section
-    id="como-funciona"
+    id="administracion"
     class="seccion"
 >
 
-<div class="contenedor">
-
-<div class="centrado">
+<div class="seccion-titulo">
 
 <h2>
-¿Cómo funciona?
+Más control para el administrador
 </h2>
 
-<p class="subtitulo">
-Un sistema pensado para que puedas empezar
-a organizar tu empresa de forma simple.
+<p>
+La información de tu empresa queda organizada
+para que puedas tomar decisiones con mayor facilidad.
 </p>
 
 </div>
 
 
-<div class="pasos">
+<div class="panel">
 
 
-<div class="paso">
-
-<div class="numero">
-1
-</div>
+<div class="panel-card">
 
 <h3>
-Creá tu cuenta
+👨‍💼 Panel de Administrador
 </h3>
 
 <p>
-Registrá tu empresa y configurá tus datos.
+Accedé a la información de empleados, fichajes
+y actividad registrada dentro de GESBASE.
 </p>
 
 </div>
 
 
-<div class="paso">
-
-<div class="numero">
-2
-</div>
+<div class="panel-card">
 
 <h3>
-Organizá tu empresa
+📍 Control de ubicación
 </h3>
 
 <p>
-Cargá clientes, trabajos, presupuestos y
-empleados.
+Consultá la ubicación GPS asociada a los fichajes
+registrados por los empleados.
 </p>
 
 </div>
 
 
-<div class="paso">
-
-<div class="numero">
-3
-</div>
+<div class="panel-card">
 
 <h3>
-Controlá todo
+⏱️ Control horario
 </h3>
 
 <p>
-Gestioná tu información desde cualquier
-dispositivo.
+Visualizá fecha, entrada, salida y tiempo trabajado
+de cada jornada registrada.
 </p>
 
 </div>
 
 
+<div class="panel-card">
+
+<h3>
+📱 Acceso desde celular
+</h3>
+
+<p>
+GESBASE está pensado para utilizarse desde
+computadoras, tablets y teléfonos.
+</p>
+
 </div>
+
 
 </div>
 
@@ -1125,41 +1079,114 @@ dispositivo.
      BENEFICIOS
 ========================= -->
 
-<section class="seccion seccion-gris">
+<section class="beneficios">
 
-<div class="contenedor centrado">
+<div class="seccion">
 
-<div class="etiqueta">
-GESBASE
-</div>
+<div class="seccion-titulo">
 
 <h2>
-Menos papeles. Más control.
+¿Por qué GESBASE?
 </h2>
 
-<p class="subtitulo">
-Una herramienta pensada para pequeñas y
-medianas empresas que necesitan organizar
-su gestión y tener la información disponible
-cuando la necesitan.
+<p>
+Una solución pensada para simplificar la gestión
+diaria de empresas y profesionales.
 </p>
 
-<div class="botones" style="justify-content:center;">
+</div>
 
-<a
-    href="#contacto"
-    class="btn btn-primary"
->
-Solicitar demostración
-</a>
 
-<a
-    href="login.html"
-    class="btn"
-    style="background:#111827;color:white;"
->
-Ingresar a GESBASE
-</a>
+<div class="beneficio-lista">
+
+
+<div class="beneficio">
+
+<div>
+🚀
+</div>
+
+<div>
+
+<strong>
+Más organización
+</strong>
+
+<span>
+Toda la información importante de tu empresa
+en un mismo sistema.
+</span>
+
+</div>
+
+</div>
+
+
+<div class="beneficio">
+
+<div>
+📱
+</div>
+
+<div>
+
+<strong>
+Desde cualquier dispositivo
+</strong>
+
+<span>
+Consultá la información de tu empresa
+desde el celular o computadora.
+</span>
+
+</div>
+
+</div>
+
+
+<div class="beneficio">
+
+<div>
+🔐
+</div>
+
+<div>
+
+<strong>
+Acceso controlado
+</strong>
+
+<span>
+Cada usuario puede acceder según las funciones
+habilitadas para su cuenta.
+</span>
+
+</div>
+
+</div>
+
+
+<div class="beneficio">
+
+<div>
+📊
+</div>
+
+<div>
+
+<strong>
+Información centralizada
+</strong>
+
+<span>
+Evitá tener información dispersa y mantené
+tu gestión organizada.
+</span>
+
+</div>
+
+</div>
+
 
 </div>
 
@@ -1169,7 +1196,7 @@ Ingresar a GESBASE
 
 
 <!-- =========================
-     CONTACTO
+     CTA
 ========================= -->
 
 <section
@@ -1177,36 +1204,30 @@ Ingresar a GESBASE
     class="cta"
 >
 
-<div class="contenedor">
-
 <h2>
-¿Querés conocer GESBASE?
+¿Querés organizar mejor tu empresa?
 </h2>
 
 <p>
-Solicitá una demostración y conocé cómo
-GESBASE puede ayudarte a organizar y
-controlar tu empresa.
+Conocé GESBASE y descubrí una nueva forma de
+administrar presupuestos, clientes, trabajos y empleados.
 </p>
 
 <div class="botones" style="justify-content:center;">
 
 <a
     href="mailto:contacto@albeserviciosintegral.com.ar?subject=Consulta%20GESBASE"
-    class="btn btn-primary"
+    class="boton boton-secundario"
 >
-Solicitar demostración
+📩 Consultar por email
 </a>
 
 <a
-    href="login.html"
-    class="btn btn-light"
+    href="index.html"
+    class="boton boton-secundario"
 >
-Ingresar
-
+🔐 Ingresar a GESBASE
 </a>
-
-</div>
 
 </div>
 
@@ -1219,7 +1240,7 @@ Ingresar
 
 <footer>
 
-<div class="contenedor footer-grid">
+<div class="footer-contenido">
 
 <div>
 
@@ -1227,15 +1248,27 @@ Ingresar
 GESBASE
 </div>
 
-<div class="footer-text">
-Gestión para empresas y profesionales.
+<div class="footer-texto">
+Gestión empresarial simple y organizada.
 </div>
 
 </div>
 
 
-<div class="footer-text">
-© 2026 GESBASE. Todos los derechos reservados.
+<div class="footer-links">
+
+<a href="#funciones">
+Funciones
+</a>
+
+<a href="#gps">
+Fichaje GPS
+</a>
+
+<a href="#contacto">
+Contacto
+</a>
+
 </div>
 
 </div>
@@ -1243,6 +1276,21 @@ Gestión para empresas y profesionales.
 </footer>
 
 
-</body>
+<!-- =========================
+     BOTÓN FLOTANTE
+========================= -->
 
+<a
+    class="whatsapp"
+    href="https://wa.me/"
+    aria-label="Contactar por WhatsApp"
+    title="Contactar por WhatsApp"
+>
+💬
+</a>
+
+
+</div>
+
+</body>
 </html>
