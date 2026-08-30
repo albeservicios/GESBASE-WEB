@@ -22,11 +22,11 @@
      SEO
 ========================= -->
 
-<title>GESBASE | Software de gestión empresarial para empresas y profesionales</title>
+<title>GESBASE | Software de gestión empresarial para empresas, comercios y profesionales</title>
 
 <meta
     name="description"
-    content="GESBASE es un software de gestión empresarial para organizar presupuestos, clientes, trabajos, empleados, fichaje GPS, gastos, cobros y facturación desde un solo lugar."
+    content="GESBASE es un software de gestión empresarial para empresas, comercios, distribuidoras, almacenes, indumentaria y profesionales. Organizá clientes, presupuestos, productos, inventario, ventas, compras, empleados, gastos, cobros y facturación desde un solo lugar."
 >
 
 <meta
@@ -41,7 +41,7 @@
 
 <meta
     name="keywords"
-    content="GESBASE, software de gestión empresarial, sistema de gestión empresarial, gestión para empresas, gestión de negocios, presupuestos, clientes, trabajos, empleados, fichaje GPS, gastos, cobros, facturación"
+    content="GESBASE, software de gestión empresarial, sistema de gestión empresarial, gestión para empresas, gestión de negocios, comercio, indumentaria, distribuidora, almacén, inventario, productos, ventas, compras, proveedores, presupuestos, clientes, trabajos, empleados, fichaje GPS, gastos, cobros, facturación"
 >
 
 <link
@@ -71,12 +71,12 @@
 
 <meta
     property="og:title"
-    content="GESBASE | Software de gestión empresarial"
+    content="GESBASE | Gestión empresarial para empresas y comercios"
 >
 
 <meta
     property="og:description"
-    content="Gestioná presupuestos, clientes, trabajos, empleados, fichaje GPS, gastos, cobros y facturación desde un solo lugar."
+    content="Gestioná clientes, presupuestos, productos, inventario, ventas, compras, empleados, gastos, cobros y facturación desde un solo lugar."
 >
 
 <meta
@@ -106,7 +106,7 @@
 
 <meta
     name="twitter:description"
-    content="Software de gestión empresarial para organizar presupuestos, clientes, trabajos, empleados y administración."
+    content="Gestioná tu empresa, comercio, distribuidora, almacén o negocio de indumentaria desde un solo lugar."
 >
 
 <meta
@@ -129,7 +129,7 @@
     "applicationCategory": "BusinessApplication",
     "applicationSubCategory": "Business Management Software",
     "operatingSystem": "Web",
-    "description": "Software de gestión empresarial para empresas y profesionales. Permite organizar presupuestos, clientes, trabajos, empleados, fichaje GPS, gastos, cobros y facturación.",
+    "description": "Software de gestión empresarial para empresas, comercios, distribuidoras, almacenes, negocios de indumentaria y profesionales.",
     "inLanguage": "es-AR",
     "offers": {
         "@type": "Offer",
@@ -173,7 +173,9 @@ padding:0 20px;
 }
 
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header{
 background:#111827;
@@ -219,7 +221,9 @@ color:#fff;
 }
 
 
-/* BOTONES */
+/* =========================
+   BOTONES
+========================= */
 
 .boton{
 display:inline-block;
@@ -264,7 +268,9 @@ border:1px solid #d1d5db;
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
 background:#fff;
@@ -340,7 +346,9 @@ font-size:14px;
 }
 
 
-/* ACCESOS */
+/* =========================
+   ACCESOS
+========================= */
 
 .accesos{
 background:#f3f4f6;
@@ -397,7 +405,9 @@ gap:10px;
 }
 
 
-/* FUNCIONES */
+/* =========================
+   FUNCIONES
+========================= */
 
 .funciones{
 background:#fff;
@@ -415,6 +425,12 @@ border:1px solid #e5e7eb;
 border-radius:16px;
 padding:25px;
 background:#fff;
+transition:.2s;
+}
+
+.funcion:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(0,0,0,.06);
 }
 
 .funcion-icono{
@@ -433,10 +449,51 @@ font-size:14px;
 }
 
 
-/* POR QUÉ */
+/* =========================
+   RUBROS
+========================= */
+
+.rubros{
+background:#f9fafb;
+padding:80px 0;
+}
+
+.rubros-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.rubro{
+background:#fff;
+border:1px solid #e5e7eb;
+border-radius:16px;
+padding:25px;
+text-align:center;
+}
+
+.rubro-icono{
+font-size:40px;
+margin-bottom:12px;
+}
+
+.rubro h3{
+font-size:18px;
+margin-bottom:7px;
+}
+
+.rubro p{
+font-size:14px;
+color:#6b7280;
+}
+
+
+/* =========================
+   POR QUÉ
+========================= */
 
 .porque{
-background:#f9fafb;
+background:#fff;
 padding:80px 0;
 }
 
@@ -447,7 +504,7 @@ gap:25px;
 }
 
 .ventaja{
-background:#fff;
+background:#f9fafb;
 border-radius:16px;
 padding:25px;
 border:1px solid #e5e7eb;
@@ -463,7 +520,9 @@ color:#6b7280;
 }
 
 
-/* GPS */
+/* =========================
+   GPS
+========================= */
 
 .gps{
 background:#111827;
@@ -498,7 +557,54 @@ color:#e5e7eb;
 }
 
 
-/* PLANES */
+/* =========================
+   NOTIFICACIONES
+========================= */
+
+.notificaciones{
+background:#eff6ff;
+padding:80px 0;
+}
+
+.notificaciones-box{
+background:#fff;
+border:1px solid #bfdbfe;
+border-radius:20px;
+padding:40px;
+display:grid;
+grid-template-columns:auto 1fr;
+gap:25px;
+align-items:center;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.notificacion-icono{
+font-size:65px;
+}
+
+.notificaciones h2{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.notificaciones p{
+color:#4b5563;
+margin-bottom:15px;
+}
+
+.notificacion-lista{
+list-style:none;
+}
+
+.notificacion-lista li{
+padding:5px 0;
+color:#374151;
+}
+
+
+/* =========================
+   PLANES
+========================= */
 
 .planes{
 background:#fff;
@@ -540,7 +646,9 @@ margin-bottom:20px;
 }
 
 
-/* CTA */
+/* =========================
+   CTA
+========================= */
 
 .cta{
 background:#eff6ff;
@@ -564,7 +672,9 @@ margin-bottom:25px;
 }
 
 
-/* CONTACTO */
+/* =========================
+   CONTACTO
+========================= */
 
 .contacto{
 background:#f3f4f6;
@@ -600,7 +710,9 @@ font-size:17px;
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
 background:#111827;
@@ -633,9 +745,11 @@ font-size:14px;
 }
 
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 
-@media(max-width:850px){
+@media(max-width:950px){
 
 nav{
 display:none;
@@ -653,12 +767,21 @@ grid-template-columns:1fr;
 grid-template-columns:1fr 1fr;
 }
 
+.rubros-grid{
+grid-template-columns:1fr 1fr;
+}
+
 .porque-grid{
 grid-template-columns:1fr;
 }
 
 .gps-grid{
 grid-template-columns:1fr;
+}
+
+.notificaciones-box{
+grid-template-columns:1fr;
+text-align:center;
 }
 
 .planes-grid{
@@ -697,6 +820,27 @@ width:100%;
 grid-template-columns:1fr;
 }
 
+.rubros-grid{
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
+.rubro{
+padding:18px 10px;
+}
+
+.rubro-icono{
+font-size:32px;
+}
+
+.rubro h3{
+font-size:16px;
+}
+
+.rubro p{
+font-size:12px;
+}
+
 .acceso-botones{
 flex-direction:column;
 }
@@ -707,6 +851,18 @@ font-size:29px;
 
 .gps h2{
 font-size:30px;
+}
+
+.notificaciones{
+padding:60px 0;
+}
+
+.notificaciones-box{
+padding:30px 20px;
+}
+
+.notificaciones h2{
+font-size:28px;
 }
 
 .cta h2{
@@ -732,6 +888,10 @@ text-align:center;
 <body>
 
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
 <div class="contenedor header-contenido">
@@ -746,9 +906,11 @@ GES<span>BASE</span>
 
 <a href="#funciones">Funciones</a>
 
+<a href="#rubros">Rubros</a>
+
 <a href="#accesos">Accesos</a>
 
-<a href="#gps">Fichaje GPS</a>
+<a href="#gps">GPS</a>
 
 <a href="#contacto">Contacto</a>
 
@@ -765,6 +927,10 @@ Ingresar
 
 </header>
 
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section
 id="inicio"
@@ -785,10 +951,13 @@ Gestioná tu empresa
 </h1>
 
 <p class="hero-texto">
+
 GESBASE es un software de gestión empresarial
-para empresas y profesionales que necesitan organizar
-presupuestos, clientes, trabajos, empleados y administración
-desde un solo lugar.
+que se adapta a empresas, profesionales, comercios,
+distribuidoras, almacenes e indumentaria.
+
+Organizá la actividad de tu negocio desde un solo lugar.
+
 </p>
 
 <div class="botones">
@@ -825,17 +994,33 @@ Las herramientas principales de tu empresa
 en un solo lugar.
 </p>
 
-<div class="hero-item">📋 Presupuestos</div>
+<div class="hero-item">
+📋 Presupuestos
+</div>
 
-<div class="hero-item">👥 Clientes</div>
+<div class="hero-item">
+👥 Clientes
+</div>
 
-<div class="hero-item">🔧 Trabajos</div>
+<div class="hero-item">
+🔧 Trabajos
+</div>
 
-<div class="hero-item">👷 Empleados</div>
+<div class="hero-item">
+📦 Productos e inventario
+</div>
 
-<div class="hero-item">📍 Fichaje con GPS</div>
+<div class="hero-item">
+🛒 Ventas y compras
+</div>
 
-<div class="hero-item">💰 Administración</div>
+<div class="hero-item">
+👷 Empleados y fichajes
+</div>
+
+<div class="hero-item">
+💰 Administración
+</div>
 
 </div>
 
@@ -843,6 +1028,10 @@ en un solo lugar.
 
 </section>
 
+
+<!-- =========================
+     ACCESOS
+========================= -->
 
 <section
 id="accesos"
@@ -869,16 +1058,21 @@ Elegí el acceso correspondiente.
 
 <div class="acceso">
 
-<div class="acceso-icono">🏢</div>
+<div class="acceso-icono">
+🏢
+</div>
 
 <h3>
 Acceso Empresa
 </h3>
 
 <p>
+
 Ingresá a tu cuenta para administrar
 tu empresa, clientes, presupuestos,
-trabajos, empleados y operaciones.
+productos, inventario, ventas, trabajos,
+empleados y operaciones.
+
 </p>
 
 <div class="acceso-botones">
@@ -904,15 +1098,19 @@ Crear cuenta
 
 <div class="acceso">
 
-<div class="acceso-icono">👷</div>
+<div class="acceso-icono">
+👷
+</div>
 
 <h3>
 Acceso Empleado
 </h3>
 
 <p>
+
 Ingresá para fichar tu entrada y salida,
 controlar tu jornada y registrar tu ubicación GPS.
+
 </p>
 
 <div class="acceso-botones">
@@ -936,6 +1134,10 @@ class="boton boton-azul"
 </section>
 
 
+<!-- =========================
+     FUNCIONES
+========================= -->
+
 <section
 id="funciones"
 class="funciones"
@@ -950,7 +1152,7 @@ Funciones de GESBASE
 </h2>
 
 <p>
-Herramientas de gestión empresarial para organizar la actividad de tu empresa.
+Herramientas para organizar y controlar la actividad de tu empresa.
 </p>
 
 </div>
@@ -961,13 +1163,17 @@ Herramientas de gestión empresarial para organizar la actividad de tu empresa.
 
 <div class="funcion">
 
-<div class="funcion-icono">📋</div>
+<div class="funcion-icono">
+📋
+</div>
 
-<h3>Presupuestos</h3>
+<h3>
+Presupuestos
+</h3>
 
 <p>
 Creá presupuestos profesionales y mantené
-organizada la información de tus trabajos.
+organizada la información de tus operaciones.
 </p>
 
 </div>
@@ -975,9 +1181,13 @@ organizada la información de tus trabajos.
 
 <div class="funcion">
 
-<div class="funcion-icono">👥</div>
+<div class="funcion-icono">
+👥
+</div>
 
-<h3>Clientes</h3>
+<h3>
+Clientes
+</h3>
 
 <p>
 Registrá y administrá la información
@@ -989,12 +1199,17 @@ de tus clientes desde un solo lugar.
 
 <div class="funcion">
 
-<div class="funcion-icono">🔧</div>
+<div class="funcion-icono">
+🔧
+</div>
 
-<h3>Trabajos</h3>
+<h3>
+Trabajos
+</h3>
 
 <p>
-Organizá trabajos y servicios y realizá su seguimiento.
+Organizá trabajos, servicios y operaciones
+y realizá su seguimiento.
 </p>
 
 </div>
@@ -1002,12 +1217,17 @@ Organizá trabajos y servicios y realizá su seguimiento.
 
 <div class="funcion">
 
-<div class="funcion-icono">👷</div>
+<div class="funcion-icono">
+📦
+</div>
 
-<h3>Empleados</h3>
+<h3>
+Inventario
+</h3>
 
 <p>
-Gestioná empleados, puestos, jornadas y datos laborales.
+Controlá productos, existencias y movimientos
+de inventario de tu negocio.
 </p>
 
 </div>
@@ -1015,12 +1235,17 @@ Gestioná empleados, puestos, jornadas y datos laborales.
 
 <div class="funcion">
 
-<div class="funcion-icono">📍</div>
+<div class="funcion-icono">
+🏷️
+</div>
 
-<h3>Fichaje GPS</h3>
+<h3>
+Productos
+</h3>
 
 <p>
-Registrá entrada y salida junto con la ubicación GPS del fichaje.
+Registrá productos y mantené organizada
+la información necesaria para vender.
 </p>
 
 </div>
@@ -1028,12 +1253,179 @@ Registrá entrada y salida junto con la ubicación GPS del fichaje.
 
 <div class="funcion">
 
-<div class="funcion-icono">💰</div>
+<div class="funcion-icono">
+🛒
+</div>
 
-<h3>Administración</h3>
+<h3>
+Ventas
+</h3>
 
 <p>
-Centralizá gastos, cobros, facturas y otros movimientos.
+Organizá las ventas y mantené un registro
+de las operaciones realizadas.
+</p>
+
+</div>
+
+
+<div class="funcion">
+
+<div class="funcion-icono">
+📥
+</div>
+
+<h3>
+Compras
+</h3>
+
+<p>
+Registrá compras y movimientos relacionados
+con tus proveedores.
+</p>
+
+</div>
+
+
+<div class="funcion">
+
+<div class="funcion-icono">
+🚚
+</div>
+
+<h3>
+Proveedores
+</h3>
+
+<p>
+Mantené organizada la información
+de tus proveedores.
+</p>
+
+</div>
+
+
+<div class="funcion">
+
+<div class="funcion-icono">
+👷
+</div>
+
+<h3>
+Empleados
+</h3>
+
+<p>
+Gestioná empleados, puestos, jornadas
+y datos laborales.
+</p>
+
+</div>
+
+
+<div class="funcion">
+
+<div class="funcion-icono">
+📍
+</div>
+
+<h3>
+Fichaje GPS
+</h3>
+
+<p>
+Registrá entrada y salida junto con
+la ubicación GPS del fichaje.
+</p>
+
+</div>
+
+
+<div class="funcion">
+
+<div class="funcion-icono">
+💸
+</div>
+
+<h3>
+Gastos
+</h3>
+
+<p>
+Registrá y controlá los gastos
+de la actividad de tu empresa.
+</p>
+
+</div>
+
+
+<div class="funcion">
+
+<div class="funcion-icono">
+💵
+</div>
+
+<h3>
+Cobros
+</h3>
+
+<p>
+Registrá los cobros y mantené
+controlados los movimientos de dinero.
+</p>
+
+</div>
+
+
+<div class="funcion">
+
+<div class="funcion-icono">
+🧾
+</div>
+
+<h3>
+Facturación
+</h3>
+
+<p>
+Centralizá la información de tus facturas
+y operaciones administrativas.
+</p>
+
+</div>
+
+
+<div class="funcion">
+
+<div class="funcion-icono">
+📸
+</div>
+
+<h3>
+Fotos
+</h3>
+
+<p>
+Guardá fotografías asociadas a trabajos
+y operaciones de tu empresa.
+</p>
+
+</div>
+
+
+<div class="funcion">
+
+<div class="funcion-icono">
+📅
+</div>
+
+<h3>
+Agenda
+</h3>
+
+<p>
+Organizá actividades, tareas y compromisos
+desde un solo lugar.
 </p>
 
 </div>
@@ -1045,6 +1437,180 @@ Centralizá gastos, cobros, facturas y otros movimientos.
 
 </section>
 
+
+<!-- =========================
+     RUBROS
+========================= -->
+
+<section
+id="rubros"
+class="rubros"
+>
+
+<div class="contenedor">
+
+<div class="titulo">
+
+<h2>
+GESBASE se adapta a tu negocio
+</h2>
+
+<p>
+Seleccioná el tipo de actividad y utilizá los módulos que necesitás.
+</p>
+
+</div>
+
+
+<div class="rubros-grid">
+
+
+<div class="rubro">
+
+<div class="rubro-icono">
+🔧
+</div>
+
+<h3>
+Servicios
+</h3>
+
+<p>
+Presupuestos, clientes, trabajos y administración.
+</p>
+
+</div>
+
+
+<div class="rubro">
+
+<div class="rubro-icono">
+🏪
+</div>
+
+<h3>
+Comercios
+</h3>
+
+<p>
+Productos, inventario, ventas y compras.
+</p>
+
+</div>
+
+
+<div class="rubro">
+
+<div class="rubro-icono">
+📦
+</div>
+
+<h3>
+Distribuidoras
+</h3>
+
+<p>
+Productos, stock, ventas, compras y proveedores.
+</p>
+
+</div>
+
+
+<div class="rubro">
+
+<div class="rubro-icono">
+🍬
+</div>
+
+<h3>
+Almacenes
+</h3>
+
+<p>
+Controlá productos, existencias y ventas.
+</p>
+
+</div>
+
+
+<div class="rubro">
+
+<div class="rubro-icono">
+👕
+</div>
+
+<h3>
+Indumentaria
+</h3>
+
+<p>
+Gestioná productos, stock, ventas y compras.
+</p>
+
+</div>
+
+
+<div class="rubro">
+
+<div class="rubro-icono">
+🍽️
+</div>
+
+<h3>
+Gastronomía
+</h3>
+
+<p>
+Organizá productos, compras y operaciones.
+</p>
+
+</div>
+
+
+<div class="rubro">
+
+<div class="rubro-icono">
+🔌
+</div>
+
+<h3>
+Profesionales
+</h3>
+
+<p>
+Centralizá clientes, presupuestos y administración.
+</p>
+
+</div>
+
+
+<div class="rubro">
+
+<div class="rubro-icono">
+🚀
+</div>
+
+<h3>
+Otros negocios
+</h3>
+
+<p>
+Una plataforma preparada para adaptarse a diferentes actividades.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     POR QUÉ GESBASE
+========================= -->
 
 <section class="porque">
 
@@ -1068,7 +1634,9 @@ Una gestión empresarial más simple, organizada y centralizada.
 
 <div class="ventaja">
 
-<h3>📱 Acceso desde cualquier dispositivo</h3>
+<h3>
+📱 Acceso desde cualquier dispositivo
+</h3>
 
 <p>
 Gestioná la información de tu empresa
@@ -1080,11 +1648,14 @@ desde computadora, tablet o teléfono.
 
 <div class="ventaja">
 
-<h3>🗂️ Información centralizada</h3>
+<h3>
+🗂️ Información centralizada
+</h3>
 
 <p>
-Clientes, presupuestos, trabajos, empleados
-y administración en un solo sistema.
+Clientes, presupuestos, productos,
+ventas, trabajos y administración
+en un solo sistema.
 </p>
 
 </div>
@@ -1092,7 +1663,23 @@ y administración en un solo sistema.
 
 <div class="ventaja">
 
-<h3>📍 Control de empleados</h3>
+<h3>
+📦 Control de inventario
+</h3>
+
+<p>
+Conocé tus productos y existencias
+y mantené el stock organizado.
+</p>
+
+</div>
+
+
+<div class="ventaja">
+
+<h3>
+📍 Control de empleados
+</h3>
 
 <p>
 Consultá fichajes, horarios y ubicación
@@ -1104,19 +1691,9 @@ GPS registrados durante la jornada.
 
 <div class="ventaja">
 
-<h3>⚡ Gestión más rápida</h3>
-
-<p>
-Reducí tareas administrativas y mantené
-la información importante organizada.
-</p>
-
-</div>
-
-
-<div class="ventaja">
-
-<h3>🔐 Accesos separados</h3>
+<h3>
+🔐 Accesos separados
+</h3>
 
 <p>
 La empresa y sus empleados cuentan
@@ -1128,7 +1705,9 @@ con accesos diferenciados.
 
 <div class="ventaja">
 
-<h3>📈 Pensado para crecer</h3>
+<h3>
+📈 Pensado para crecer
+</h3>
 
 <p>
 Una plataforma preparada para acompañar
@@ -1145,6 +1724,10 @@ el crecimiento de tu empresa.
 </section>
 
 
+<!-- =========================
+     GPS
+========================= -->
+
 <section
 id="gps"
 class="gps"
@@ -1160,9 +1743,11 @@ Control de fichaje con GPS
 </h2>
 
 <p>
+
 Tus empleados pueden registrar la entrada y salida
 desde su dispositivo. GESBASE guarda la información
 asociada al fichaje para que la administración pueda consultarla.
+
 </p>
 
 <a
@@ -1179,19 +1764,33 @@ Conocer el sistema
 
 <ul class="lista">
 
-<li>🟢 Registro de entrada</li>
+<li>
+🟢 Registro de entrada
+</li>
 
-<li>🔴 Registro de salida</li>
+<li>
+🔴 Registro de salida
+</li>
 
-<li>📅 Fecha del fichaje</li>
+<li>
+📅 Fecha del fichaje
+</li>
 
-<li>🕐 Hora de entrada y salida</li>
+<li>
+🕐 Hora de entrada y salida
+</li>
 
-<li>📍 Ubicación GPS</li>
+<li>
+📍 Ubicación GPS
+</li>
 
-<li>👷 Identificación del empleado</li>
+<li>
+👷 Identificación del empleado
+</li>
 
-<li>⏱️ Tiempo trabajado</li>
+<li>
+⏱️ Tiempo trabajado
+</li>
 
 </ul>
 
@@ -1201,6 +1800,67 @@ Conocer el sistema
 
 </section>
 
+
+<!-- =========================
+     NOTIFICACIONES
+========================= -->
+
+<section class="notificaciones">
+
+<div class="contenedor">
+
+<div class="notificaciones-box">
+
+<div class="notificacion-icono">
+🔔
+</div>
+
+<div>
+
+<h2>
+Notificaciones y novedades
+</h2>
+
+<p>
+
+GESBASE también está pensado para mantener
+a los usuarios informados sobre mejoras,
+actualizaciones y mantenimientos de la plataforma.
+
+</p>
+
+<ul class="notificacion-lista">
+
+<li>
+🔔 Avisos de nuevas funciones
+</li>
+
+<li>
+🔧 Comunicaciones sobre mejoras del sistema
+</li>
+
+<li>
+🛠️ Avisos de mantenimiento programado
+</li>
+
+<li>
+🚀 Novedades y actualizaciones de GESBASE
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PLANES
+========================= -->
 
 <section class="planes">
 
@@ -1224,7 +1884,9 @@ Consultá cuál se adapta mejor a tu empresa.
 
 <div class="plan">
 
-<h3>Inicial</h3>
+<h3>
+Inicial
+</h3>
 
 <p class="plan-descripcion">
 Para comenzar a organizar la gestión de tu actividad.
@@ -1248,7 +1910,9 @@ Consultar
 
 <div class="plan destacado">
 
-<h3>Profesional</h3>
+<h3>
+Profesional
+</h3>
 
 <p class="plan-descripcion">
 Para empresas que necesitan más herramientas de gestión.
@@ -1272,7 +1936,9 @@ Consultar
 
 <div class="plan">
 
-<h3>Empresa</h3>
+<h3>
+Empresa
+</h3>
 
 <p class="plan-descripcion">
 Para equipos y empresas con mayores necesidades de control.
@@ -1300,6 +1966,10 @@ Consultar
 
 </section>
 
+
+<!-- =========================
+     CTA
+========================= -->
 
 <section class="cta">
 
@@ -1342,6 +2012,10 @@ class="boton boton-verde"
 </section>
 
 
+<!-- =========================
+     CONTACTO
+========================= -->
+
 <section
 id="contacto"
 class="contacto"
@@ -1356,8 +2030,11 @@ class="contacto"
 </h2>
 
 <p>
+
 Escribinos y te contamos cómo puede ayudarte
-a organizar la gestión de tu empresa.
+a organizar la gestión de tu empresa,
+comercio o negocio.
+
 </p>
 
 <a
@@ -1376,6 +2053,10 @@ class="whatsapp"
 </section>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
 <div class="contenedor footer-contenido">
@@ -1387,7 +2068,7 @@ GES<span>BASE</span>
 </div>
 
 <div class="footer-texto">
-Gestión para empresas y profesionales.
+Gestión para empresas, comercios y profesionales.
 </div>
 
 </div>
@@ -1395,15 +2076,29 @@ Gestión para empresas y profesionales.
 
 <div class="footer-links">
 
-<a href="#inicio">Inicio</a>
+<a href="#inicio">
+Inicio
+</a>
 
-<a href="#funciones">Funciones</a>
+<a href="#funciones">
+Funciones
+</a>
 
-<a href="#accesos">Accesos</a>
+<a href="#rubros">
+Rubros
+</a>
 
-<a href="#gps">GPS</a>
+<a href="#accesos">
+Accesos
+</a>
 
-<a href="#contacto">Contacto</a>
+<a href="#gps">
+GPS
+</a>
+
+<a href="#contacto">
+Contacto
+</a>
 
 </div>
 
