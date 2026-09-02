@@ -166,6 +166,14 @@
         }
 
 
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit;
+        }
+
+
         .contenedor {
             width: min(1120px, 92%);
 
@@ -548,7 +556,6 @@
         ===================================================== */
 
         .accesos {
-
             background: white;
         }
 
@@ -698,7 +705,6 @@
         ===================================================== */
 
         .rubros {
-
             background: white;
         }
 
@@ -816,7 +822,6 @@
         ===================================================== */
 
         .gps {
-
             background: white;
         }
 
@@ -859,7 +864,6 @@
 
 
         .lista {
-
             list-style: none;
         }
 
@@ -998,7 +1002,6 @@
         ===================================================== */
 
         .planes {
-
             background: white;
         }
 
@@ -1166,7 +1169,7 @@
 
             gap: 30px;
 
-            align-items: start;
+            align-items: stretch;
         }
 
 
@@ -2646,7 +2649,10 @@
             </p>
 
 
-            <div class="hero-botones" style="justify-content:center;">
+            <div
+                class="hero-botones"
+                style="justify-content:center;"
+            >
 
                 <a
                     href="https://albeservicios.github.io/GESBASE/registro.html"
@@ -2723,7 +2729,7 @@
 
                     <div>
                         <strong>Email</strong><br>
-                        julianbattauz006@gmail.com
+                        gesbase0@gmail.com
                     </div>
 
                 </div>
@@ -2787,6 +2793,7 @@
                                 id="nombre"
                                 name="nombre"
                                 placeholder="Ej.: Juan Pérez"
+                                autocomplete="name"
                                 required
                             >
 
@@ -2804,6 +2811,7 @@
                                 id="empresa"
                                 name="empresa"
                                 placeholder="Nombre de tu empresa"
+                                autocomplete="organization"
                             >
 
                         </div>
@@ -2820,6 +2828,7 @@
                                 id="correo"
                                 name="correo"
                                 placeholder="tuemail@ejemplo.com"
+                                autocomplete="email"
                                 required
                             >
 
@@ -2837,6 +2846,7 @@
                                 id="telefono"
                                 name="telefono"
                                 placeholder="+54 9 ..."
+                                autocomplete="tel"
                             >
 
                         </div>
@@ -2938,9 +2948,8 @@
 
                     <div class="formulario-ayuda">
 
-                        Al enviar, se abrirá tu aplicación de correo
-                        con la consulta preparada para
-                        <strong>julianbattauz006@gmail.com</strong>.
+                        La consulta se prepara para enviar a
+                        <strong>gesbase0@gmail.com</strong>.
 
                     </div>
 
@@ -3045,31 +3054,18 @@
 
 <script>
 
-    /*
-     * Año automático del footer
-     */
+    /* =====================================================
+       AÑO AUTOMÁTICO
+    ===================================================== */
 
     document.getElementById("anio").textContent =
         new Date().getFullYear();
 
 
 
-    /*
-     * FORMULARIO DE CONTACTO
-     *
-     * GitHub Pages es un hosting estático.
-     * Por eso, sin un backend, el formulario
-     * no puede enviar un correo directamente.
-     *
-     * Este sistema prepara automáticamente
-     * un correo para:
-     *
-     * julianbattauz006@gmail.com
-     *
-     * Luego podemos reemplazar este sistema
-     * por Firebase/Cloud Functions para que
-     * el envío sea completamente automático.
-     */
+    /* =====================================================
+       FORMULARIO DE CONTACTO
+    ===================================================== */
 
     const formulario =
         document.getElementById("formularioContacto");
@@ -3087,27 +3083,38 @@
 
 
             const nombre =
-                document.getElementById("nombre").value.trim();
+                document.getElementById("nombre")
+                .value
+                .trim();
 
 
             const empresa =
-                document.getElementById("empresa").value.trim();
+                document.getElementById("empresa")
+                .value
+                .trim();
 
 
             const correo =
-                document.getElementById("correo").value.trim();
+                document.getElementById("correo")
+                .value
+                .trim();
 
 
             const telefono =
-                document.getElementById("telefono").value.trim();
+                document.getElementById("telefono")
+                .value
+                .trim();
 
 
             const motivo =
-                document.getElementById("motivo").value;
+                document.getElementById("motivo")
+                .value;
 
 
             const mensaje =
-                document.getElementById("mensaje").value.trim();
+                document.getElementById("mensaje")
+                .value
+                .trim();
 
 
             if (
@@ -3128,10 +3135,12 @@
 
 
             const asunto =
-                "Consulta desde GESBASE - " + motivo;
+                "Consulta desde GESBASE - " +
+                motivo;
 
 
             const cuerpo =
+
                 "NUEVA CONSULTA DESDE GESBASE\n\n" +
 
                 "Nombre y apellido: " +
@@ -3164,16 +3173,16 @@
 
 
             const mailto =
-                "mailto:julianbattauz006@gmail.com" +
+
+                "mailto:gesbase0@gmail.com" +
 
                 "?subject=" +
+
                 encodeURIComponent(asunto) +
 
                 "&body=" +
+
                 encodeURIComponent(cuerpo);
-
-
-            window.location.href = mailto;
 
 
             mensajeFormulario.className =
@@ -3181,29 +3190,17 @@
 
 
             mensajeFormulario.textContent =
-                "Se preparó la consulta. Ahora confirmá el envío desde tu aplicación de correo.";
-
-        }
-    );
+                "Preparando el correo...";
 
 
-
-    /*
-     * Cerrar el menú automáticamente
-     * al seleccionar una sección en dispositivos
-     * donde eventualmente se incorpore navegación móvil.
-     */
-
-    document.querySelectorAll("nav a").forEach(
-        function(enlace) {
-
-            enlace.addEventListener(
-                "click",
+            setTimeout(
                 function() {
 
-                    // Navegación normal por ancla.
+                    window.location.href =
+                        mailto;
 
-                }
+                },
+                300
             );
 
         }
