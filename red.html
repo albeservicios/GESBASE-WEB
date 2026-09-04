@@ -1,29 +1,10 @@
-<!DOCTYPE html>
-<html lang="es-AR">
+<!DOCTYPE html><html lang="es-AR"><head><meta charset="UTF-8"><meta name="viewport"
+content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-<head>
+<meta name="theme-color" content="#111827"><meta name="description"
+content="Red GESBASE - Conectá personas, empresas y oportunidades laborales.">
 
-<meta charset="UTF-8">
-
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
->
-
-<meta
-    name="theme-color"
-    content="#111827"
->
-
-<meta
-    name="description"
-    content="Red GESBASE - Conectá personas, empresas y oportunidades laborales."
->
-
-<title>Red GESBASE</title>
-
-
-<style>
+<title>Red GESBASE</title><style>
 
 *{
     box-sizing:border-box;
@@ -31,24 +12,17 @@
     padding:0;
 }
 
-html,
 body{
-    min-height:100%;
-}
-
-body{
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-    background:#f1f5f9;
-    color:#111827;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f0f2f5;
+    color:#1c1e21;
 }
 
 button,
 input,
-textarea{
-    font-family:inherit;
+textarea,
+select{
+    font:inherit;
 }
 
 button{
@@ -60,2285 +34,1122 @@ a{
     color:inherit;
 }
 
-
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 .topbar{
-
+    height:64px;
+    background:#111827;
+    color:white;
     position:sticky;
     top:0;
     z-index:1000;
-
-    height:64px;
-
-    background:#111827;
-    color:white;
-
     display:flex;
     align-items:center;
-
-    border-bottom:1px solid #1f2937;
-
+    padding:0 18px;
+    box-shadow:0 2px 8px rgba(0,0,0,.2);
 }
 
 .topbar-inner{
-
     width:100%;
     max-width:1400px;
     margin:auto;
-
-    padding:0 18px;
-
     display:flex;
     align-items:center;
-
-    gap:16px;
-
+    gap:15px;
 }
 
 .logo{
-
     display:flex;
     align-items:center;
-    gap:9px;
-
+    gap:8px;
     font-size:21px;
     font-weight:800;
-
     white-space:nowrap;
-
 }
 
 .logo-icon{
-
-    width:37px;
-    height:37px;
-
-    border-radius:10px;
-
-    background:linear-gradient(
-        135deg,
-        #2563eb,
-        #38bdf8
-    );
-
+    width:38px;
+    height:38px;
+    border-radius:11px;
+    background:#2563eb;
     display:flex;
     align-items:center;
     justify-content:center;
-
-    font-weight:900;
-
 }
 
-
-/* SEARCH */
-
-.search-box{
-
+.search{
     flex:1;
-    max-width:520px;
-
+    max-width:450px;
     position:relative;
-
 }
 
-.search-box input{
-
+.search input{
     width:100%;
-
+    border:none;
+    outline:none;
     background:#1f2937;
     color:white;
-
-    border:1px solid #374151;
-
+    padding:11px 15px 11px 40px;
     border-radius:22px;
-
-    padding:10px 17px 10px 42px;
-
-    outline:none;
-
 }
 
-.search-box input::placeholder{
+.search input::placeholder{
     color:#9ca3af;
 }
 
 .search-icon{
-
     position:absolute;
-    left:15px;
-    top:50%;
-
-    transform:translateY(-50%);
-
+    left:14px;
+    top:10px;
     color:#9ca3af;
-
 }
-
-
-/* TOP ACTIONS */
 
 .top-actions{
-
     margin-left:auto;
-
     display:flex;
     align-items:center;
-    gap:7px;
-
+    gap:8px;
 }
 
-.icon-btn{
-
-    width:40px;
-    height:40px;
-
-    border:0;
-
+.top-btn{
+    width:42px;
+    height:42px;
+    border:none;
     border-radius:50%;
-
     background:#1f2937;
     color:white;
-
-    font-size:18px;
-
-    position:relative;
-
+    font-size:19px;
 }
 
-.icon-btn:hover{
+.top-btn:hover{
     background:#374151;
 }
 
-.notification-dot{
-
-    position:absolute;
-
-    right:5px;
-    top:5px;
-
-    width:8px;
-    height:8px;
-
-    border-radius:50%;
-
-    background:#ef4444;
-
-    display:none;
-
-}
-
-.user-mini{
-
+.profile-mini{
     display:flex;
     align-items:center;
     gap:8px;
-
-    margin-left:5px;
-
-    padding:5px 9px;
-
+    padding:5px 10px 5px 5px;
     border-radius:22px;
-
-    background:#1f2937;
-
-    font-size:13px;
-    font-weight:bold;
-
+    cursor:pointer;
 }
 
-.user-avatar{
+.profile-mini:hover{
+    background:#1f2937;
+}
 
-    width:31px;
-    height:31px;
-
+.avatar{
+    width:38px;
+    height:38px;
     border-radius:50%;
-
     background:#2563eb;
-
+    color:white;
     display:flex;
     align-items:center;
     justify-content:center;
-
+    font-weight:bold;
 }
 
+/* LAYOUT */
 
-/* =========================
-   LAYOUT
-========================= */
-
-.app{
-
-    width:100%;
+.page{
     max-width:1400px;
-
     margin:auto;
-
     display:grid;
-
-    grid-template-columns:240px minmax(0,650px) 280px;
-
-    gap:20px;
-
-    padding:20px;
-
+    grid-template-columns:250px minmax(0,680px) 280px;
+    gap:22px;
+    padding:22px 15px 100px;
 }
 
+/* LEFT */
 
-/* =========================
-   SIDEBAR
-========================= */
-
-.sidebar{
-
+.left{
     position:sticky;
-    top:84px;
-
-    align-self:start;
-
-}
-
-.menu{
-
-    background:white;
-
-    border:1px solid #e2e8f0;
-
-    border-radius:15px;
-
-    padding:10px;
-
+    top:85px;
+    height:max-content;
 }
 
 .menu-item{
-
     width:100%;
-
+    border:none;
+    background:transparent;
+    padding:13px 12px;
+    border-radius:10px;
     display:flex;
     align-items:center;
-
     gap:12px;
-
-    padding:12px;
-
-    border:0;
-
-    background:transparent;
-
-    border-radius:10px;
-
-    text-align:left;
-
-    color:#334155;
-
-    font-size:14px;
     font-weight:600;
-
+    text-align:left;
+    color:#374151;
 }
 
-.menu-item:hover{
-
-    background:#eff6ff;
-    color:#2563eb;
-
-}
-
+.menu-item:hover,
 .menu-item.active{
-
-    background:#dbeafe;
-    color:#1d4ed8;
-
+    background:#e5e7eb;
 }
 
 .menu-icon{
-
-    width:25px;
+    width:30px;
     text-align:center;
-
-    font-size:19px;
-
+    font-size:20px;
 }
 
-.sidebar-divider{
-
+.left-divider{
     height:1px;
-
-    background:#e2e8f0;
-
-    margin:12px 0;
-
+    background:#d1d5db;
+    margin:15px 0;
 }
 
-.back-gesbase{
-
-    display:flex;
-    align-items:center;
-    gap:10px;
-
-    color:#2563eb;
-
+.left-title{
     font-size:13px;
+    color:#6b7280;
+    padding:0 12px 8px;
     font-weight:bold;
-
-    padding:10px;
-
 }
 
-
-/* =========================
-   MAIN
-========================= */
+/* MAIN */
 
 .main{
-
     min-width:0;
-
 }
 
 .view{
-
     display:none;
-
 }
 
 .view.active{
-
     display:block;
-
 }
 
+/* CREATE */
 
-/* =========================
-   PAGE TITLE
-========================= */
-
-.page-title{
-
-    margin-bottom:16px;
-
-}
-
-.page-title h1{
-
-    font-size:27px;
-    margin-bottom:4px;
-
-}
-
-.page-title p{
-
-    color:#64748b;
-    font-size:14px;
-
-}
-
-
-/* =========================
-   COMPOSER
-========================= */
-
-.card{
-
+.create-box{
     background:white;
-
-    border:1px solid #e2e8f0;
-
-    border-radius:15px;
-
-    box-shadow:
-        0 4px 15px
-        rgba(15,23,42,.04);
-
-}
-
-.composer{
-
+    border-radius:12px;
     padding:15px;
-
-    margin-bottom:15px;
-
+    box-shadow:0 1px 3px rgba(0,0,0,.1);
+    margin-bottom:18px;
 }
 
-.composer-top{
-
+.create-top{
     display:flex;
-    align-items:center;
     gap:10px;
-
-}
-
-.composer-avatar{
-
-    width:43px;
-    height:43px;
-
-    flex-shrink:0;
-
-    border-radius:50%;
-
-    background:#2563eb;
-
-    color:white;
-
-    display:flex;
     align-items:center;
-    justify-content:center;
-
-    font-size:19px;
-
 }
 
-.composer-input{
-
+.create-trigger{
     flex:1;
-
-    background:#f1f5f9;
-
-    border:0;
-
+    border:none;
+    background:#f0f2f5;
+    color:#65676b;
     border-radius:22px;
-
     padding:12px 17px;
-
-    color:#64748b;
-
-    cursor:pointer;
-
+    text-align:left;
 }
 
-.composer-actions{
-
-    display:flex;
-
-    gap:5px;
-
-    margin-top:12px;
-
-    border-top:1px solid #e2e8f0;
-
-    padding-top:10px;
-
+.create-trigger:hover{
+    background:#e4e6eb;
 }
 
-.composer-action{
+.create-actions{
+    border-top:1px solid #e5e7eb;
+    margin-top:13px;
+    padding-top:11px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+}
 
-    flex:1;
-
-    border:0;
-
-    background:white;
-
-    color:#475569;
-
-    border-radius:8px;
-
+.create-action{
+    border:none;
+    background:transparent;
     padding:9px;
-
-    font-size:13px;
-
+    border-radius:8px;
+    color:#4b5563;
     font-weight:600;
-
 }
 
-.composer-action:hover{
-
-    background:#f1f5f9;
-
+.create-action:hover{
+    background:#f3f4f6;
 }
 
-
-/* =========================
-   POST
-========================= */
+/* POST */
 
 .post{
-
-    margin-bottom:15px;
-
+    background:white;
+    border-radius:12px;
+    margin-bottom:18px;
+    box-shadow:0 1px 3px rgba(0,0,0,.1);
     overflow:hidden;
-
 }
 
 .post-header{
-
-    padding:15px;
-
     display:flex;
-
-    align-items:center;
-
     gap:10px;
-
-}
-
-.post-avatar{
-
-    width:43px;
-    height:43px;
-
-    border-radius:50%;
-
-    background:#2563eb;
-
-    color:white;
-
-    display:flex;
+    padding:15px;
     align-items:center;
-    justify-content:center;
-
-    flex-shrink:0;
-
 }
 
 .post-author{
-
-    font-weight:700;
-    font-size:14px;
-
+    font-weight:bold;
 }
 
 .post-meta{
-
-    color:#94a3b8;
-    font-size:11px;
-
+    font-size:12px;
+    color:#6b7280;
     margin-top:2px;
-
 }
 
-.post-menu{
-
-    margin-left:auto;
-
-    border:0;
-    background:none;
-
-    font-size:18px;
-    color:#64748b;
-
-}
-
-.post-content{
-
+.post-body{
     padding:0 15px 15px;
+}
 
+.post-text{
     white-space:pre-wrap;
-
     word-break:break-word;
-
-    font-size:14px;
-
-    color:#334155;
-
 }
 
-.post-footer{
-
-    border-top:1px solid #e2e8f0;
-
-    display:flex;
-
-    padding:5px;
-
-}
-
-.post-action{
-
-    flex:1;
-
-    border:0;
-
-    background:white;
-
-    padding:9px;
-
-    border-radius:8px;
-
-    color:#64748b;
-
-    font-size:13px;
-
-    font-weight:600;
-
-}
-
-.post-action:hover{
-
-    background:#f1f5f9;
-
-}
-
-.post-action.liked{
-
-    color:#2563eb;
-
-}
-
-
-/* =========================
-   EMPTY
-========================= */
-
-.empty{
-
-    text-align:center;
-
-    padding:45px 20px;
-
-    color:#64748b;
-
-}
-
-.empty-icon{
-
-    font-size:45px;
-
-    margin-bottom:12px;
-
-}
-
-.empty h3{
-
-    color:#334155;
-    margin-bottom:5px;
-
-}
-
-
-/* =========================
-   RIGHT
-========================= */
-
-.rightbar{
-
-    position:sticky;
-    top:84px;
-
-    align-self:start;
-
-}
-
-.right-card{
-
-    padding:16px;
-
-    margin-bottom:15px;
-
-}
-
-.right-title{
-
-    font-size:15px;
-    font-weight:800;
-
-    margin-bottom:14px;
-
-}
-
-.suggestion{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:9px;
-
-    margin-bottom:13px;
-
-}
-
-.suggestion-avatar{
-
-    width:38px;
-    height:38px;
-
-    border-radius:50%;
-
-    background:#e0e7ff;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    flex-shrink:0;
-
-}
-
-.suggestion-info{
-
-    min-width:0;
-    flex:1;
-
-}
-
-.suggestion-name{
-
-    font-size:12px;
-    font-weight:bold;
-
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
-
-}
-
-.suggestion-type{
-
-    font-size:10px;
-    color:#94a3b8;
-
-}
-
-.small-btn{
-
-    border:0;
-
-    background:#dbeafe;
-    color:#1d4ed8;
-
-    padding:6px 9px;
-
-    border-radius:7px;
-
-    font-size:11px;
-    font-weight:bold;
-
-}
-
-
-/* =========================
-   MODAL
-========================= */
-
-.modal-overlay{
-
-    position:fixed;
-
-    inset:0;
-
-    z-index:2000;
-
-    background:rgba(15,23,42,.65);
-
-    display:none;
-
-    align-items:center;
-    justify-content:center;
-
-    padding:15px;
-
-}
-
-.modal-overlay.active{
-
-    display:flex;
-
-}
-
-.modal{
-
-    width:100%;
-    max-width:520px;
-
-    max-height:90vh;
-
-    overflow:auto;
-
-    background:white;
-
-    border-radius:18px;
-
-    box-shadow:
-        0 25px 70px
-        rgba(0,0,0,.25);
-
-}
-
-.modal-header{
-
-    display:flex;
-    align-items:center;
-
-    padding:17px;
-
-    border-bottom:1px solid #e2e8f0;
-
-}
-
-.modal-header h2{
-
-    font-size:18px;
-
-}
-
-.close{
-
-    margin-left:auto;
-
-    border:0;
-
-    background:#f1f5f9;
-
-    width:34px;
-    height:34px;
-
-    border-radius:50%;
-
-    font-size:18px;
-
-}
-
-.modal-body{
-
-    padding:17px;
-
-}
-
-.modal-body textarea{
-
-    width:100%;
-
-    min-height:160px;
-
-    resize:none;
-
-    border:1px solid #cbd5e1;
-
-    border-radius:12px;
-
-    padding:14px;
-
-    outline:none;
-
-    font-size:15px;
-
-}
-
-.modal-body textarea:focus{
-
-    border-color:#2563eb;
-
-}
-
-.modal-options{
-
-    display:flex;
-
-    gap:8px;
-
+.employment{
     margin-top:12px;
-
-    flex-wrap:wrap;
-
+    border:1px solid #dbeafe;
+    background:#eff6ff;
+    padding:15px;
+    border-radius:10px;
 }
 
-.option{
-
-    border:1px solid #cbd5e1;
-
-    background:white;
-
-    border-radius:9px;
-
-    padding:8px 11px;
-
-    font-size:12px;
-
-}
-
-.option.selected{
-
-    background:#dbeafe;
-    border-color:#60a5fa;
+.employment-title{
     color:#1d4ed8;
-
-}
-
-.modal-footer{
-
-    padding:14px 17px;
-
-    border-top:1px solid #e2e8f0;
-
-    display:flex;
-
-    justify-content:flex-end;
-
-    gap:8px;
-
-}
-
-.btn{
-
-    border:0;
-
-    border-radius:9px;
-
-    padding:10px 16px;
-
     font-weight:bold;
+    margin-bottom:5px;
+}
 
+.post-stats{
+    display:flex;
+    justify-content:space-between;
+    padding:8px 15px;
+    color:#6b7280;
     font-size:13px;
-
 }
 
-.btn-secondary{
-
-    background:#f1f5f9;
-    color:#334155;
-
+.post-buttons{
+    border-top:1px solid #e5e7eb;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
 }
 
-.btn-primary{
-
-    background:#2563eb;
-    color:white;
-
-}
-
-
-/* =========================
-   SEARCH VIEW
-========================= */
-
-.search-result{
-
-    display:flex;
-    align-items:center;
-    gap:12px;
-
-    padding:14px;
-
-    border-bottom:1px solid #e2e8f0;
-
-}
-
-.search-result:last-child{
-    border-bottom:0;
-}
-
-.result-avatar{
-
-    width:45px;
-    height:45px;
-
-    border-radius:50%;
-
-    background:#dbeafe;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:20px;
-
-}
-
-.result-info{
-    flex:1;
-}
-
-.result-name{
-    font-size:14px;
-    font-weight:bold;
-}
-
-.result-type{
-    font-size:11px;
-    color:#64748b;
-}
-
-
-/* =========================
-   PROFILE
-========================= */
-
-.profile-cover{
-
-    height:150px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #1d4ed8,
-            #0ea5e9
-        );
-
-    border-radius:15px 15px 0 0;
-
-}
-
-.profile-body{
-
+.post-btn{
+    border:none;
     background:white;
-
-    border:1px solid #e2e8f0;
-
-    border-top:0;
-
-    border-radius:0 0 15px 15px;
-
-    padding:0 20px 22px;
-
+    padding:11px;
+    color:#4b5563;
+    font-weight:600;
 }
 
-.profile-big-avatar{
+.post-btn:hover{
+    background:#f3f4f6;
+}
 
+.post-btn.liked{
+    color:#2563eb;
+}
+
+/* PROFILE */
+
+.profile-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 1px 3px rgba(0,0,0,.1);
+    margin-bottom:18px;
+}
+
+.cover{
+    height:150px;
+    background:linear-gradient(135deg,#111827,#2563eb);
+}
+
+.profile-info{
+    padding:0 20px 20px;
+    position:relative;
+}
+
+.profile-big{
     width:90px;
     height:90px;
-
-    margin-top:-45px;
-
-    border:5px solid white;
-
     border-radius:50%;
-
     background:#2563eb;
-
-    color:white;
-
+    border:5px solid white;
     display:flex;
     align-items:center;
     justify-content:center;
-
-    font-size:37px;
-
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+    margin-top:-45px;
 }
 
-.profile-name{
-
-    font-size:23px;
-    font-weight:800;
-
-    margin-top:10px;
-
+.profile-info h2{
+    margin-top:8px;
 }
 
 .profile-type{
-
-    color:#64748b;
-    font-size:13px;
-
+    color:#6b7280;
+    margin:4px 0 12px;
 }
 
-.profile-location{
+.profile-actions{
+    display:flex;
+    gap:10px;
+}
 
-    color:#64748b;
+.primary-btn{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:10px 17px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.secondary-btn{
+    background:#e5e7eb;
+    color:#111827;
+    border:none;
+    padding:10px 17px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* PEOPLE */
+
+.people-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.person-card{
+    background:white;
+    border-radius:12px;
+    padding:18px;
+    box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+
+.person-top{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:13px;
+}
+
+.person-name{
+    font-weight:bold;
+}
+
+.person-type{
     font-size:12px;
-
-    margin-top:7px;
-
+    color:#6b7280;
 }
 
+.person-card button{
+    width:100%;
+}
 
-/* =========================
-   JOBS
-========================= */
+/* JOBS */
 
 .job-card{
+    background:white;
+    border-radius:12px;
+    padding:18px;
+    margin-bottom:14px;
+    box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
 
-    padding:17px;
-
-    margin-bottom:12px;
-
+.job-tag{
+    display:inline-block;
+    background:#dbeafe;
+    color:#1d4ed8;
+    padding:5px 9px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:9px;
 }
 
 .job-title{
-
-    font-size:17px;
-    font-weight:800;
-
-    margin-bottom:4px;
-
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:7px;
 }
 
 .job-company{
-
-    color:#2563eb;
-    font-weight:bold;
-    font-size:13px;
-
-}
-
-.job-location{
-
-    color:#64748b;
-    font-size:12px;
-
-    margin:7px 0;
-
+    color:#4b5563;
+    margin-bottom:10px;
 }
 
 .job-description{
-
-    color:#475569;
-    font-size:13px;
-
+    color:#374151;
+    margin-bottom:14px;
 }
 
+.job-actions{
+    display:flex;
+    gap:10px;
+}
 
-/* =========================
-   NOTIFICATIONS
-========================= */
+/* RIGHT */
 
-.notification{
+.right{
+    position:sticky;
+    top:85px;
+    height:max-content;
+}
 
+.side-card{
+    background:white;
+    border-radius:12px;
+    padding:17px;
+    margin-bottom:15px;
+    box-shadow:0 1px 3px rgba(0,0,0,.08);
+}
+
+.side-title{
+    font-weight:bold;
+    margin-bottom:13px;
+}
+
+.suggestion{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    margin:13px 0;
+}
+
+.suggestion-info{
+    flex:1;
+}
+
+.suggestion-name{
+    font-weight:bold;
+    font-size:14px;
+}
+
+.suggestion-type{
+    color:#6b7280;
+    font-size:12px;
+}
+
+/* MODAL */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    z-index:3000;
+    display:none;
+    align-items:center;
+    justify-content:center;
     padding:15px;
-
-    border-bottom:1px solid #e2e8f0;
-
-    font-size:13px;
-
 }
 
-.notification:last-child{
-    border-bottom:0;
+.modal.show{
+    display:flex;
 }
 
-.notification.unread{
-
-    background:#eff6ff;
-
+.modal-box{
+    width:min(550px,100%);
+    background:white;
+    border-radius:14px;
+    overflow:hidden;
 }
 
+.modal-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px;
+    border-bottom:1px solid #e5e7eb;
+}
 
-/* =========================
-   MOBILE NAV
-========================= */
+.modal-header h3{
+    font-size:19px;
+}
+
+.close{
+    border:none;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:#e5e7eb;
+    font-size:20px;
+}
+
+.modal-body{
+    padding:17px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:6px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    padding:11px;
+    outline:none;
+}
+
+.form-group textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+    border-color:#2563eb;
+}
+
+.publish{
+    width:100%;
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:12px;
+    border-radius:9px;
+    font-weight:bold;
+}
+
+/* EMPTY */
+
+.empty{
+    background:white;
+    border-radius:12px;
+    padding:35px 20px;
+    text-align:center;
+    color:#6b7280;
+}
+
+/* MOBILE NAV */
 
 .mobile-nav{
-
     display:none;
-
     position:fixed;
-
     left:0;
     right:0;
     bottom:0;
-
-    z-index:1500;
-
-    height:65px;
-
+    height:62px;
     background:white;
-
-    border-top:1px solid #e2e8f0;
-
-    justify-content:space-around;
-
+    border-top:1px solid #d1d5db;
+    z-index:2000;
+    grid-template-columns:repeat(5,1fr);
 }
 
 .mobile-nav button{
-
-    flex:1;
-
-    border:0;
-
+    border:none;
     background:white;
+    font-size:20px;
+}
 
-    color:#64748b;
-
+.mobile-nav small{
+    display:block;
     font-size:10px;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-
-    gap:3px;
-
+    margin-top:2px;
 }
 
-.mobile-nav button.active{
+/* TOAST */
 
-    color:#2563eb;
-
+.toast{
+    position:fixed;
+    left:50%;
+    bottom:80px;
+    transform:translateX(-50%);
+    background:#111827;
+    color:white;
+    padding:12px 18px;
+    border-radius:10px;
+    z-index:5000;
+    display:none;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
 }
 
-.mobile-nav-icon{
-
-    font-size:19px;
-
+.toast.show{
+    display:block;
 }
 
+/* RESPONSIVE */
 
-/* =========================
-   LOADING
-========================= */
+@media(max-width:1050px){
 
-.loading{
-
-    padding:40px;
-
-    text-align:center;
-
-    color:#64748b;
-
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:1100px){
-
-    .app{
-
-        grid-template-columns:210px minmax(0,1fr);
-
+    .page{
+        grid-template-columns:210px minmax(0,680px);
     }
 
-    .rightbar{
-
+    .right{
         display:none;
-
     }
 
 }
 
-@media(max-width:760px){
-
-    body{
-
-        padding-bottom:65px;
-
-    }
+@media(max-width:750px){
 
     .topbar{
-
         height:58px;
-
-    }
-
-    .topbar-inner{
-
         padding:0 10px;
-
-        gap:8px;
-
     }
 
-    .logo span{
-
+    .logo-text{
         display:none;
-
     }
 
-    .logo-icon{
-
-        width:35px;
-        height:35px;
-
-    }
-
-    .search-box{
-
+    .search{
         max-width:none;
-
     }
 
-    .top-actions .user-mini{
-
+    .profile-mini{
         display:none;
-
     }
 
-    .top-actions{
-
-        gap:4px;
-
+    .top-btn{
+        width:38px;
+        height:38px;
     }
 
-    .icon-btn{
-
-        width:37px;
-        height:37px;
-
-    }
-
-    .app{
-
+    .page{
         display:block;
-
-        padding:12px 10px 20px;
-
+        padding:12px 8px 80px;
     }
 
-    .sidebar{
-
+    .left{
         display:none;
+    }
 
+    .main{
+        width:100%;
     }
 
     .mobile-nav{
-
-        display:flex;
-
+        display:grid;
     }
 
-    .page-title h1{
-
-        font-size:23px;
-
+    .people-grid{
+        grid-template-columns:1fr;
     }
 
 }
 
-@media(max-width:430px){
+@media(max-width:450px){
 
-    .search-box input{
-
-        padding-left:35px;
-
+    .top-actions{
+        gap:3px;
     }
 
-    .search-icon{
-
-        left:11px;
-
+    .top-btn{
+        width:34px;
+        height:34px;
+        font-size:16px;
     }
 
-    .top-actions .icon-btn:nth-child(1){
-
-        display:none;
-
-    }
-
-    .composer-actions{
-
-        gap:2px;
-
-    }
-
-    .composer-action{
-
-        font-size:11px;
-        padding:8px 3px;
-
+    .create-actions{
+        grid-template-columns:1fr;
     }
 
 }
 
-</style>
+</style></head><body><!-- HEADER --><header class="topbar"><div class="topbar-inner"><a href="#" class="logo"><div class="logo-icon">G</div><span class="logo-text">
+Red GESBASE
+</span></a><div class="search"><span class="search-icon">🔎</span>
 
-</head>
+<input
+id="searchInput"
+type="search"
+placeholder="Buscar personas, empresas u oportunidades..."
 
+«»
 
-<body>
+</div><div class="top-actions"><button
+class="top-btn"
+id="messagesBtn"
+title="Mensajes"
 
+«»
 
-<!-- =========================
-     HEADER
-========================= -->
+💬
 
-<header class="topbar">
+</button><button
+class="top-btn"
+id="notificationsBtn"
+title="Notificaciones"
 
-<div class="topbar-inner">
+«»
 
-<a
-    href="#"
-    class="logo"
-    onclick="mostrarVista('inicio');return false;"
+🔔
+
+</button><div
+    class="profile-mini"
+    id="profileMini"
+><div
+    class="avatar"
+    id="miniAvatar"
 >
+    G
+</div><span id="miniName">
+Perfil
+</span></div></div></div></header><!-- APP --><div class="page"><!-- LEFT MENU --><aside class="left"><button
+class="menu-item active"
+data-view="inicio"
 
-    <div class="logo-icon">
-        G
-    </div>
+«»
 
-    <span>GESBASE</span>
+<span class="menu-icon">🏠</span>
+Inicio
 
-</a>
+</button><button
+class="menu-item"
+data-view="perfil"
 
+«»
 
-<div class="search-box">
+<span class="menu-icon">👤</span>
+Mi perfil
 
-    <span class="search-icon">
-        🔎
-    </span>
+</button><button
+class="menu-item"
+data-view="personas"
 
-    <input
-        id="searchInput"
-        type="search"
-        placeholder="Buscar personas, empresas..."
-        autocomplete="off"
-    >
+«»
 
-</div>
+<span class="menu-icon">👥</span>
+Personas y empresas
 
+</button><button
+class="menu-item"
+data-view="empleos"
 
-<div class="top-actions">
+«»
 
-    <button
-        class="icon-btn"
-        onclick="mostrarVista('mensajes')"
-        title="Mensajes"
-    >
-        💬
-    </button>
+<span class="menu-icon">💼</span>
+Empleos
 
-    <button
-        class="icon-btn"
-        onclick="mostrarVista('notificaciones')"
-        title="Notificaciones"
-    >
+</button><button
+class="menu-item"
+data-view="conexiones"
 
-        🔔
+«»
 
-        <span
-            id="notificationDot"
-            class="notification-dot"
-        ></span>
+<span class="menu-icon">🤝</span>
+Conexiones
 
-    </button>
+</button><div class="left-divider"></div><div class="left-title">
+RED GESBASE
+</div><button
+class="menu-item"
+data-view="ayuda"
 
-    <button
-        class="user-mini"
-        onclick="mostrarVista('perfil')"
-    >
+«»
 
-        <span
-            id="miniAvatar"
-            class="user-avatar"
-        >
-            👤
-        </span>
+<span class="menu-icon">❓</span>
+Ayuda
 
-        <span id="miniName">
-            Usuario
-        </span>
+</button><a
+class="menu-item"
+href="https://albeservicios.github.io/GESBASE/login.html"
 
-    </button>
+«»
 
-</div>
+<span class="menu-icon">🏢</span>
+Volver a GESBASE
 
-</div>
-
-</header>
-
-
-
-<!-- =========================
-     APP
-========================= -->
-
-<div class="app">
-
-
-<!-- =========================
-     SIDEBAR
-========================= -->
-
-<aside class="sidebar">
-
-<div class="menu">
-
-    <button
-        class="menu-item active"
-        data-view="inicio"
-        onclick="mostrarVista('inicio')"
-    >
-
-        <span class="menu-icon">🏠</span>
-
-        Inicio
-
-    </button>
-
-
-    <button
-        class="menu-item"
-        data-view="personas"
-        onclick="mostrarVista('personas')"
-    >
-
-        <span class="menu-icon">👤</span>
-
-        Personas
-
-    </button>
-
-
-    <button
-        class="menu-item"
-        data-view="empresas"
-        onclick="mostrarVista('empresas')"
-    >
-
-        <span class="menu-icon">🏢</span>
-
-        Empresas
-
-    </button>
-
-
-    <button
-        class="menu-item"
-        data-view="conexiones"
-        onclick="mostrarVista('conexiones')"
-    >
-
-        <span class="menu-icon">🤝</span>
-
-        Conexiones
-
-    </button>
-
-
-    <button
-        class="menu-item"
-        data-view="empleos"
-        onclick="mostrarVista('empleos')"
-    >
-
-        <span class="menu-icon">💼</span>
-
-        Empleos
-
-    </button>
-
-
-    <button
-        class="menu-item"
-        data-view="mensajes"
-        onclick="mostrarVista('mensajes')"
-    >
-
-        <span class="menu-icon">💬</span>
-
-        Mensajes
-
-    </button>
-
-
-    <button
-        class="menu-item"
-        data-view="notificaciones"
-        onclick="mostrarVista('notificaciones')"
-    >
-
-        <span class="menu-icon">🔔</span>
-
-        Notificaciones
-
-    </button>
-
-
-    <button
-        class="menu-item"
-        data-view="perfil"
-        onclick="mostrarVista('perfil')"
-    >
-
-        <span class="menu-icon">👤</span>
-
-        Mi perfil
-
-    </button>
-
-
-    <div class="sidebar-divider"></div>
-
-
-    <a
-        href="https://albeservicios.github.io/GESBASE/login.html"
-        class="back-gesbase"
-    >
-        ← Volver a GESBASE
-    </a>
-
-</div>
-
-</aside>
-
-
-
-<!-- =========================
-     MAIN
-========================= -->
-
-<main class="main">
-
-
-<!-- INICIO -->
-
-<section
-    id="view-inicio"
+</a></aside><!-- MAIN --><main class="main"><!-- INICIO --><section
     class="view active"
+    id="view-inicio"
+><div class="create-box"><div class="create-top"><div
+    class="avatar"
+    id="createAvatar"
 >
+    G
+</div><button
+class="create-trigger"
+id="openCreate"
 
-<div class="page-title">
+«»
 
-    <h1>
-        Red GESBASE
-    </h1>
+¿Qué querés publicar?
 
-    <p>
-        Conectá personas, empresas y oportunidades.
-    </p>
+</button></div><div class="create-actions"><button
+class="create-action"
+id="normalPostBtn"
 
-</div>
+«»
 
+📝 Publicación
 
-<div class="card composer">
+</button><button
+class="create-action"
+id="jobPostBtn"
 
-    <div class="composer-top">
+«»
 
-        <div
-            id="composerAvatar"
-            class="composer-avatar"
-        >
-            👤
-        </div>
+💼 Oferta laboral
 
-        <button
-            class="composer-input"
-            onclick="abrirPublicacion()"
-        >
-            ¿Qué querés compartir?
-        </button>
+</button><button
+class="create-action"
+id="servicePostBtn"
 
-    </div>
+«»
 
+🛠️ Servicio
 
-    <div class="composer-actions">
-
-        <button
-            class="composer-action"
-            onclick="abrirPublicacion('normal')"
-        >
-            📝 Publicación
-        </button>
-
-        <button
-            class="composer-action"
-            onclick="abrirPublicacion('empleo')"
-        >
-            💼 Oferta laboral
-        </button>
-
-        <button
-            class="composer-action"
-            onclick="abrirPublicacion('servicio')"
-        >
-            🔧 Servicio
-        </button>
-
-    </div>
-
-</div>
-
-
-<div id="feed">
-
-    <div class="loading">
-        Cargando publicaciones...
-    </div>
-
-</div>
-
-</section>
-
-
-
-<!-- PERSONAS -->
-
-<section
-    id="view-personas"
+</button></div></div><div id="feed"><div class="empty">
+Cargando publicaciones...
+</div></div></section><!-- PERFIL --><section
     class="view"
->
-
-<div class="page-title">
-
-    <h1>
-        Personas
-    </h1>
-
-    <p>
-        Encontrá trabajadores y profesionales.
-    </p>
-
-</div>
-
-<div
-    id="peopleList"
-    class="card"
->
-
-    <div class="loading">
-        Buscando personas...
-    </div>
-
-</div>
-
-</section>
-
-
-
-<!-- EMPRESAS -->
-
-<section
-    id="view-empresas"
-    class="view"
->
-
-<div class="page-title">
-
-    <h1>
-        Empresas
-    </h1>
-
-    <p>
-        Conocé empresas y contratistas dentro de GESBASE.
-    </p>
-
-</div>
-
-<div
-    id="companyList"
-    class="card"
->
-
-    <div class="loading">
-        Buscando empresas...
-    </div>
-
-</div>
-
-</section>
-
-
-
-<!-- CONEXIONES -->
-
-<section
-    id="view-conexiones"
-    class="view"
->
-
-<div class="page-title">
-
-    <h1>
-        Conexiones
-    </h1>
-
-    <p>
-        Personas y empresas con las que estás conectado.
-    </p>
-
-</div>
-
-<div
-    id="connectionsList"
-    class="card"
->
-
-    <div class="empty">
-
-        <div class="empty-icon">
-            🤝
-        </div>
-
-        <h3>
-            Tus conexiones
-        </h3>
-
-        <p>
-            Acá aparecerán las personas y empresas
-            que acepten tu conexión.
-        </p>
-
-    </div>
-
-</div>
-
-</section>
-
-
-
-<!-- EMPLEOS -->
-
-<section
-    id="view-empleos"
-    class="view"
->
-
-<div class="page-title">
-
-    <h1>
-        Empleos
-    </h1>
-
-    <p>
-        Encontrá oportunidades laborales.
-    </p>
-
-</div>
-
-
-<div id="jobsList">
-
-    <div class="loading">
-        Cargando oportunidades...
-    </div>
-
-</div>
-
-</section>
-
-
-
-<!-- MENSAJES -->
-
-<section
-    id="view-mensajes"
-    class="view"
->
-
-<div class="page-title">
-
-    <h1>
-        Mensajes
-    </h1>
-
-    <p>
-        Próximamente podrás comunicarte con tus conexiones.
-    </p>
-
-</div>
-
-<div class="card">
-
-    <div class="empty">
-
-        <div class="empty-icon">
-            💬
-        </div>
-
-        <h3>
-            Mensajería GESBASE
-        </h3>
-
-        <p>
-            Estamos preparando el chat privado y
-            la comunicación entre empresas y trabajadores.
-        </p>
-
-    </div>
-
-</div>
-
-</section>
-
-
-
-<!-- NOTIFICACIONES -->
-
-<section
-    id="view-notificaciones"
-    class="view"
->
-
-<div class="page-title">
-
-    <h1>
-        Notificaciones
-    </h1>
-
-    <p>
-        Tus novedades de Red GESBASE.
-    </p>
-
-</div>
-
-
-<div
-    id="notificationsList"
-    class="card"
->
-
-    <div class="empty">
-
-        <div class="empty-icon">
-            🔔
-        </div>
-
-        <h3>
-            No hay notificaciones
-        </h3>
-
-        <p>
-            Cuando recibas conexiones, mensajes u otras
-            novedades aparecerán acá.
-        </p>
-
-    </div>
-
-</div>
-
-</section>
-
-
-
-<!-- PERFIL -->
-
-<section
     id="view-perfil"
+><div id="profileContainer"><div class="empty">
+Cargando perfil...
+</div></div></section><!-- PERSONAS --><section
     class="view"
->
+    id="view-personas"
+><div class="section-title" style="margin-bottom:15px;"><h2>Personas y empresas</h2><p style="color:#6b7280;">
+Conectate con otros usuarios de la Red GESBASE.
+</p></div><div
+    class="people-grid"
+    id="peopleGrid"
+><div class="empty">
+Cargando...
+</div></div></section><!-- EMPLEOS --><section
+    class="view"
+    id="view-empleos"
+><div class="section-title" style="margin-bottom:15px;"><h2>Oportunidades laborales</h2><p style="color:#6b7280;">
+Encontrá ofertas publicadas por empresas y contratistas.
+</p></div><div id="jobsList"><div class="empty">
+Cargando oportunidades...
+</div></div></section><!-- CONEXIONES --><section
+    class="view"
+    id="view-conexiones"
+><div class="section-title" style="margin-bottom:15px;"><h2>Mis conexiones</h2><p style="color:#6b7280;">
+Personas y empresas con las que estás conectado.
+</p></div><div
+    id="connectionsList"
+><div class="empty">
+Todavía no tenés conexiones.
+</div></div></section><!-- AYUDA --><section
+    class="view"
+    id="view-ayuda"
+><div class="side-card"><h2 style="margin-bottom:15px;">
+Red GESBASE
+</h2><p style="color:#4b5563;">
+La Red GESBASE es un espacio complementario a la aplicación
+GESBASE para conectar personas, empresas y oportunidades laborales.
+</p><br><p style="color:#4b5563;">
+Usá la red para crear tu perfil, publicar contenido,
+conectar con otros usuarios y encontrar oportunidades.
+</p></div></section></main><!-- RIGHT --><aside class="right"><div class="side-card"><div class="side-title">
+Tu acceso
+</div><p style="font-size:14px;color:#6b7280;">
+Estás utilizando la Red GESBASE.
+</p><br><a
+href="https://albeservicios.github.io/GESBASE/login.html"
+class="secondary-btn"
+style="display:block;text-align:center;"
 
-<div class="page-title">
+«»
 
-    <h1>
-        Mi perfil
-    </h1>
+Ir a GESBASE
 
-</div>
+</a></div><div class="side-card"><div class="side-title">
+Personas para conectar
+</div><div id="suggestions"><div style="color:#6b7280;font-size:14px;">
+Cargando...
+</div></div></div><div class="side-card"><div class="side-title">
+Sobre Red GESBASE
+</div><p style="font-size:13px;color:#6b7280;">
+Una red orientada al mundo laboral y empresarial.
+</p></div></aside></div><!-- MOBILE NAV --><nav class="mobile-nav"><button data-view="inicio">
+🏠
+<small>Inicio</small>
+</button><button data-view="personas">
+👥
+<small>Personas</small>
+</button><button id="mobileCreate">
+➕
+<small>Publicar</small>
+</button><button data-view="empleos">
+💼
+<small>Empleos</small>
+</button><button data-view="perfil">
+👤
+<small>Perfil</small>
+</button></nav><!-- CREATE MODAL --><div
+    class="modal"
+    id="createModal"
+><div class="modal-box"><div class="modal-header"><h3 id="modalTitle">
+Crear publicación
+</h3><button
+class="close"
+id="closeModal"
 
+«»
 
-<div class="profile-cover"></div>
-
-
-<div class="profile-body">
-
-    <div
-        id="profileAvatar"
-        class="profile-big-avatar"
-    >
-        👤
-    </div>
-
-    <div
-        id="profileName"
-        class="profile-name"
-    >
-        Usuario
-    </div>
-
-    <div
-        id="profileType"
-        class="profile-type"
-    >
-        Perfil GESBASE
-    </div>
-
-    <div
-        id="profileLocation"
-        class="profile-location"
-    >
-        📍 Sin ubicación
-    </div>
-
-</div>
-
-</section>
-
-
-</main>
-
-
-
-<!-- =========================
-     RIGHTBAR
-========================= -->
-
-<aside class="rightbar">
-
-
-<div class="card right-card">
-
-    <div class="right-title">
-        Personas que podrías conocer
-    </div>
-
-    <div id="suggestions">
-
-        <div class="loading">
-            Cargando...
-        </div>
-
-    </div>
-
-</div>
-
-
-<div class="card right-card">
-
-    <div class="right-title">
-        Red GESBASE
-    </div>
-
-    <p
-        style="
-            color:#64748b;
-            font-size:12px;
-            line-height:1.6;
-        "
-    >
-        Conectá trabajadores, profesionales,
-        empresas y oportunidades laborales
-        dentro del ecosistema GESBASE.
-    </p>
-
-</div>
-
-
-</aside>
-
-</div>
-
-
-
-<!-- =========================
-     MOBILE NAV
-========================= -->
-
-<nav class="mobile-nav">
-
-<button
-    data-view="inicio"
-    class="active"
-    onclick="mostrarVista('inicio')"
->
-
-    <span class="mobile-nav-icon">
-        🏠
-    </span>
-
-    Inicio
-
+×
 </button>
 
+</div><div class="modal-body"><div class="form-group"><label>
+Tipo de publicación
+</label><select id="postType"><option value="normal">
+Publicación
+</option><option value="empleo">
+Oferta laboral
+</option><option value="servicio">
+Servicio
+</option></select></div><div
+    class="form-group"
+    id="jobTitleGroup"
+    style="display:none;"
+><label>
+Título de la oferta
+</label><input
+id="jobTitle"
+type="text"
+placeholder="Ej: Buscamos oficial albañil"
 
-<button
-    data-view="personas"
-    onclick="mostrarVista('personas')"
->
+«»
 
-    <span class="mobile-nav-icon">
-        👤
-    </span>
+</div><div class="form-group"><label>
+Contenido
+</label><textarea
+    id="postText"
+    placeholder="Escribí tu publicación..."
+></textarea></div><button
+class="publish"
+id="publishBtn"
 
-    Personas
+«»
 
+Publicar
 </button>
 
-
-<button
-    onclick="abrirPublicacion()"
->
-
-    <span class="mobile-nav-icon">
-        ➕
-    </span>
-
-    Publicar
-
-</button>
-
-
-<button
-    data-view="empleos"
-    onclick="mostrarVista('empleos')"
->
-
-    <span class="mobile-nav-icon">
-        💼
-    </span>
-
-    Empleos
-
-</button>
-
-
-<button
-    data-view="perfil"
-    onclick="mostrarVista('perfil')"
->
-
-    <span class="mobile-nav-icon">
-        👤
-    </span>
-
-    Perfil
-
-</button>
-
-</nav>
-
-
-
-<!-- =========================
-     MODAL PUBLICAR
-========================= -->
-
-<div
-    id="publicationModal"
-    class="modal-overlay"
->
-
-<div class="modal">
-
-    <div class="modal-header">
-
-        <h2>
-            Crear publicación
-        </h2>
-
-        <button
-            class="close"
-            onclick="cerrarPublicacion()"
-        >
-            ×
-        </button>
-
-    </div>
-
-
-    <div class="modal-body">
-
-        <textarea
-            id="publicationText"
-            placeholder="¿Qué querés compartir?"
-        ></textarea>
-
-
-        <div class="modal-options">
-
-            <button
-                class="option selected"
-                data-type="normal"
-                onclick="seleccionarTipo('normal')"
-            >
-                📝 Publicación
-            </button>
-
-            <button
-                class="option"
-                data-type="empleo"
-                onclick="seleccionarTipo('empleo')"
-            >
-                💼 Oferta laboral
-            </button>
-
-            <button
-                class="option"
-                data-type="servicio"
-                onclick="seleccionarTipo('servicio')"
-            >
-                🔧 Servicio
-            </button>
-
-        </div>
-
-        <p
-            style="
-                margin-top:12px;
-                color:#64748b;
-                font-size:11px;
-            "
-        >
-            Las ofertas laborales serán revisadas
-            por los sistemas de moderación de GESBASE
-            antes de su publicación definitiva.
-        </p>
-
-    </div>
-
-
-    <div class="modal-footer">
-
-        <button
-            class="btn btn-secondary"
-            onclick="cerrarPublicacion()"
-        >
-            Cancelar
-        </button>
-
-        <button
-            id="publishButton"
-            class="btn btn-primary"
-            onclick="publicar()"
-        >
-            Publicar
-        </button>
-
-    </div>
-
-</div>
-
-</div>
-
-
-
-<script type="module">
+</div></div></div><div
+    class="toast"
+    id="toast"
+></div><script type="module">
 
 import {
     auth,
-    db,
-    almacenamiento
-}
-from "./firebase.js";
-
+    db
+} from "./firebase.js";
 
 import {
     onAuthStateChanged
-}
-from "https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js";
-
+} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js";
 
 import {
     collection,
-    addDoc,
-    getDocs,
-    getDoc,
     doc,
+    getDoc,
+    getDocs,
+    addDoc,
+    updateDoc,
+    arrayUnion,
+    arrayRemove,
     query,
     orderBy,
-    limit,
     where,
-    serverTimestamp,
-    updateDoc,
-    arrayUnion
-}
-from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
+    limit,
+    serverTimestamp
+} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
 
-
-/* =========================
-   ESTADO
-========================= */
 
 let usuarioActual = null;
-
 let perfilActual = null;
 
-let tipoPublicacion = "normal";
-
 
 /* =========================
-   ELEMENTOS
+   UTILIDADES
 ========================= */
 
-const feed =
-    document.getElementById("feed");
+function mostrarToast(texto){
 
-const peopleList =
-    document.getElementById("peopleList");
+    const toast =
+        document.getElementById("toast");
 
-const companyList =
-    document.getElementById("companyList");
+    toast.textContent = texto;
+    toast.classList.add("show");
 
-const suggestions =
-    document.getElementById("suggestions");
+    setTimeout(() => {
+        toast.classList.remove("show");
+    },3000);
+}
 
-const jobsList =
-    document.getElementById("jobsList");
+
+function escapeHTML(texto){
+
+    if(texto === undefined || texto === null){
+        return "";
+    }
+
+    return String(texto)
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#039;");
+}
+
+
+function nombreInicial(nombre){
+
+    if(!nombre){
+        return "G";
+    }
+
+    return nombre
+        .trim()
+        .charAt(0)
+        .toUpperCase();
+}
+
+
+function fechaTexto(fecha){
+
+    if(!fecha){
+        return "Ahora";
+    }
+
+    try{
+
+        const date =
+            fecha.toDate
+                ? fecha.toDate()
+                : new Date(fecha);
+
+        return date.toLocaleString(
+            "es-AR",
+            {
+                dateStyle:"short",
+                timeStyle:"short"
+            }
+        );
+
+    }catch{
+
+        return "Ahora";
+
+    }
+
+}
 
 
 /* =========================
-   AUTH
+   AUTENTICACIÓN
 ========================= */
 
 onAuthStateChanged(
@@ -2351,12 +1162,9 @@ onAuthStateChanged(
                 "./login.html";
 
             return;
-
         }
 
-
         usuarioActual = user;
-
 
         await cargarPerfil();
 
@@ -2364,18 +1172,14 @@ onAuthStateChanged(
 
         await cargarPersonas();
 
-        await cargarEmpresas();
-
         await cargarEmpleos();
-
-        await cargarSugerencias();
 
     }
 );
 
 
 /* =========================
-   PERFIL
+   PERFIL ACTUAL
 ========================= */
 
 async function cargarPerfil(){
@@ -2392,7 +1196,6 @@ async function cargarPerfil(){
         const snap =
             await getDoc(ref);
 
-
         if(snap.exists()){
 
             perfilActual =
@@ -2403,84 +1206,44 @@ async function cargarPerfil(){
             perfilActual = {
 
                 nombre:
-                    usuarioActual.displayName ||
-                    "Usuario",
+                    usuarioActual.displayName
+                    || "Usuario",
 
                 email:
-                    usuarioActual.email || "",
+                    usuarioActual.email
+                    || "",
 
                 tipo:
-                    "usuario"
+                    "persona"
 
             };
 
         }
 
-
         const nombre =
-            perfilActual.nombre ||
-            (
-                (perfilActual.nombre || "") +
-                " " +
-                (perfilActual.apellido || "")
-            ).trim() ||
-            "Usuario";
-
+            perfilActual.nombre
+            || perfilActual.nombreCompleto
+            || "Usuario";
 
         document.getElementById(
             "miniName"
         ).textContent = nombre;
 
-
-        document.getElementById(
-            "profileName"
-        ).textContent = nombre;
-
-
-        document.getElementById(
-            "profileType"
-        ).textContent =
-            obtenerTipoPerfil(
-                perfilActual.tipo
-            );
-
-
-        document.getElementById(
-            "profileLocation"
-        ).textContent =
-            "📍 " +
-            (
-                perfilActual.localidad ||
-                "Sin ubicación"
-            );
-
-
-        const inicial =
-            nombre
-                .charAt(0)
-                .toUpperCase();
-
-
         document.getElementById(
             "miniAvatar"
-        ).textContent = inicial;
-
-
-        document.getElementById(
-            "composerAvatar"
-        ).textContent = inicial;
-
+        ).textContent =
+            nombreInicial(nombre);
 
         document.getElementById(
-            "profileAvatar"
-        ).textContent = inicial;
+            "createAvatar"
+        ).textContent =
+            nombreInicial(nombre);
+
+        cargarMiPerfil();
 
     }catch(error){
 
-        console.error(
-            "Error cargando perfil:",
-            error
-        );
+        console.error(error);
 
     }
 
@@ -2488,30 +1251,73 @@ async function cargarPerfil(){
 
 
 /* =========================
-   TIPO PERFIL
+   NAVEGACIÓN
 ========================= */
 
-function obtenerTipoPerfil(tipo){
+function activarVista(nombre){
 
-    switch(
-        String(tipo || "").toLowerCase()
-    ){
+    document
+        .querySelectorAll(".view")
+        .forEach(view => {
 
-        case "empresa":
-            return "🏢 Empresa";
+            view.classList.remove("active");
 
-        case "contratista":
-            return "🏗️ Contratista";
+        });
 
-        case "empleado":
-            return "👷 Empleado";
+    const vista =
+        document.getElementById(
+            "view-" + nombre
+        );
 
-        default:
-            return "👤 Usuario GESBASE";
+    if(vista){
+        vista.classList.add("active");
+    }
 
+    document
+        .querySelectorAll("[data-view]")
+        .forEach(btn => {
+
+            btn.classList.toggle(
+                "active",
+                btn.dataset.view === nombre
+            );
+
+        });
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+    if(nombre === "personas"){
+        cargarPersonas();
+    }
+
+    if(nombre === "empleos"){
+        cargarEmpleos();
     }
 
 }
+
+
+document
+    .querySelectorAll("[data-view]")
+    .forEach(btn => {
+
+        btn.addEventListener(
+            "click",
+            () => activarVista(btn.dataset.view)
+        );
+
+    });
+
+
+document
+    .getElementById("profileMini")
+    .addEventListener(
+        "click",
+        () => activarVista("perfil")
+    );
 
 
 /* =========================
@@ -2520,13 +1326,14 @@ function obtenerTipoPerfil(tipo){
 
 async function cargarFeed(){
 
-    feed.innerHTML =
-        `
-        <div class="loading">
+    const feed =
+        document.getElementById("feed");
+
+    feed.innerHTML = `
+        <div class="empty">
             Cargando publicaciones...
         </div>
-        `;
-
+    `;
 
     try{
 
@@ -2536,6 +1343,11 @@ async function cargarFeed(){
                     db,
                     "publicaciones"
                 ),
+                where(
+                    "estado",
+                    "==",
+                    "publicada"
+                ),
                 orderBy(
                     "fecha",
                     "desc"
@@ -2543,53 +1355,37 @@ async function cargarFeed(){
                 limit(30)
             );
 
-
         const snap =
             await getDocs(q);
 
+        if(snap.empty){
 
-        if(
-            snap.empty
-        ){
-
-            feed.innerHTML =
-                `
-                <div class="card empty">
-
-                    <div class="empty-icon">
-                        📰
+            feed.innerHTML = `
+                <div class="empty">
+                    <div style="font-size:40px;">
+                        🌐
                     </div>
-
-                    <h3>
-                        Todavía no hay publicaciones
-                    </h3>
-
-                    <p>
-                        Sé de los primeros en compartir
-                        algo en Red GESBASE.
-                    </p>
-
+                    <br>
+                    Todavía no hay publicaciones.
+                    <br>
+                    <small>
+                        Sé el primero en publicar.
+                    </small>
                 </div>
-                `;
+            `;
 
             return;
-
         }
 
-
         feed.innerHTML = "";
-
 
         snap.forEach(
             documento => {
 
-                const data =
-                    documento.data();
-
                 feed.appendChild(
-                    crearPublicacion(
+                    crearPost(
                         documento.id,
-                        data
+                        documento.data()
                     )
                 );
 
@@ -2603,26 +1399,15 @@ async function cargarFeed(){
             error
         );
 
-
-        feed.innerHTML =
-            `
-            <div class="card empty">
-
-                <div class="empty-icon">
-                    ⚠️
-                </div>
-
-                <h3>
-                    No pudimos cargar las publicaciones
-                </h3>
-
-                <p>
-                    Revisá las reglas de Firestore
-                    si el problema continúa.
-                </p>
-
+        feed.innerHTML = `
+            <div class="empty">
+                No se pudieron cargar las publicaciones.
+                <br><br>
+                <small>
+                    Revisá las reglas e índices de Firestore.
+                </small>
             </div>
-            `;
+        `;
 
     }
 
@@ -2630,113 +1415,124 @@ async function cargarFeed(){
 
 
 /* =========================
-   CREAR PUBLICACION VISUAL
+   CREAR POST
 ========================= */
 
-function crearPublicacion(
-    id,
-    data
-){
+function crearPost(id,data){
 
     const article =
         document.createElement("article");
 
+    article.className = "post";
 
-    article.className =
-        "card post";
+    const likes =
+        Array.isArray(data.likes)
+            ? data.likes
+            : [];
 
+    const liked =
+        usuarioActual &&
+        likes.includes(usuarioActual.uid);
 
-    const autor =
-        data.autorNombre ||
-        "Usuario GESBASE";
+    const nombre =
+        data.autorNombre
+        || "Usuario GESBASE";
 
+    let contenidoExtra = "";
 
-    const inicial =
-        autor
-            .charAt(0)
-            .toUpperCase();
+    if(data.tipo === "empleo"){
 
+        contenidoExtra = `
+            <div class="employment">
 
-    const tipo =
-        data.tipo ||
-        "normal";
+                <div class="employment-title">
+                    💼 Oferta laboral
+                </div>
 
+                ${
+                    data.tituloEmpleo
+                    ? `<strong>
+                        ${escapeHTML(data.tituloEmpleo)}
+                       </strong>`
+                    : ""
+                }
 
-    let etiqueta =
-        "Publicación";
+            </div>
+        `;
 
-
-    if(tipo === "empleo")
-        etiqueta =
-            "💼 Oferta laboral";
-
-
-    if(tipo === "servicio")
-        etiqueta =
-            "🔧 Servicio";
-
-
-    const fecha =
-        formatearFecha(
-            data.fecha
-        );
-
+    }
 
     article.innerHTML = `
 
         <div class="post-header">
 
-            <div class="post-avatar">
-                ${escapeHTML(inicial)}
+            <div class="avatar">
+                ${nombreInicial(nombre)}
             </div>
 
             <div>
 
                 <div class="post-author">
-                    ${escapeHTML(autor)}
+                    ${escapeHTML(nombre)}
                 </div>
 
                 <div class="post-meta">
-                    ${etiqueta} · ${fecha}
+                    ${escapeHTML(
+                        data.autorTipo || "Usuario"
+                    )}
+                    ·
+                    ${fechaTexto(data.fecha)}
                 </div>
 
             </div>
 
-            <button
-                class="post-menu"
-            >
-                ⋯
-            </button>
+        </div>
+
+        <div class="post-body">
+
+            ${contenidoExtra}
+
+            <div class="post-text"
+                 style="margin-top:${
+                    contenidoExtra ? "10px" : "0"
+                 };">
+                ${escapeHTML(data.texto)}
+            </div>
 
         </div>
 
+        <div class="post-stats">
 
-        <div class="post-content">
-            ${escapeHTML(
-                data.texto || ""
-            )}
+            <span>
+                👍
+                ${likes.length}
+            </span>
+
+            <span>
+                Comentarios
+            </span>
+
         </div>
 
-
-        <div class="post-footer">
+        <div class="post-buttons">
 
             <button
-                class="post-action"
+                class="post-btn ${liked ? "liked" : ""}"
                 data-like="${id}"
             >
-                👍 Me gusta
+                ${liked ? "👍 Me gusta" : "👍 Me gusta"}
             </button>
 
             <button
-                class="post-action"
-                onclick="alert('Los comentarios se habilitarán en la siguiente etapa.')"
+                class="post-btn"
+                data-comment="${id}"
             >
                 💬 Comentar
             </button>
 
             <button
-                class="post-action"
-                onclick="alert('La función compartir se habilitará próximamente.')"
+                class="post-btn"
+                data-share="${id}"
             >
                 ↗ Compartir
             </button>
@@ -2745,201 +1541,35 @@ function crearPublicacion(
 
     `;
 
-
-    const likeButton =
-        article.querySelector(
-            `[data-like="${id}"]`
+    article
+        .querySelector("[data-like]")
+        .addEventListener(
+            "click",
+            () => cambiarLike(id,liked)
         );
 
+    article
+        .querySelector("[data-comment]")
+        .addEventListener(
+            "click",
+            () => mostrarToast(
+                "Los comentarios se habilitarán en la próxima versión."
+            )
+        );
 
-    likeButton.addEventListener(
-        "click",
-        async () => {
-
-            await darMeGusta(
-                id,
-                likeButton
-            );
-
-        }
-    );
-
+    article
+        .querySelector("[data-share]")
+        .addEventListener(
+            "click",
+            () => compartirPost(data)
+        );
 
     return article;
 
 }
 
 
-/* =========================
-   PUBLICAR
-========================= */
-
-window.publicar =
-async function(){
-
-    if(!usuarioActual)
-        return;
-
-
-    const textarea =
-        document.getElementById(
-            "publicationText"
-        );
-
-
-    const texto =
-        textarea.value.trim();
-
-
-    if(!texto){
-
-        alert(
-            "Escribí algo antes de publicar."
-        );
-
-        return;
-
-    }
-
-
-    const button =
-        document.getElementById(
-            "publishButton"
-        );
-
-
-    button.disabled = true;
-
-    button.textContent =
-        "Publicando...";
-
-
-    try{
-
-        const nombre =
-            obtenerNombreActual();
-
-
-        await addDoc(
-            collection(
-                db,
-                "publicaciones"
-            ),
-            {
-
-                autorId:
-                    usuarioActual.uid,
-
-                autorNombre:
-                    nombre,
-
-                autorTipo:
-                    perfilActual?.tipo ||
-                    "usuario",
-
-                texto:
-                    texto,
-
-                tipo:
-                    tipoPublicacion,
-
-                estado:
-                    tipoPublicacion === "empleo"
-                        ? "pendiente_moderacion"
-                        : "publicada",
-
-                fecha:
-                    serverTimestamp(),
-
-                creadoPor:
-                    usuarioActual.uid
-
-            }
-        );
-
-
-        textarea.value = "";
-
-        cerrarPublicacion();
-
-
-        await cargarFeed();
-
-
-        alert(
-            tipoPublicacion === "empleo"
-                ? "Oferta enviada a revisión."
-                : "Publicación creada correctamente."
-        );
-
-
-    }catch(error){
-
-        console.error(
-            error
-        );
-
-
-        alert(
-            "No se pudo publicar. Revisá los permisos de Firestore."
-        );
-
-    }
-
-
-    button.disabled = false;
-
-    button.textContent =
-        "Publicar";
-
-};
-
-
-/* =========================
-   NOMBRE
-========================= */
-
-function obtenerNombreActual(){
-
-    if(!perfilActual)
-        return "Usuario GESBASE";
-
-
-    const nombreCompleto =
-        (
-            perfilActual.nombre ||
-            ""
-        ) +
-        " " +
-        (
-            perfilActual.apellido ||
-            ""
-        );
-
-
-    return (
-        nombreCompleto.trim() ||
-        perfilActual.nombreEmpresa ||
-        perfilActual.razonSocial ||
-        usuarioActual.displayName ||
-        "Usuario GESBASE"
-    );
-
-}
-
-
-/* =========================
-   ME GUSTA
-========================= */
-
-async function darMeGusta(
-    publicacionId,
-    button
-){
-
-    if(!usuarioActual)
-        return;
-
+async function cambiarLike(id,yaTieneLike){
 
     try{
 
@@ -2947,41 +1577,440 @@ async function darMeGusta(
             doc(
                 db,
                 "publicaciones",
-                publicacionId
+                id
             );
-
 
         await updateDoc(
             ref,
             {
                 likes:
-                    arrayUnion(
+                    yaTieneLike
+                    ? arrayRemove(
                         usuarioActual.uid
-                    )
+                      )
+                    : arrayUnion(
+                        usuarioActual.uid
+                      )
             }
         );
 
+        await cargarFeed();
 
-        button.classList.add(
-            "liked"
+    }catch(error){
+
+        console.error(error);
+
+        mostrarToast(
+            "No se pudo actualizar el Me gusta."
         );
 
+    }
 
-        button.textContent =
-            "👍 Te gusta";
+}
 
+
+async function compartirPost(data){
+
+    const texto =
+        data.texto || "";
+
+    try{
+
+        if(
+            navigator.share
+        ){
+
+            await navigator.share({
+                title:"Red GESBASE",
+                text:texto
+            });
+
+        }else{
+
+            await navigator.clipboard.writeText(
+                texto
+            );
+
+            mostrarToast(
+                "Publicación copiada."
+            );
+
+        }
+
+    }catch{
+
+        // Usuario canceló compartir.
+
+    }
+
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+const modal =
+    document.getElementById("createModal");
+
+function abrirModal(tipo="normal"){
+
+    modal.classList.add("show");
+
+    document.getElementById(
+        "postType"
+    ).value = tipo;
+
+    actualizarFormulario();
+
+    document.getElementById(
+        "postText"
+    ).focus();
+
+}
+
+
+function cerrarModal(){
+
+    modal.classList.remove("show");
+
+    document.getElementById(
+        "postText"
+    ).value = "";
+
+    document.getElementById(
+        "jobTitle"
+    ).value = "";
+
+}
+
+
+function actualizarFormulario(){
+
+    const tipo =
+        document.getElementById(
+            "postType"
+        ).value;
+
+    const grupo =
+        document.getElementById(
+            "jobTitleGroup"
+        );
+
+    grupo.style.display =
+        tipo === "empleo"
+            ? "block"
+            : "none";
+
+}
+
+
+document
+    .getElementById("openCreate")
+    .addEventListener(
+        "click",
+        () => abrirModal("normal")
+    );
+
+
+document
+    .getElementById("normalPostBtn")
+    .addEventListener(
+        "click",
+        () => abrirModal("normal")
+    );
+
+
+document
+    .getElementById("jobPostBtn")
+    .addEventListener(
+        "click",
+        () => abrirModal("empleo")
+    );
+
+
+document
+    .getElementById("servicePostBtn")
+    .addEventListener(
+        "click",
+        () => abrirModal("servicio")
+    );
+
+
+document
+    .getElementById("mobileCreate")
+    .addEventListener(
+        "click",
+        () => abrirModal("normal")
+    );
+
+
+document
+    .getElementById("closeModal")
+    .addEventListener(
+        "click",
+        cerrarModal
+    );
+
+
+document
+    .getElementById("postType")
+    .addEventListener(
+        "change",
+        actualizarFormulario
+    );
+
+
+modal.addEventListener(
+    "click",
+    event => {
+
+        if(event.target === modal){
+
+            cerrarModal();
+
+        }
+
+    }
+);
+
+
+/* =========================
+   PUBLICAR
+========================= */
+
+document
+    .getElementById("publishBtn")
+    .addEventListener(
+        "click",
+        publicar
+    );
+
+
+async function publicar(){
+
+    const tipo =
+        document.getElementById(
+            "postType"
+        ).value;
+
+    const texto =
+        document.getElementById(
+            "postText"
+        ).value.trim();
+
+    const titulo =
+        document.getElementById(
+            "jobTitle"
+        ).value.trim();
+
+    if(!texto){
+
+        mostrarToast(
+            "Escribí algo antes de publicar."
+        );
+
+        return;
+    }
+
+    if(
+        tipo === "empleo" &&
+        !titulo
+    ){
+
+        mostrarToast(
+            "Ingresá el título de la oferta laboral."
+        );
+
+        return;
+    }
+
+    const nombre =
+        perfilActual?.nombre
+        || perfilActual?.nombreCompleto
+        || usuarioActual.displayName
+        || "Usuario GESBASE";
+
+    const autorTipo =
+        perfilActual?.tipo
+        || perfilActual?.rol
+        || "persona";
+
+    const datos = {
+
+        autorId:
+            usuarioActual.uid,
+
+        autorNombre:
+            nombre,
+
+        autorTipo:
+            autorTipo,
+
+        texto:
+            texto,
+
+        tipo:
+            tipo,
+
+        estado:
+            tipo === "empleo"
+                ? "pendiente_moderacion"
+                : "publicada",
+
+        fecha:
+            serverTimestamp(),
+
+        creadoPor:
+            usuarioActual.uid,
+
+        likes:
+            []
+
+    };
+
+    if(tipo === "empleo"){
+
+        datos.tituloEmpleo =
+            titulo;
+
+    }
+
+    try{
+
+        document.getElementById(
+            "publishBtn"
+        ).disabled = true;
+
+        await addDoc(
+            collection(
+                db,
+                "publicaciones"
+            ),
+            datos
+        );
+
+        cerrarModal();
+
+        if(tipo === "empleo"){
+
+            mostrarToast(
+                "Oferta enviada para revisión."
+            );
+
+        }else{
+
+            mostrarToast(
+                "Publicación realizada."
+            );
+
+        }
+
+        await cargarFeed();
 
     }catch(error){
 
         console.error(
+            "Error publicando:",
             error
         );
 
-        alert(
-            "No se pudo registrar el Me gusta."
+        mostrarToast(
+            "No se pudo publicar."
         );
 
+    }finally{
+
+        document.getElementById(
+            "publishBtn"
+        ).disabled = false;
+
     }
+
+}
+
+
+/* =========================
+   PERFIL
+========================= */
+
+function cargarMiPerfil(){
+
+    const contenedor =
+        document.getElementById(
+            "profileContainer"
+        );
+
+    const nombre =
+        perfilActual?.nombre
+        || perfilActual?.nombreCompleto
+        || usuarioActual.displayName
+        || "Usuario";
+
+    const tipo =
+        perfilActual?.tipo
+        || perfilActual?.rol
+        || "Usuario";
+
+    const email =
+        perfilActual?.email
+        || usuarioActual.email
+        || "";
+
+    const empresa =
+        perfilActual?.empresa
+        || perfilActual?.nombreEmpresa
+        || "";
+
+    contenedor.innerHTML = `
+
+        <div class="profile-card">
+
+            <div class="cover"></div>
+
+            <div class="profile-info">
+
+                <div class="profile-big">
+                    ${nombreInicial(nombre)}
+                </div>
+
+                <h2>
+                    ${escapeHTML(nombre)}
+                </h2>
+
+                <div class="profile-type">
+                    ${escapeHTML(tipo)}
+                </div>
+
+                ${
+                    empresa
+                    ? `<p>
+                        🏢 ${escapeHTML(empresa)}
+                       </p>`
+                    : ""
+                }
+
+                <p style="color:#6b7280;margin-top:5px;">
+                    ✉️ ${escapeHTML(email)}
+                </p>
+
+                <div class="profile-actions"
+                     style="margin-top:15px;">
+
+                    <button
+                        class="primary-btn"
+                        onclick="alert('La edición del perfil se incorporará próximamente.')"
+                    >
+                        Editar perfil
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    `;
 
 }
 
@@ -2992,146 +2021,16 @@ async function darMeGusta(
 
 async function cargarPersonas(){
 
-    peopleList.innerHTML =
-        `
-        <div class="loading">
-            Cargando personas...
+    const grid =
+        document.getElementById(
+            "peopleGrid"
+        );
+
+    grid.innerHTML = `
+        <div class="empty">
+            Cargando usuarios...
         </div>
-        `;
-
-
-    try{
-
-        const q =
-            query(
-                collection(
-                    db,
-                    "usuarios"
-                ),
-                limit(30)
-            );
-
-
-        const snap =
-            await getDocs(q);
-
-
-        const personas =
-            [];
-
-
-        snap.forEach(
-            d => {
-
-                if(
-                    d.id ===
-                    usuarioActual.uid
-                )
-                    return;
-
-
-                const data =
-                    d.data();
-
-
-                const tipo =
-                    String(
-                        data.tipo || ""
-                    ).toLowerCase();
-
-
-                if(
-                    tipo !== "empresa"
-                ){
-
-                    personas.push({
-                        id:d.id,
-                        ...data
-                    });
-
-                }
-
-            }
-        );
-
-
-        if(
-            personas.length === 0
-        ){
-
-            peopleList.innerHTML =
-                `
-                <div class="empty">
-
-                    <div class="empty-icon">
-                        👤
-                    </div>
-
-                    <h3>
-                        Todavía no encontramos personas
-                    </h3>
-
-                    <p>
-                        A medida que más usuarios
-                        se registren aparecerán acá.
-                    </p>
-
-                </div>
-                `;
-
-            return;
-
-        }
-
-
-        peopleList.innerHTML = "";
-
-
-        personas.forEach(
-            persona => {
-
-                peopleList.appendChild(
-                    crearResultado(
-                        persona,
-                        "persona"
-                    )
-                );
-
-            }
-        );
-
-
-    }catch(error){
-
-        console.error(
-            error
-        );
-
-        peopleList.innerHTML =
-            `
-            <div class="empty">
-                No se pudieron cargar las personas.
-            </div>
-            `;
-
-    }
-
-}
-
-
-/* =========================
-   EMPRESAS
-========================= */
-
-async function cargarEmpresas(){
-
-    companyList.innerHTML =
-        `
-        <div class="loading">
-            Cargando empresas...
-        </div>
-        `;
-
+    `;
 
     try{
 
@@ -3144,37 +2043,22 @@ async function cargarEmpresas(){
                 limit(50)
             );
 
-
         const snap =
             await getDocs(q);
 
-
-        const empresas =
-            [];
-
+        const personas = [];
 
         snap.forEach(
-            d => {
-
-                const data =
-                    d.data();
-
-
-                const tipo =
-                    String(
-                        data.tipo || ""
-                    ).toLowerCase();
-
+            documento => {
 
                 if(
-                    d.id !==
-                    usuarioActual.uid &&
-                    tipo === "empresa"
+                    documento.id !==
+                    usuarioActual.uid
                 ){
 
-                    empresas.push({
-                        id:d.id,
-                        ...data
+                    personas.push({
+                        id:documento.id,
+                        ...documento.data()
                     });
 
                 }
@@ -3182,174 +2066,152 @@ async function cargarEmpresas(){
             }
         );
 
+        if(!personas.length){
 
-        if(
-            empresas.length === 0
-        ){
-
-            companyList.innerHTML =
-                `
+            grid.innerHTML = `
                 <div class="empty">
-
-                    <div class="empty-icon">
-                        🏢
-                    </div>
-
-                    <h3>
-                        Todavía no hay empresas
-                    </h3>
-
-                    <p>
-                        Las empresas registradas en
-                        GESBASE aparecerán acá.
-                    </p>
-
+                    Todavía no hay otros usuarios.
                 </div>
-                `;
+            `;
 
             return;
 
         }
 
+        grid.innerHTML = "";
 
-        companyList.innerHTML = "";
+        personas.forEach(
+            persona => {
 
-
-        empresas.forEach(
-            empresa => {
-
-                companyList.appendChild(
-                    crearResultado(
-                        empresa,
-                        "empresa"
-                    )
+                grid.appendChild(
+                    crearPersona(persona)
                 );
 
             }
         );
 
+        cargarSugerencias(personas.slice(0,4));
 
     }catch(error){
 
-        console.error(
-            error
-        );
+        console.error(error);
+
+        grid.innerHTML = `
+            <div class="empty">
+                No se pudieron cargar los usuarios.
+            </div>
+        `;
 
     }
 
 }
 
 
-/* =========================
-   RESULTADO
-========================= */
-
-function crearResultado(
-    persona,
-    tipo
-){
-
-    const row =
-        document.createElement(
-            "div"
-        );
-
-
-    row.className =
-        "search-result";
-
+function crearPersona(persona){
 
     const nombre =
-        persona.nombre ||
-        persona.nombreEmpresa ||
-        persona.razonSocial ||
-        "Perfil GESBASE";
+        persona.nombre
+        || persona.nombreCompleto
+        || persona.nombreEmpresa
+        || "Usuario";
 
+    const div =
+        document.createElement("div");
 
-    const inicial =
-        nombre
-            .charAt(0)
-            .toUpperCase();
+    div.className =
+        "person-card";
 
+    div.innerHTML = `
 
-    const tipoTexto =
-        tipo === "empresa"
-            ? "🏢 Empresa"
-            : obtenerTipoPerfil(
-                persona.tipo
-            );
+        <div class="person-top">
 
-
-    row.innerHTML = `
-
-        <div class="result-avatar">
-            ${escapeHTML(inicial)}
-        </div>
-
-        <div class="result-info">
-
-            <div class="result-name">
-                ${escapeHTML(nombre)}
+            <div class="avatar">
+                ${nombreInicial(nombre)}
             </div>
 
-            <div class="result-type">
-                ${escapeHTML(tipoTexto)}
-                ${
-                    persona.localidad
-                        ? " · " +
-                          escapeHTML(
-                              persona.localidad
-                          )
-                        : ""
-                }
+            <div>
+
+                <div class="person-name">
+                    ${escapeHTML(nombre)}
+                </div>
+
+                <div class="person-type">
+                    ${escapeHTML(
+                        persona.tipo
+                        || persona.rubro
+                        || "Usuario"
+                    )}
+                </div>
+
             </div>
 
         </div>
 
         <button
-            class="small-btn"
+            class="primary-btn"
             data-connect="${persona.id}"
         >
-            Conectar
+            🤝 Conectar
         </button>
 
     `;
 
-
-    row
-        .querySelector(
-            `[data-connect="${persona.id}"]`
-        )
+    div
+        .querySelector("[data-connect]")
         .addEventListener(
             "click",
             () => enviarConexion(
-                persona.id
+                persona.id,
+                nombre
             )
         );
 
-
-    return row;
+    return div;
 
 }
 
 
 /* =========================
-   CONEXION
+   CONEXIONES
 ========================= */
 
 async function enviarConexion(
-    receptorId
+    destinatarioId,
+    nombre
 ){
 
-    if(
-        !usuarioActual ||
-        receptorId ===
-        usuarioActual.uid
-    )
-        return;
-
-
     try{
+
+        const q =
+            query(
+                collection(
+                    db,
+                    "solicitudesConexion"
+                ),
+                where(
+                    "solicitanteId",
+                    "==",
+                    usuarioActual.uid
+                ),
+                where(
+                    "destinatarioId",
+                    "==",
+                    destinatarioId
+                )
+            );
+
+        const snap =
+            await getDocs(q);
+
+        if(!snap.empty){
+
+            mostrarToast(
+                "Ya enviaste una solicitud."
+            );
+
+            return;
+
+        }
 
         await addDoc(
             collection(
@@ -3358,11 +2220,15 @@ async function enviarConexion(
             ),
             {
 
-                emisorId:
+                solicitanteId:
                     usuarioActual.uid,
 
-                receptorId:
-                    receptorId,
+                solicitanteNombre:
+                    perfilActual?.nombre
+                    || "Usuario GESBASE",
+
+                destinatarioId:
+                    destinatarioId,
 
                 estado:
                     "pendiente",
@@ -3373,20 +2239,15 @@ async function enviarConexion(
             }
         );
 
-
-        alert(
-            "Solicitud de conexión enviada."
+        mostrarToast(
+            "Solicitud enviada a " + nombre
         );
-
 
     }catch(error){
 
-        console.error(
-            error
-        );
+        console.error(error);
 
-
-        alert(
+        mostrarToast(
             "No se pudo enviar la solicitud."
         );
 
@@ -3399,160 +2260,58 @@ async function enviarConexion(
    SUGERENCIAS
 ========================= */
 
-async function cargarSugerencias(){
+function cargarSugerencias(personas){
 
-    suggestions.innerHTML = "";
+    const contenedor =
+        document.getElementById(
+            "suggestions"
+        );
 
+    contenedor.innerHTML = "";
 
-    try{
+    personas.forEach(
+        persona => {
 
-        const q =
-            query(
-                collection(
-                    db,
-                    "usuarios"
-                ),
-                limit(8)
-            );
+            const nombre =
+                persona.nombre
+                || persona.nombreCompleto
+                || persona.nombreEmpresa
+                || "Usuario";
 
+            const div =
+                document.createElement("div");
 
-        const snap =
-            await getDocs(q);
+            div.className =
+                "suggestion";
 
+            div.innerHTML = `
 
-        let contador = 0;
+                <div class="avatar">
+                    ${nombreInicial(nombre)}
+                </div>
 
+                <div class="suggestion-info">
 
-        snap.forEach(
-            d => {
+                    <div class="suggestion-name">
+                        ${escapeHTML(nombre)}
+                    </div>
 
-                if(
-                    d.id ===
-                    usuarioActual.uid
-                )
-                    return;
-
-
-                if(
-                    contador >= 5
-                )
-                    return;
-
-
-                const data =
-                    d.data();
-
-
-                const nombre =
-                    data.nombre ||
-                    data.nombreEmpresa ||
-                    data.razonSocial ||
-                    "Usuario";
-
-
-                const div =
-                    document.createElement(
-                        "div"
-                    );
-
-
-                div.className =
-                    "suggestion";
-
-
-                div.innerHTML = `
-
-                    <div class="suggestion-avatar">
+                    <div class="suggestion-type">
                         ${escapeHTML(
-                            nombre.charAt(0)
+                            persona.tipo
+                            || persona.rubro
+                            || "Usuario"
                         )}
                     </div>
 
-                    <div class="suggestion-info">
+                </div>
 
-                        <div class="suggestion-name">
-                            ${escapeHTML(nombre)}
-                        </div>
-
-                        <div class="suggestion-type">
-                            ${escapeHTML(
-                                obtenerTipoPerfil(
-                                    data.tipo
-                                )
-                            )}
-                        </div>
-
-                    </div>
-
-                    <button
-                        class="small-btn"
-                    >
-                        Conectar
-                    </button>
-
-                `;
-
-
-                div
-                    .querySelector("button")
-                    .addEventListener(
-                        "click",
-                        () =>
-                            enviarConexion(
-                                d.id
-                            )
-                    );
-
-
-                suggestions.appendChild(
-                    div
-                );
-
-
-                contador++;
-
-            }
-        );
-
-
-        if(
-            contador === 0
-        ){
-
-            suggestions.innerHTML =
-                `
-                <p
-                    style="
-                        color:#64748b;
-                        font-size:12px;
-                    "
-                >
-                    Todavía no hay sugerencias.
-                </p>
-                `;
-
-        }
-
-
-    }catch(error){
-
-        console.error(
-            error
-        );
-
-        suggestions.innerHTML =
-            `
-            <p
-                style="
-                    color:#64748b;
-                    font-size:12px;
-                "
-            >
-                No se pudieron cargar las sugerencias.
-            </p>
             `;
 
-    }
+            contenedor.appendChild(div);
+
+        }
+    );
 
 }
 
@@ -3563,13 +2322,16 @@ async function cargarSugerencias(){
 
 async function cargarEmpleos(){
 
-    jobsList.innerHTML =
-        `
-        <div class="loading">
+    const lista =
+        document.getElementById(
+            "jobsList"
+        );
+
+    lista.innerHTML = `
+        <div class="empty">
             Cargando oportunidades...
         </div>
-        `;
-
+    `;
 
     try{
 
@@ -3589,132 +2351,145 @@ async function cargarEmpleos(){
                     "==",
                     "publicada"
                 ),
+                orderBy(
+                    "fecha",
+                    "desc"
+                ),
                 limit(30)
             );
-
 
         const snap =
             await getDocs(q);
 
+        if(snap.empty){
 
-        if(
-            snap.empty
-        ){
+            lista.innerHTML = `
+                <div class="empty">
 
-            jobsList.innerHTML =
-                `
-                <div class="card empty">
-
-                    <div class="empty-icon">
+                    <div style="font-size:40px;">
                         💼
                     </div>
 
-                    <h3>
-                        Todavía no hay ofertas
-                    </h3>
+                    <br>
 
-                    <p>
-                        Las ofertas laborales verificadas
-                        aparecerán acá.
-                    </p>
+                    No hay oportunidades laborales
+                    publicadas todavía.
 
                 </div>
-                `;
+            `;
 
             return;
 
         }
 
-
-        jobsList.innerHTML = "";
-
+        lista.innerHTML = "";
 
         snap.forEach(
-            d => {
+            documento => {
 
                 const data =
-                    d.data();
+                    documento.data();
 
+                const nombre =
+                    data.autorNombre
+                    || "Empresa";
 
                 const card =
-                    document.createElement(
-                        "div"
-                    );
-
+                    document.createElement("div");
 
                 card.className =
-                    "card job-card";
-
+                    "job-card";
 
                 card.innerHTML = `
 
-                    <div class="job-title">
-                        Oferta laboral
+                    <div class="job-tag">
+                        💼 OFERTA LABORAL
                     </div>
 
-                    <div class="job-company">
-                        🏢 ${escapeHTML(
-                            data.autorNombre ||
-                            "Empresa GESBASE"
+                    <div class="job-title">
+                        ${escapeHTML(
+                            data.tituloEmpleo
+                            || "Oportunidad laboral"
                         )}
                     </div>
 
-                    <div class="job-location">
-                        📍 Oportunidad laboral
+                    <div class="job-company">
+                        🏢 ${escapeHTML(nombre)}
                     </div>
 
                     <div class="job-description">
                         ${escapeHTML(
-                            data.texto || ""
+                            data.texto
                         )}
                     </div>
 
-                    <button
-                        class="btn btn-primary"
-                        style="margin-top:14px;"
-                        onclick="alert('La postulación y el chat con la empresa serán incorporados en la siguiente etapa.')"
-                    >
-                        Me interesa
-                    </button>
+                    <div class="job-actions">
+
+                        <button
+                            class="primary-btn"
+                            data-apply="${documento.id}"
+                        >
+                            Me interesa
+                        </button>
+
+                        <button
+                            class="secondary-btn"
+                            data-job-share="${documento.id}"
+                        >
+                            Compartir
+                        </button>
+
+                    </div>
 
                 `;
 
+                card
+                    .querySelector(
+                        "[data-apply]"
+                    )
+                    .addEventListener(
+                        "click",
+                        () => mostrarToast(
+                            "Tu interés fue registrado. La postulación completa se incorporará próximamente."
+                        )
+                    );
 
-                jobsList.appendChild(
-                    card
-                );
+                card
+                    .querySelector(
+                        "[data-job-share]"
+                    )
+                    .addEventListener(
+                        "click",
+                        () => compartirPost(data)
+                    );
+
+                lista.appendChild(card);
 
             }
         );
 
-
     }catch(error){
 
         console.error(
-            "Error cargando empleos:",
+            "Error empleos:",
             error
         );
 
+        lista.innerHTML = `
+            <div class="empty">
 
-        jobsList.innerHTML =
-            `
-            <div class="card empty">
+                No se pudieron cargar
+                las oportunidades.
 
-                <div class="empty-icon">
-                    ⚠️
-                </div>
+                <br><br>
 
-                <h3>
-                    No se pudieron cargar los empleos
-                </h3>
-
-                <p>
-                    Es posible que Firestore requiera
+                <small>
+                    Es posible que Firestore solicite
                     un índice para esta consulta.
-                </p>
+                </small>
 
             </div>
-            `;
+        `;
 
     }
 
@@ -3722,128 +2497,82 @@ async function cargarEmpleos(){
 
 
 /* =========================
-   BUSCADOR
+   BÚSQUEDA
 ========================= */
 
 document
-    .getElementById(
-        "searchInput"
-    )
+    .getElementById("searchInput")
     .addEventListener(
-        "keydown",
-        event => {
-
-            if(
-                event.key === "Enter"
-            ){
-
-                realizarBusqueda(
-                    event.target.value
-                );
-
-            }
-
-        }
+        "input",
+        buscarUsuarios
     );
 
 
-async function realizarBusqueda(
-    texto
-){
+async function buscarUsuarios(event){
 
-    texto =
-        texto
+    const texto =
+        event.target.value
             .trim()
             .toLowerCase();
 
-
-    if(!texto){
-
-        mostrarVista(
-            "inicio"
-        );
+    if(texto.length < 2){
 
         return;
 
     }
 
-
-    mostrarVista(
-        "personas"
-    );
-
-
-    peopleList.innerHTML =
-        `
-        <div class="loading">
-            Buscando "${escapeHTML(texto)}"...
-        </div>
-        `;
-
-
     try{
 
         const snap =
             await getDocs(
-                collection(
-                    db,
-                    "usuarios"
+                query(
+                    collection(
+                        db,
+                        "usuarios"
+                    ),
+                    limit(100)
                 )
             );
 
-
-        const resultados =
-            [];
-
+        const encontrados = [];
 
         snap.forEach(
-            d => {
+            documento => {
 
                 if(
-                    d.id ===
+                    documento.id ===
                     usuarioActual.uid
-                )
+                ){
+
                     return;
 
+                }
 
                 const data =
-                    d.data();
-
+                    documento.data();
 
                 const nombre =
                     (
-                        data.nombre ||
-                        data.nombreEmpresa ||
-                        data.razonSocial ||
-                        ""
-                    )
-                    .toLowerCase();
-
-
-                const localidad =
-                    (
-                        data.localidad ||
-                        ""
-                    )
-                    .toLowerCase();
-
+                        data.nombre
+                        || data.nombreCompleto
+                        || data.nombreEmpresa
+                        || ""
+                    ).toLowerCase();
 
                 const rubro =
                     (
-                        data.rubro ||
-                        ""
-                    )
-                    .toLowerCase();
-
+                        data.rubro
+                        || ""
+                    ).toLowerCase();
 
                 if(
-                    nombre.includes(texto) ||
-                    localidad.includes(texto) ||
+                    nombre.includes(texto)
+                    ||
                     rubro.includes(texto)
                 ){
 
-                    resultados.push({
-                        id:d.id,
+                    encontrados.push({
+                        id:documento.id,
                         ...data
                     });
 
@@ -3852,76 +2581,40 @@ async function realizarBusqueda(
             }
         );
 
+        activarVista("personas");
 
-        if(
-            resultados.length === 0
-        ){
+        const grid =
+            document.getElementById(
+                "peopleGrid"
+            );
 
-            peopleList.innerHTML =
-                `
+        grid.innerHTML = "";
+
+        if(!encontrados.length){
+
+            grid.innerHTML = `
                 <div class="empty">
-
-                    <div class="empty-icon">
-                        🔎
-                    </div>
-
-                    <h3>
-                        No encontramos resultados
-                    </h3>
-
-                    <p>
-                        Probá con otro nombre,
-                        localidad o rubro.
-                    </p>
-
+                    No encontramos resultados.
                 </div>
-                `;
+            `;
 
             return;
 
         }
 
+        encontrados.forEach(
+            persona => {
 
-        peopleList.innerHTML = "";
-
-
-        resultados.forEach(
-            resultado => {
-
-                const tipo =
-                    String(
-                        resultado.tipo ||
-                        ""
-                    ).toLowerCase() ===
-                    "empresa"
-                        ? "empresa"
-                        : "persona";
-
-
-                peopleList.appendChild(
-                    crearResultado(
-                        resultado,
-                        tipo
-                    )
+                grid.appendChild(
+                    crearPersona(persona)
                 );
 
             }
         );
-
 
     }catch(error){
 
-        console.error(
-            error
-        );
-
-
-        peopleList.innerHTML =
-            `
-            <div class="empty">
-                Error realizando la búsqueda.
-            </div>
-            `;
+        console.error(error);
 
     }
 
@@ -3929,259 +2622,27 @@ async function realizarBusqueda(
 
 
 /* =========================
-   VISTAS
-========================= */
-
-window.mostrarVista =
-function(vista){
-
-    document
-        .querySelectorAll(
-            ".view"
-        )
-        .forEach(
-            element => {
-
-                element.classList.remove(
-                    "active"
-                );
-
-            }
-        );
-
-
-    const target =
-        document.getElementById(
-            "view-" + vista
-        );
-
-
-    if(target){
-
-        target.classList.add(
-            "active"
-        );
-
-    }
-
-
-    document
-        .querySelectorAll(
-            ".menu-item"
-        )
-        .forEach(
-            element => {
-
-                element.classList.toggle(
-                    "active",
-                    element.dataset.view ===
-                    vista
-                );
-
-            }
-        );
-
-
-    document
-        .querySelectorAll(
-            ".mobile-nav button"
-        )
-        .forEach(
-            element => {
-
-                element.classList.toggle(
-                    "active",
-                    element.dataset.view ===
-                    vista
-                );
-
-            }
-        );
-
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-};
-
-
-/* =========================
-   MODAL
-========================= */
-
-window.abrirPublicacion =
-function(tipo="normal"){
-
-    tipoPublicacion =
-        tipo || "normal";
-
-
-    document
-        .getElementById(
-            "publicationModal"
-        )
-        .classList.add(
-            "active"
-        );
-
-
-    seleccionarTipo(
-        tipoPublicacion
-    );
-
-
-    setTimeout(
-        () => {
-
-            document
-                .getElementById(
-                    "publicationText"
-                )
-                .focus();
-
-        },
-        100
-    );
-
-};
-
-
-window.cerrarPublicacion =
-function(){
-
-    document
-        .getElementById(
-            "publicationModal"
-        )
-        .classList.remove(
-            "active"
-        );
-
-};
-
-
-window.seleccionarTipo =
-function(tipo){
-
-    tipoPublicacion =
-        tipo;
-
-
-    document
-        .querySelectorAll(
-            ".option"
-        )
-        .forEach(
-            button => {
-
-                button.classList.toggle(
-                    "selected",
-                    button.dataset.type ===
-                    tipo
-                );
-
-            }
-        );
-
-};
-
-
-/* =========================
-   FECHA
-========================= */
-
-function formatearFecha(
-    timestamp
-){
-
-    if(
-        !timestamp ||
-        !timestamp.toDate
-    )
-        return "Ahora";
-
-
-    const fecha =
-        timestamp.toDate();
-
-
-    return fecha.toLocaleDateString(
-        "es-AR",
-        {
-            day:"2-digit",
-            month:"2-digit",
-            year:"numeric"
-        }
-    );
-
-}
-
-
-/* =========================
-   SEGURIDAD HTML
-========================= */
-
-function escapeHTML(
-    valor
-){
-
-    return String(
-        valor ?? ""
-    )
-    .replace(
-        /&/g,
-        "&amp;"
-    )
-    .replace(
-        /</g,
-        "&lt;"
-    )
-    .replace(
-        />/g,
-        "&gt;"
-    )
-    .replace(
-        /"/g,
-        "&quot;"
-    )
-    .replace(
-        /'/g,
-        "&#039;"
-    );
-
-}
-
-
-/* =========================
-   CERRAR MODAL AL TOCAR FUERA
+   NOTIFICACIONES
 ========================= */
 
 document
-    .getElementById(
-        "publicationModal"
-    )
+    .getElementById("notificationsBtn")
     .addEventListener(
         "click",
-        event => {
-
-            if(
-                event.target.id ===
-                "publicationModal"
-            ){
-
-                cerrarPublicacion();
-
-            }
-
-        }
+        () => mostrarToast(
+            "Las notificaciones estarán disponibles próximamente."
+        )
     );
 
 
-</script>
+document
+    .getElementById("messagesBtn")
+    .addEventListener(
+        "click",
+        () => mostrarToast(
+            "La mensajería privada estará disponible próximamente."
+        )
+    );
 
 
-</body>
-
-</html>
+</script></body></html>
