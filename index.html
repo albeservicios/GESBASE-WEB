@@ -1,122 +1,73 @@
-<!DOCTYPE html>
-<html lang="es-AR">
+<!DOCTYPE html><html lang="es-AR"><head><meta charset="UTF-8"><meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
 
-<head>
-
-<meta charset="UTF-8">
-
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
->
+«»
 
 <meta
-    name="theme-color"
-    content="#111827"
->
+name="theme-color"
+content="#111827"
+
+«»
 
 <meta
-    name="description"
-    content="GESBASE: gestión empresarial para empresas, contratistas y empleados. Presupuestos, clientes, trabajos, empleados, fichaje GPS, gastos, cobros, facturación, inventario y más. Además, conectate a la Red GESBASE."
->
+name="description"
+content="GESBASE - Gestión empresarial para empresas, contratistas, comercios y trabajadores. Presupuestos, clientes, trabajos, empleados, fichaje GPS, gastos, cobros y rentabilidad."
+
+«»
 
 <meta
-    name="keywords"
-    content="GESBASE, gestión empresarial, contratistas, empresas, empleados, presupuestos, trabajos, fichaje GPS, gestión de empleados, red laboral"
->
+name="keywords"
+content="GESBASE, gestión empresarial, presupuestos, contratistas, empleados, fichaje GPS, trabajos, clientes, gastos, cobros, rentabilidad, Red GESBASE"
+
+«»
 
 <meta
-    name="author"
-    content="GESBASE"
->
+name="author"
+content="GESBASE"
+
+«»
 
 <meta
-    name="robots"
-    content="index, follow"
->
+name="robots"
+content="index, follow"
 
-<meta
-    name="google-site-verification"
-    content="REEMPLAZAR_CON_TU_CODIGO_DE_GOOGLE"
->
+«»
 
 <link
     rel="canonical"
     href="https://albeservicios.github.io/GESBASE-WEB/"
->
+><meta
+property="og:title"
+content="GESBASE - Gestión empresarial"
 
-<!-- Open Graph -->
-
-<meta
-    property="og:title"
-    content="GESBASE | Gestión empresarial + Red GESBASE"
->
+«»
 
 <meta
-    property="og:description"
-    content="Gestioná tu empresa, organizá tus trabajos y conectate con personas y empresas a través de la Red GESBASE."
->
+property="og:description"
+content="Gestioná tu empresa de forma simple desde cualquier dispositivo."
+
+«»
 
 <meta
-    property="og:type"
-    content="website"
->
+property="og:type"
+content="website"
+
+«»
 
 <meta
-    property="og:url"
-    content="https://albeservicios.github.io/GESBASE-WEB/"
->
+property="og:url"
+content="https://albeservicios.github.io/GESBASE-WEB/"
+
+«»
 
 <meta
-    property="og:image"
-    content="https://albeservicios.github.io/GESBASE-WEB/logo-gesbase.png"
->
+property="og:image"
+content="https://albeservicios.github.io/GESBASE-WEB/logo.png"
 
-<!-- Twitter -->
+«»
 
-<meta
-    name="twitter:card"
-    content="summary_large_image"
->
-
-<meta
-    name="twitter:title"
-    content="GESBASE | Gestión empresarial + Red GESBASE"
->
-
-<meta
-    name="twitter:description"
-    content="La plataforma para gestionar empresas y conectar personas, trabajadores y empresas."
->
-
-<meta
-    name="twitter:image"
-    content="https://albeservicios.github.io/GESBASE-WEB/logo-gesbase.png"
->
-
-<title>GESBASE | Gestión empresarial + Red GESBASE</title>
-
-<!-- Datos estructurados -->
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "GESBASE",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    "description": "Plataforma de gestión empresarial con presupuestos, clientes, trabajos, empleados, fichaje GPS, gastos, cobros, facturación, inventario y Red GESBASE.",
-    "url": "https://albeservicios.github.io/GESBASE-WEB/",
-    "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "ARS"
-    }
-}
-</script>
-
-
-<style>
+<title>GESBASE | Gestión empresarial</title><style>
 
 *{
     box-sizing:border-box;
@@ -129,11 +80,8 @@ html{
 }
 
 body{
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-    background:#f3f6fb;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f7fb;
     color:#111827;
     line-height:1.6;
 }
@@ -143,15 +91,12 @@ a{
     color:inherit;
 }
 
-button,
-a{
-    -webkit-tap-highlight-color:transparent;
+.container{
+    width:min(1150px,92%);
+    margin:auto;
 }
 
-
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header{
     position:sticky;
@@ -159,14 +104,11 @@ header{
     z-index:1000;
     background:#111827;
     color:white;
-    border-bottom:1px solid rgba(255,255,255,.08);
+    box-shadow:0 4px 18px rgba(0,0,0,.15);
 }
 
-.header-container{
-    max-width:1200px;
-    margin:auto;
-    min-height:72px;
-    padding:0 20px;
+.nav{
+    min-height:70px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -179,19 +121,17 @@ header{
     gap:10px;
     font-size:23px;
     font-weight:800;
-    letter-spacing:.5px;
 }
 
-.logo-icon{
-    width:38px;
-    height:38px;
-    border-radius:10px;
-    background:linear-gradient(135deg,#2563eb,#38bdf8);
+.logo-mark{
+    width:40px;
+    height:40px;
+    border-radius:12px;
+    background:#2563eb;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:20px;
-    font-weight:bold;
+    font-weight:900;
 }
 
 nav{
@@ -201,109 +141,74 @@ nav{
 }
 
 nav a{
-    color:#dbeafe;
+    color:#d1d5db;
     font-size:14px;
     font-weight:600;
-    transition:.2s;
 }
 
 nav a:hover{
     color:white;
 }
 
-.header-login{
-    padding:11px 18px;
-    border-radius:10px;
+.nav-button{
     background:#2563eb;
     color:white!important;
+    padding:10px 17px;
+    border-radius:10px;
 }
 
-.menu-button{
+.menu{
     display:none;
-    border:0;
-    background:none;
-    color:white;
-    font-size:27px;
-    cursor:pointer;
 }
 
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
-    position:relative;
-    overflow:hidden;
     background:
-        radial-gradient(circle at 85% 20%,rgba(37,99,235,.35),transparent 30%),
-        linear-gradient(135deg,#0f172a,#111827 55%,#172554);
+        radial-gradient(circle at top right,#2563eb55,transparent 35%),
+        linear-gradient(135deg,#111827,#172554);
     color:white;
+    padding:95px 0 90px;
 }
 
-.hero-container{
-    max-width:1200px;
-    margin:auto;
-    padding:90px 20px 100px;
+.hero-grid{
     display:grid;
-    grid-template-columns:1.1fr .9fr;
-    align-items:center;
+    grid-template-columns:1.15fr .85fr;
     gap:60px;
-}
-
-.hero-badge{
-    display:inline-flex;
     align-items:center;
-    gap:8px;
-    padding:8px 13px;
-    border:1px solid rgba(255,255,255,.15);
-    border-radius:999px;
-    background:rgba(255,255,255,.07);
-    color:#bfdbfe;
-    font-size:13px;
-    font-weight:bold;
-    margin-bottom:22px;
 }
 
 .hero h1{
-    font-size:clamp(40px,6vw,66px);
+    font-size:clamp(42px,6vw,68px);
     line-height:1.05;
-    margin-bottom:22px;
-    letter-spacing:-2px;
+    margin-bottom:25px;
 }
 
 .hero h1 span{
     color:#60a5fa;
 }
 
-.hero-text{
-    max-width:650px;
-    color:#cbd5e1;
+.hero p{
     font-size:19px;
+    color:#dbeafe;
+    max-width:680px;
     margin-bottom:32px;
 }
 
-.hero-buttons{
+.buttons{
     display:flex;
     flex-wrap:wrap;
-    gap:13px;
+    gap:14px;
 }
 
 .btn{
     display:inline-flex;
-    justify-content:center;
     align-items:center;
-    gap:8px;
-    min-height:48px;
-    padding:13px 21px;
-    border-radius:11px;
+    justify-content:center;
+    padding:14px 22px;
+    border-radius:12px;
     font-weight:700;
-    font-size:15px;
     transition:.2s;
-}
-
-.btn:hover{
-    transform:translateY(-2px);
 }
 
 .btn-primary{
@@ -311,662 +216,331 @@ nav a:hover{
     color:white;
 }
 
-.btn-secondary{
+.btn-primary:hover{
+    transform:translateY(-2px);
+    background:#1d4ed8;
+}
+
+.btn-light{
     background:white;
     color:#111827;
 }
 
-.btn-outline{
-    border:1px solid rgba(255,255,255,.25);
-    color:white;
-    background:rgba(255,255,255,.05);
+.btn-light:hover{
+    transform:translateY(-2px);
 }
 
 .hero-card{
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.12);
+    background:#ffffff12;
+    border:1px solid #ffffff20;
+    backdrop-filter:blur(12px);
+    padding:28px;
     border-radius:22px;
-    padding:25px;
-    backdrop-filter:blur(15px);
-    box-shadow:0 25px 70px rgba(0,0,0,.25);
 }
 
-.hero-card-title{
-    font-size:18px;
-    font-weight:bold;
+.hero-card h3{
+    font-size:22px;
     margin-bottom:18px;
 }
 
-.dashboard-preview{
-    display:grid;
-    grid-template-columns:1fr 1fr;
+.hero-item{
+    display:flex;
     gap:12px;
+    margin:15px 0;
+    color:#dbeafe;
 }
 
-.preview-item{
-    padding:16px;
-    border-radius:14px;
-    background:rgba(255,255,255,.08);
+.hero-icon{
+    font-size:22px;
 }
 
-.preview-icon{
-    font-size:23px;
-    margin-bottom:5px;
+/* SECTIONS */
+
+section{
+    padding:80px 0;
 }
 
-.preview-number{
-    font-size:21px;
-    font-weight:bold;
-}
-
-.preview-label{
-    font-size:12px;
-    color:#cbd5e1;
-}
-
-
-/* =========================
-   ACCESS
-========================= */
-
-.section{
-    max-width:1200px;
-    margin:auto;
-    padding:80px 20px;
-}
-
-.section-header{
+.section-title{
     text-align:center;
     max-width:720px;
     margin:0 auto 45px;
 }
 
-.section-header h2{
-    font-size:36px;
-    line-height:1.15;
+.section-title h2{
+    font-size:38px;
     margin-bottom:12px;
 }
 
-.section-header p{
+.section-title p{
     color:#64748b;
-    font-size:17px;
 }
 
-.access-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
+/* FEATURES */
 
-.access-card{
-    background:white;
-    border:1px solid #e2e8f0;
-    border-radius:20px;
-    padding:30px;
-    box-shadow:0 10px 30px rgba(15,23,42,.06);
-    transition:.25s;
-}
-
-.access-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 18px 40px rgba(15,23,42,.10);
-}
-
-.access-icon{
-    width:58px;
-    height:58px;
-    border-radius:15px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:29px;
-    background:#eff6ff;
-    margin-bottom:18px;
-}
-
-.access-card h3{
-    font-size:21px;
-    margin-bottom:8px;
-}
-
-.access-card p{
-    color:#64748b;
-    font-size:14px;
-    margin-bottom:20px;
-}
-
-.card-link{
-    display:inline-flex;
-    align-items:center;
-    gap:7px;
-    color:#2563eb;
-    font-weight:bold;
-}
-
-
-/* =========================
-   RED
-========================= */
-
-.network-section{
-    background:#eaf2ff;
-    border-top:1px solid #dbeafe;
-    border-bottom:1px solid #dbeafe;
-}
-
-.network-container{
-    max-width:1200px;
-    margin:auto;
-    padding:85px 20px;
-}
-
-.network-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:45px;
-    align-items:center;
-}
-
-.network-label{
-    color:#2563eb;
-    font-size:13px;
-    font-weight:800;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    margin-bottom:12px;
-}
-
-.network-content h2{
-    font-size:40px;
-    line-height:1.1;
-    margin-bottom:17px;
-}
-
-.network-content h2 span{
-    color:#2563eb;
-}
-
-.network-content p{
-    color:#475569;
-    font-size:17px;
-    margin-bottom:25px;
-}
-
-.network-list{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-    margin-bottom:28px;
-}
-
-.network-list div{
-    background:white;
-    border:1px solid #dbeafe;
-    border-radius:12px;
-    padding:12px;
-    font-weight:600;
-    font-size:14px;
-}
-
-.network-card{
-    background:#111827;
-    color:white;
-    padding:30px;
-    border-radius:24px;
-    box-shadow:0 25px 55px rgba(15,23,42,.18);
-}
-
-.network-card-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:25px;
-}
-
-.network-card-title{
-    font-size:20px;
-    font-weight:bold;
-}
-
-.online{
-    display:flex;
-    align-items:center;
-    gap:6px;
-    font-size:12px;
-    color:#86efac;
-}
-
-.online-dot{
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:#22c55e;
-}
-
-.network-post{
-    background:#1e293b;
-    border-radius:15px;
-    padding:17px;
-    margin-bottom:12px;
-}
-
-.network-post-user{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:10px;
-}
-
-.avatar{
-    width:38px;
-    height:38px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#2563eb;
-}
-
-.network-post-name{
-    font-size:14px;
-    font-weight:bold;
-}
-
-.network-post-type{
-    font-size:11px;
-    color:#94a3b8;
-}
-
-.network-post-text{
-    color:#cbd5e1;
-    font-size:13px;
-}
-
-
-/* =========================
-   FEATURES
-========================= */
-
-.features-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:16px;
-}
-
-.feature{
-    background:white;
-    border:1px solid #e2e8f0;
-    border-radius:17px;
-    padding:22px;
-}
-
-.feature-icon{
-    font-size:25px;
-    margin-bottom:12px;
-}
-
-.feature h3{
-    font-size:16px;
-    margin-bottom:6px;
-}
-
-.feature p{
-    color:#64748b;
-    font-size:13px;
-}
-
-
-/* =========================
-   HOW IT WORKS
-========================= */
-
-.steps{
+.features{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:18px;
 }
 
-.step{
-    position:relative;
+.card{
     background:white;
-    border:1px solid #e2e8f0;
+    padding:24px;
     border-radius:18px;
-    padding:25px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 8px 25px rgba(15,23,42,.05);
 }
 
-.step-number{
-    width:38px;
-    height:38px;
-    border-radius:50%;
-    background:#2563eb;
+.card-icon{
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.card h3{
+    margin-bottom:7px;
+    font-size:18px;
+}
+
+.card p{
+    color:#64748b;
+    font-size:14px;
+}
+
+/* ACCESS */
+
+.access-section{
+    background:#eef2ff;
+}
+
+.access{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.access-card{
+    background:white;
+    padding:30px;
+    border-radius:22px;
+    border:1px solid #e5e7eb;
+    text-align:center;
+    box-shadow:0 12px 35px rgba(15,23,42,.07);
+}
+
+.access-card.red{
+    background:linear-gradient(145deg,#111827,#1e3a8a);
     color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
+    border:none;
+}
+
+.access-icon{
+    font-size:44px;
     margin-bottom:15px;
 }
 
-.step h3{
-    font-size:17px;
-    margin-bottom:7px;
+.access-card h3{
+    font-size:24px;
+    margin-bottom:10px;
 }
 
-.step p{
+.access-card p{
     color:#64748b;
-    font-size:13px;
+    margin-bottom:22px;
+    font-size:14px;
 }
 
+.access-card.red p{
+    color:#dbeafe;
+}
 
-/* =========================
-   GPS
-========================= */
+.access-btn{
+    display:inline-block;
+    width:100%;
+    padding:13px;
+    border-radius:11px;
+    background:#2563eb;
+    color:white;
+    font-weight:700;
+}
 
-.gps-section{
+.access-card.red .access-btn{
+    background:white;
+    color:#1e3a8a;
+}
+
+/* RED */
+
+.red-section{
     background:#111827;
     color:white;
 }
 
-.gps-container{
-    max-width:1200px;
-    margin:auto;
-    padding:85px 20px;
+.red-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:55px;
+    gap:50px;
     align-items:center;
 }
 
-.gps-container h2{
-    font-size:39px;
-    line-height:1.1;
+.red-content h2{
+    font-size:42px;
     margin-bottom:18px;
 }
 
-.gps-container p{
+.red-content h2 span{
+    color:#60a5fa;
+}
+
+.red-content p{
     color:#cbd5e1;
     font-size:17px;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
-.gps-list{
-    display:grid;
-    gap:10px;
+.red-list{
+    list-style:none;
+    margin-bottom:30px;
 }
 
-.gps-list div{
-    display:flex;
-    gap:10px;
-    align-items:flex-start;
+.red-list li{
+    margin:13px 0;
     color:#dbeafe;
 }
 
-.gps-visual{
-    min-height:330px;
-    border-radius:25px;
-    background:
-        linear-gradient(rgba(37,99,235,.15),rgba(37,99,235,.15)),
-        repeating-linear-gradient(
-            45deg,
-            #172033,
-            #172033 20px,
-            #1b263b 20px,
-            #1b263b 40px
-        );
-    border:1px solid rgba(255,255,255,.1);
+.red-box{
+    background:#ffffff0d;
+    border:1px solid #ffffff18;
+    border-radius:24px;
+    padding:30px;
+}
+
+.red-box h3{
+    font-size:25px;
+    margin-bottom:20px;
+}
+
+.red-feature{
     display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
-    overflow:hidden;
+    gap:13px;
+    margin:17px 0;
 }
 
-.gps-pin{
-    font-size:65px;
-    filter:drop-shadow(0 8px 10px rgba(0,0,0,.4));
+.red-feature strong{
+    display:block;
 }
 
-.gps-ring{
-    position:absolute;
-    width:150px;
-    height:150px;
-    border-radius:50%;
-    border:2px solid rgba(96,165,250,.45);
+.red-feature span{
+    color:#94a3b8;
+    font-size:14px;
 }
 
-.gps-ring-2{
-    width:250px;
-    height:250px;
-}
-
-
-/* =========================
-   RUBROS
-========================= */
+/* RUBROS */
 
 .rubros{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:10px;
+    gap:12px;
 }
 
 .rubro{
     background:white;
-    border:1px solid #e2e8f0;
-    padding:10px 15px;
-    border-radius:999px;
-    font-size:13px;
+    border:1px solid #e5e7eb;
+    padding:12px 18px;
+    border-radius:50px;
     font-weight:600;
+    font-size:14px;
 }
 
+/* BENEFITS */
 
-/* =========================
-   PLANS
-========================= */
-
-.plans{
+.benefits{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:20px;
 }
 
-.plan{
+.benefit{
     background:white;
-    border:1px solid #e2e8f0;
-    border-radius:20px;
-    padding:30px;
+    padding:28px;
+    border-radius:18px;
+    border:1px solid #e5e7eb;
 }
 
-.plan.featured{
-    border:2px solid #2563eb;
-    position:relative;
-}
-
-.plan-badge{
-    position:absolute;
-    top:-13px;
-    left:25px;
-    background:#2563eb;
-    color:white;
-    padding:5px 11px;
-    border-radius:999px;
-    font-size:11px;
-    font-weight:bold;
-}
-
-.plan h3{
-    font-size:21px;
+.benefit strong{
+    display:block;
+    font-size:19px;
     margin-bottom:8px;
 }
 
-.plan-price{
-    font-size:30px;
-    font-weight:800;
-    margin:15px 0;
-}
-
-.plan-price small{
+.benefit p{
     color:#64748b;
-    font-size:12px;
-    font-weight:normal;
 }
 
-.plan ul{
-    list-style:none;
-    display:grid;
-    gap:10px;
-    margin:20px 0;
-}
-
-.plan li{
-    font-size:13px;
-    color:#475569;
-}
-
-
-/* =========================
-   CTA
-========================= */
+/* CTA */
 
 .cta{
-    max-width:1100px;
-    margin:0 auto 80px;
-    padding:55px 30px;
-    border-radius:25px;
-    background:
-        radial-gradient(circle at 80% 20%,rgba(96,165,250,.25),transparent 35%),
-        #172554;
+    background:linear-gradient(135deg,#2563eb,#1e40af);
     color:white;
     text-align:center;
+    padding:75px 20px;
 }
 
 .cta h2{
-    font-size:38px;
-    margin-bottom:12px;
+    font-size:42px;
+    margin-bottom:15px;
 }
 
 .cta p{
-    color:#bfdbfe;
-    margin-bottom:25px;
+    max-width:650px;
+    margin:0 auto 28px;
+    color:#dbeafe;
 }
 
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact{
-    max-width:700px;
-    margin:auto;
-}
-
-.form{
-    background:white;
-    border:1px solid #e2e8f0;
-    border-radius:20px;
-    padding:30px;
-    box-shadow:0 10px 30px rgba(15,23,42,.05);
-}
-
-.form-group{
-    margin-bottom:17px;
-}
-
-.form label{
-    display:block;
-    font-size:13px;
-    font-weight:bold;
-    margin-bottom:6px;
-}
-
-.form input,
-.form textarea{
-    width:100%;
-    border:1px solid #cbd5e1;
-    border-radius:10px;
-    padding:12px;
-    font-family:inherit;
-    font-size:14px;
-    outline:none;
-}
-
-.form input:focus,
-.form textarea:focus{
-    border-color:#2563eb;
-}
-
-.form textarea{
-    min-height:120px;
-    resize:vertical;
-}
-
-.form button{
-    border:0;
-    cursor:pointer;
-    width:100%;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
-    background:#0b1120;
+    background:#020617;
     color:#94a3b8;
-}
-
-.footer-container{
-    max-width:1200px;
-    margin:auto;
-    padding:45px 20px;
+    padding:40px 0;
 }
 
 .footer-grid{
-    display:grid;
-    grid-template-columns:1.5fr 1fr 1fr;
-    gap:35px;
-    margin-bottom:35px;
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    flex-wrap:wrap;
 }
 
-.footer-title{
+.footer-brand{
     color:white;
-    font-weight:bold;
-    margin-bottom:12px;
+    font-size:22px;
+    font-weight:800;
+}
+
+footer p{
+    font-size:14px;
+    margin-top:7px;
 }
 
 .footer-links{
-    display:grid;
-    gap:8px;
-    font-size:13px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
 .footer-links a:hover{
     color:white;
 }
 
-.footer-bottom{
-    border-top:1px solid rgba(255,255,255,.08);
-    padding-top:20px;
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
-    font-size:12px;
-}
-
-
-/* =========================
-   WHATSAPP
-========================= */
+/* WHATSAPP */
 
 .whatsapp{
     position:fixed;
-    right:18px;
-    bottom:18px;
-    z-index:900;
-    width:55px;
-    height:55px;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
     border-radius:50%;
     background:#22c55e;
     color:white;
@@ -974,1562 +548,321 @@ footer{
     align-items:center;
     justify-content:center;
     font-size:27px;
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+    z-index:999;
 }
 
+/* MOBILE */
 
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:950px){
+@media(max-width:900px){
 
     nav{
         display:none;
     }
 
-    .menu-button{
+    .menu{
         display:block;
+        font-size:27px;
     }
 
-    .hero-container{
-        grid-template-columns:1fr;
-        padding-top:65px;
-    }
-
-    .access-grid{
+    .hero-grid,
+    .red-grid{
         grid-template-columns:1fr;
     }
 
-    .network-grid{
-        grid-template-columns:1fr;
-    }
-
-    .features-grid{
+    .features{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .steps{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .gps-container{
+    .access{
         grid-template-columns:1fr;
     }
 
-    .plans{
+    .benefits{
         grid-template-columns:1fr;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
     }
 
 }
 
 @media(max-width:600px){
 
-    .header-container{
-        min-height:64px;
-        padding:0 15px;
-    }
-
-    .logo{
-        font-size:20px;
-    }
-
-    .logo-icon{
-        width:34px;
-        height:34px;
-    }
-
-    .hero-container{
-        padding:55px 16px 65px;
-        gap:35px;
+    .hero{
+        padding:70px 0;
     }
 
     .hero h1{
-        font-size:42px;
+        font-size:43px;
     }
 
-    .hero-text{
-        font-size:16px;
+    .hero p{
+        font-size:17px;
     }
 
-    .hero-buttons{
-        flex-direction:column;
+    section{
+        padding:60px 0;
     }
 
-    .hero-buttons .btn{
-        width:100%;
+    .features{
+        grid-template-columns:1fr;
     }
 
-    .section{
-        padding:60px 16px;
-    }
-
-    .section-header h2{
-        font-size:30px;
-    }
-
-    .network-container{
-        padding:60px 16px;
-    }
-
-    .network-content h2{
+    .section-title h2{
         font-size:31px;
     }
 
-    .network-list{
-        grid-template-columns:1fr;
-    }
-
-    .features-grid{
-        grid-template-columns:1fr;
-    }
-
-    .steps{
-        grid-template-columns:1fr;
-    }
-
-    .gps-container{
-        padding:60px 16px;
-    }
-
-    .gps-container h2{
-        font-size:31px;
-    }
-
-    .gps-visual{
-        min-height:250px;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
-
-    .footer-bottom{
-        flex-direction:column;
-    }
-
-    .cta{
-        margin:0 16px 60px;
-        padding:45px 20px;
+    .red-content h2{
+        font-size:34px;
     }
 
     .cta h2{
-        font-size:30px;
+        font-size:32px;
     }
 
-    .form{
-        padding:22px;
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
     }
 
 }
 
-
-/* =========================
-   MOBILE MENU
-========================= */
-
-.mobile-menu{
-    display:none;
-    background:#111827;
-    border-top:1px solid rgba(255,255,255,.08);
-    padding:10px 15px 15px;
-}
-
-.mobile-menu.active{
-    display:grid;
-}
-
-.mobile-menu a{
-    color:#dbeafe;
-    padding:12px 5px;
-    border-bottom:1px solid rgba(255,255,255,.06);
-    font-size:14px;
-}
-
-
-/* =========================
-   SCROLL TOP
-========================= */
-
-#top{
-    scroll-margin-top:90px;
-}
-
-</style>
-
-</head>
-
-
-<body id="top">
-
-
-<!-- =========================
-     HEADER
-========================= -->
-
-<header>
-
-<div class="header-container">
-
-<a href="#top" class="logo">
-
-    <div class="logo-icon">G</div>
-
-    <span>GESBASE</span>
-
-</a>
-
-<nav>
-
-    <a href="#gestion">GESBASE</a>
-
-    <a href="#red">Red GESBASE</a>
-
-    <a href="#funciones">Funciones</a>
-
-    <a href="#rubros">Rubros</a>
-
-    <a href="#planes">Planes</a>
-
-    <a
-        href="https://albeservicios.github.io/GESBASE/login.html"
-        class="header-login"
-    >
-        Ingresar
-    </a>
-
-</nav>
-
-<button
-    class="menu-button"
-    onclick="toggleMenu()"
-    aria-label="Abrir menú"
->
-    ☰
-</button>
-
-</div>
-
-
-<div id="mobileMenu" class="mobile-menu">
-
-    <a href="#gestion" onclick="toggleMenu()">GESBASE</a>
-
-    <a href="#red" onclick="toggleMenu()">Red GESBASE</a>
-
-    <a href="#funciones" onclick="toggleMenu()">Funciones</a>
-
-    <a href="#rubros" onclick="toggleMenu()">Rubros</a>
-
-    <a href="#planes" onclick="toggleMenu()">Planes</a>
-
-    <a
-        href="https://albeservicios.github.io/GESBASE/login.html"
-    >
-        Ingresar a GESBASE
-    </a>
-
-</div>
-
-</header>
-
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="hero">
-
-<div class="hero-container">
-
-<div>
-
-    <div class="hero-badge">
-        🚀 Gestión empresarial inteligente
-    </div>
-
-    <h1>
-        Gestioná tu empresa con
-        <span>GESBASE.</span>
-    </h1>
-
-    <p class="hero-text">
-        Organizá clientes, presupuestos, trabajos, empleados,
-        fichajes GPS, gastos, cobros, inventario y mucho más
-        desde una sola plataforma.
-    </p>
-
-    <div class="hero-buttons">
-
-        <a
-            href="https://albeservicios.github.io/GESBASE/registro.html"
-            class="btn btn-primary"
-        >
-            🚀 Crear mi cuenta
-        </a>
-
-        <a
-            href="#accesos"
-            class="btn btn-secondary"
-        >
-            🔐 Acceder a GESBASE
-        </a>
-
-        <a
-            href="#red"
-            class="btn btn-outline"
-        >
-            🌐 Conocer Red GESBASE
-        </a>
-
-    </div>
-
-</div>
-
-
-<div class="hero-card">
-
-    <div class="hero-card-title">
-        📊 Tu empresa, organizada
-    </div>
-
-    <div class="dashboard-preview">
-
-        <div class="preview-item">
-
-            <div class="preview-icon">💰</div>
-
-            <div class="preview-number">
-                Presupuestos
-            </div>
-
-            <div class="preview-label">
-                Creá y administrá
-            </div>
-
-        </div>
-
-        <div class="preview-item">
-
-            <div class="preview-icon">🔨</div>
-
-            <div class="preview-number">
-                Trabajos
-            </div>
-
-            <div class="preview-label">
-                Seguimiento
-            </div>
-
-        </div>
-
-        <div class="preview-item">
-
-            <div class="preview-icon">👷</div>
-
-            <div class="preview-number">
-                Empleados
-            </div>
-
-            <div class="preview-label">
-                Gestión laboral
-            </div>
-
-        </div>
-
-        <div class="preview-item">
-
-            <div class="preview-icon">📍</div>
-
-            <div class="preview-number">
-                GPS
-            </div>
-
-            <div class="preview-label">
-                Fichajes
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     ACCESOS
-========================= -->
-
-<section
-    class="section"
-    id="accesos"
->
-
-<div class="section-header">
-
-    <h2>
-        Elegí cómo ingresar
-    </h2>
-
-    <p>
-        GESBASE tiene accesos diferenciados para empresas,
-        contratistas y empleados.
-    </p>
-
-</div>
-
-
-<div class="access-grid">
-
-
-<!-- EMPRESA -->
-
-<div class="access-card">
-
-    <div class="access-icon">
-        🏢
-    </div>
-
-    <h3>
-        Empresa / Contratista
-    </h3>
-
-    <p>
-        Administrá tu negocio, clientes, presupuestos,
-        trabajos, empleados, gastos, cobros y rentabilidad.
-    </p>
-
-    <a
-        href="https://albeservicios.github.io/GESBASE/login.html"
-        class="card-link"
-    >
-        🔐 Ingresar como empresa →
-    </a>
-
-    <br><br>
-
-    <a
-        href="https://albeservicios.github.io/GESBASE/registro.html"
-        class="card-link"
-    >
-        Crear cuenta →
-    </a>
-
-</div>
-
-
-<!-- EMPLEADO -->
-
-<div class="access-card">
-
-    <div class="access-icon">
-        👷
-    </div>
-
-    <h3>
-        Empleado
-    </h3>
-
-    <p>
-        Accedé a tus trabajos, fichajes, horarios y
-        funciones habilitadas por la empresa.
-    </p>
-
-    <a
-        href="https://albeservicios.github.io/GESBASE/empleado-login.html"
-        class="card-link"
-    >
-        🔐 Ingresar como empleado →
-    </a>
-
-</div>
-
-
-<!-- RED -->
-
-<div class="access-card">
-
-    <div class="access-icon">
-        🌐
-    </div>
-
-    <h3>
-        Red GESBASE
-    </h3>
-
-    <p>
-        Conectate con personas y empresas, buscá empleo,
-        publicá oportunidades y construí tu perfil laboral.
-    </p>
-
-    <a
-        href="#red"
-        class="card-link"
-    >
-        🌐 Conocer la Red →
-    </a>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     GESTION
-========================= -->
-
-<section
-    class="section"
-    id="gestion"
->
-
-<div class="section-header">
-
-    <h2>
-        GESBASE es tu centro de gestión
-    </h2>
-
-    <p>
-        Todo lo que necesitás para administrar y controlar
-        tu actividad empresarial desde un mismo lugar.
-    </p>
-
-</div>
-
-
-<div class="features-grid">
-
-    <div class="feature">
-        <div class="feature-icon">💰</div>
-        <h3>Presupuestos</h3>
-        <p>Creá presupuestos profesionales y realizá su seguimiento.</p>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">👥</div>
-        <h3>Clientes</h3>
-        <p>Organizá la información de tus clientes.</p>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">🔨</div>
-        <h3>Trabajos</h3>
-        <p>Controlá cada trabajo desde el inicio hasta el final.</p>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">👷</div>
-        <h3>Empleados</h3>
-        <p>Gestioná tu equipo de trabajo.</p>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">📍</div>
-        <h3>Fichaje GPS</h3>
-        <p>Registrá entradas y salidas con ubicación.</p>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">📦</div>
-        <h3>Inventario</h3>
-        <p>Controlá productos, materiales y existencias.</p>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">🛒</div>
-        <h3>Compras</h3>
-        <p>Registrá compras y proveedores.</p>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">💵</div>
-        <h3>Ventas</h3>
-        <p>Organizá tus ventas y operaciones.</p>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">💸</div>
-        <h3>Gastos</h3>
-        <p>Controlá los gastos de cada actividad.</p>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">💳</div>
-        <h3>Cobros</h3>
-        <p>Registrá pagos y saldos pendientes.</p>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">🧾</div>
-        <h3>Facturación</h3>
-        <p>Organizá la información de tus comprobantes.</p>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">📸</div>
-        <h3>Fotos</h3>
-        <p>Guardá evidencia y documentación de tus trabajos.</p>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">📅</div>
-        <h3>Agenda</h3>
-        <p>Organizá tareas y actividades.</p>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">📈</div>
-        <h3>Rentabilidad</h3>
-        <p>Conocé cuánto realmente ganás en cada trabajo.</p>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">🔔</div>
-        <h3>Notificaciones</h3>
-        <p>Recibí avisos importantes dentro de GESBASE.</p>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">🤖</div>
-        <h3>Asistente IA</h3>
-        <p>Obtené ayuda inteligente para gestionar tu actividad.</p>
-    </div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     RED GESBASE
-========================= -->
-
-<section
-    class="network-section"
-    id="red"
->
-
-<div class="network-container">
-
-<div class="network-grid">
-
-
-<div class="network-content">
-
-    <div class="network-label">
-        NUEVO ECOSISTEMA
-    </div>
-
-    <h2>
-        Conocé la
-        <span>Red GESBASE</span>
-    </h2>
-
-    <p>
-        Una red laboral y empresarial integrada a GESBASE
-        para conectar personas, trabajadores, empresas y
-        oportunidades.
-    </p>
-
-    <div class="network-list">
-
-        <div>👤 Perfiles</div>
-
-        <div>🏢 Empresas</div>
-
-        <div>🤝 Conexiones</div>
-
-        <div>💬 Mensajes</div>
-
-        <div>💼 Empleos</div>
-
-        <div>📢 Ofertas laborales</div>
-
-        <div>⭐ Reputación laboral</div>
-
-        <div>🔎 Búsqueda</div>
-
-    </div>
-
-    <a
-        href="#red-acceso"
-        class="btn btn-primary"
-    >
-        🌐 Entrar a Red GESBASE
-    </a>
-
-</div>
-
-
-<div class="network-card">
-
-    <div class="network-card-top">
-
-        <div class="network-card-title">
-            🌐 Red GESBASE
-        </div>
-
-        <div class="online">
-
-            <span class="online-dot"></span>
-
-            Comunidad
-
-        </div>
-
-    </div>
-
-
-    <div class="network-post">
-
-        <div class="network-post-user">
-
-            <div class="avatar">
-                🏢
-            </div>
-
-            <div>
-
-                <div class="network-post-name">
-                    Empresa GESBASE
-                </div>
-
-                <div class="network-post-type">
-                    Oferta laboral
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="network-post-text">
-            Buscamos personal para incorporarse
-            a nuestro equipo de trabajo.
-        </div>
-
-    </div>
-
-
-    <div class="network-post">
-
-        <div class="network-post-user">
-
-            <div class="avatar">
-                👷
-            </div>
-
-            <div>
-
-                <div class="network-post-name">
-                    Perfil profesional
-                </div>
-
-                <div class="network-post-type">
-                    Disponible para trabajar
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="network-post-text">
-            Perfil profesional conectado con
-            oportunidades laborales.
-        </div>
-
-    </div>
-
-
-    <div class="network-post">
-
-        <div class="network-post-text">
-            💬 Conectá. Compartí. Encontrá oportunidades.
-        </div>
-
-    </div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     COMO FUNCIONA
-========================= -->
-
-<section class="section">
-
-<div class="section-header">
-
-    <h2>
-        Un ecosistema conectado
-    </h2>
-
-    <p>
-        GESBASE y Red GESBASE trabajan juntos,
-        pero cada uno cumple una función diferente.
-    </p>
-
-</div>
-
-
-<div class="steps">
-
-    <div class="step">
-
-        <div class="step-number">1</div>
-
-        <h3>
-            Gestionás
-        </h3>
-
-        <p>
-            Administrás tu empresa con las herramientas
-            de GESBASE.
-        </p>
-
-    </div>
-
-
-    <div class="step">
-
-        <div class="step-number">2</div>
-
-        <h3>
-            Conectás
-        </h3>
-
-        <p>
-            Buscás personas y empresas desde
-            Red GESBASE.
-        </p>
-
-    </div>
-
-
-    <div class="step">
-
-        <div class="step-number">3</div>
-
-        <h3>
-            Trabajás
-        </h3>
-
-        <p>
-            Registrás trabajos y empleados dentro
-            de GESBASE.
-        </p>
-
-    </div>
-
-
-    <div class="step">
-
-        <div class="step-number">4</div>
-
-        <h3>
-            Crecés
-        </h3>
-
-        <p>
-            Construís relaciones y oportunidades
-            dentro del ecosistema.
-        </p>
-
-    </div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     GPS
-========================= -->
-
-<section class="gps-section">
-
-<div class="gps-container">
-
-<div>
-
-    <h2>
-        Fichaje GPS para tu equipo
-    </h2>
-
-    <p>
-        Registrá entradas y salidas de tus empleados
-        asociadas a la ubicación del fichaje.
-    </p>
-
-    <div class="gps-list">
-
-        <div>
-            📍 Ubicación del fichaje
-        </div>
-
-        <div>
-            🕐 Registro de entrada y salida
-        </div>
-
-        <div>
-            🔨 Asociación con trabajos
-        </div>
-
-        <div>
-            📊 Control de horarios
-        </div>
-
-    </div>
-
-</div>
-
-
-<div class="gps-visual">
-
-    <div class="gps-ring"></div>
-
-    <div class="gps-ring gps-ring-2"></div>
-
-    <div class="gps-pin">
-        📍
-    </div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     RUBROS
-========================= -->
-
-<section
-    class="section"
-    id="rubros"
->
-
-<div class="section-header">
-
-    <h2>
-        Para diferentes tipos de negocios
-    </h2>
-
-    <p>
-        GESBASE puede adaptarse a diferentes actividades.
-    </p>
-
-</div>
-
-
-<div class="rubros">
-
-    <div class="rubro">🔧 Servicios</div>
-
-    <div class="rubro">🏗️ Construcción</div>
-
-    <div class="rubro">⚡ Electricidad</div>
-
-    <div class="rubro">🎨 Pintura</div>
-
-    <div class="rubro">👕 Indumentaria</div>
-
-    <div class="rubro">👟 Calzado</div>
-
-    <div class="rubro">💄 Perfumería</div>
-
-    <div class="rubro">🍔 Gastronomía</div>
-
-    <div class="rubro">📦 Distribuidoras</div>
-
-    <div class="rubro">🏪 Almacenes</div>
-
-    <div class="rubro">🔩 Ferreterías</div>
-
-    <div class="rubro">🛠️ Mantenimiento</div>
-
-    <div class="rubro">💼 Profesionales</div>
-
-    <div class="rubro">🏢 Empresas</div>
-
-    <div class="rubro">➕ Otros negocios</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     PLANES
-========================= -->
-
-<section
-    class="section"
-    id="planes"
->
-
-<div class="section-header">
-
-    <h2>
-        Elegí tu plan
-    </h2>
-
-    <p>
-        Comenzá y elegí el plan que mejor se adapte
-        a tu actividad.
-    </p>
-
-</div>
-
-
-<div class="plans">
-
-
-<div class="plan">
-
-    <h3>
-        Inicial
-    </h3>
-
-    <p>
-        Para comenzar a organizar tu actividad.
-    </p>
-
-    <div class="plan-price">
-        Inicial
-    </div>
-
-    <ul>
-
-        <li>✓ Gestión básica</li>
-
-        <li>✓ Clientes</li>
-
-        <li>✓ Presupuestos</li>
-
-        <li>✓ Trabajos</li>
-
-        <li>✓ Organización empresarial</li>
-
-    </ul>
-
-    <a
-        href="https://albeservicios.github.io/GESBASE/registro.html"
-        class="btn btn-primary"
-    >
-        Comenzar
-    </a>
-
-</div>
-
-
-<div class="plan featured">
-
-    <div class="plan-badge">
-        RECOMENDADO
-    </div>
-
-    <h3>
-        Profesional
-    </h3>
-
-    <p>
-        Para quienes necesitan mayor control.
-    </p>
-
-    <div class="plan-price">
-        Profesional
-    </div>
-
-    <ul>
-
-        <li>✓ Funciones avanzadas</li>
-
-        <li>✓ Empleados</li>
-
-        <li>✓ Fichaje GPS</li>
-
-        <li>✓ Gastos y cobros</li>
-
-        <li>✓ Inventario</li>
-
-        <li>✓ Rentabilidad</li>
-
-    </ul>
-
-    <a
-        href="https://albeservicios.github.io/GESBASE/registro.html"
-        class="btn btn-primary"
-    >
-        Comenzar
-    </a>
-
-</div>
-
-
-<div class="plan">
-
-    <h3>
-        Empresa
-    </h3>
-
-    <p>
-        Para organizaciones con mayor estructura.
-    </p>
-
-    <div class="plan-price">
-        Empresa
-    </div>
-
-    <ul>
-
-        <li>✓ Gestión integral</li>
-
-        <li>✓ Equipos de trabajo</li>
-
-        <li>✓ Mayor control</li>
-
-        <li>✓ Herramientas avanzadas</li>
-
-        <li>✓ Soporte</li>
-
-    </ul>
-
-    <a
-        href="https://albeservicios.github.io/GESBASE/registro.html"
-        class="btn btn-primary"
-    >
-        Comenzar
-    </a>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     RED ACCESS
-========================= -->
-
-<section
-    class="section"
-    id="red-acceso"
->
-
-<div class="cta">
-
-    <h2>
-        🌐 Red GESBASE
-    </h2>
-
-    <p>
-        El espacio donde personas, trabajadores y empresas
-        pueden conectarse y encontrar nuevas oportunidades.
-    </p>
-
-    <a
-        href="#"
-        class="btn btn-secondary"
-        onclick="redComingSoon(event)"
-    >
-        Entrar a Red GESBASE
-    </a>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     CONTACTO
-========================= -->
-
-<section class="section">
-
-<div class="section-header">
-
-    <h2>
-        Contactanos
-    </h2>
-
-    <p>
-        ¿Querés conocer GESBASE o tenés alguna consulta?
-        Escribinos.
-    </p>
-
-</div>
-
-
-<div class="contact">
-
-<form
-    class="form"
-    id="contactForm"
->
-
-    <div class="form-group">
-
-        <label for="nombre">
-            Nombre
-        </label>
-
-        <input
-            type="text"
-            id="nombre"
-            required
-        >
-
-    </div>
-
-
-    <div class="form-group">
-
-        <label for="email">
-            Email
-        </label>
-
-        <input
-            type="email"
-            id="email"
-            required
-        >
-
-    </div>
-
-
-    <div class="form-group">
-
-        <label for="mensaje">
-            Mensaje
-        </label>
-
-        <textarea
-            id="mensaje"
-            required
-        ></textarea>
-
-    </div>
-
-
-    <button
-        type="submit"
-        class="btn btn-primary"
-    >
-        📩 Enviar consulta
-    </button>
-
-</form>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     CTA FINAL
-========================= -->
-
-<div class="cta">
-
-    <h2>
-        Empezá a trabajar con GESBASE
-    </h2>
-
-    <p>
-        Gestioná tu empresa y formá parte de un
-        nuevo ecosistema laboral y empresarial.
-    </p>
-
-    <div class="hero-buttons">
-
-        <a
-            href="https://albeservicios.github.io/GESBASE/registro.html"
-            class="btn btn-secondary"
-        >
-            🚀 Crear cuenta
-        </a>
-
-        <a
-            href="#accesos"
-            class="btn btn-outline"
-        >
-            🔐 Ingresar
-        </a>
-
-    </div>
-
-</div>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-<div class="footer-container">
-
-<div class="footer-grid">
-
-
-<div>
-
-    <div class="logo">
-        <div class="logo-icon">G</div>
-        <span>GESBASE</span>
-    </div>
-
-    <p style="margin-top:15px;font-size:13px;max-width:350px;">
-        Gestión empresarial y Red GESBASE en un
-        mismo ecosistema.
-    </p>
-
-</div>
-
-
-<div>
-
-    <div class="footer-title">
-        GESBASE
-    </div>
-
-    <div class="footer-links">
-
-        <a href="#gestion">
-            Funciones
-        </a>
-
-        <a href="#rubros">
-            Rubros
-        </a>
-
-        <a href="#planes">
-            Planes
-        </a>
-
-        <a
-            href="https://albeservicios.github.io/GESBASE/login.html"
-        >
-            Acceso empresa
-        </a>
-
-        <a
-            href="https://albeservicios.github.io/GESBASE/empleado-login.html"
-        >
-            Acceso empleado
-        </a>
-
-    </div>
-
-</div>
-
-
-<div>
-
-    <div class="footer-title">
-        Red GESBASE
-    </div>
-
-    <div class="footer-links">
-
-        <a href="#red">
-            Conocé la Red
-        </a>
-
-        <a href="#red">
-            Personas
-        </a>
-
-        <a href="#red">
-            Empresas
-        </a>
-
-        <a href="#red">
-            Empleos
-        </a>
-
-        <a href="#red">
-            Oportunidades
-        </a>
-
-    </div>
-
-</div>
-
-
-</div>
-
-
-<div class="footer-bottom">
-
-    <div>
-        © <span id="year"></span> GESBASE. Todos los derechos reservados.
-    </div>
-
-    <div>
-        Gestión empresarial + Red laboral
-    </div>
-
-</div>
-
-</div>
-
-</footer>
-
-
-
-<!-- =========================
-     WHATSAPP
-========================= -->
+</style></head><body><header><div class="container nav"><a href="#" class="logo">
+    <div class="logo-mark">G</div>
+    GESBASE
+</a><nav><a href="#funciones">Funciones</a>
+<a href="#accesos">Accesos</a>
+<a href="#red">Red GESBASE</a>
+<a href="#rubros">Rubros</a>
+<a href="#contacto">Contacto</a>
 
 <a
-    class="whatsapp"
-    href="https://wa.me/542993263793?text=Hola%20GESBASE,%20quiero%20conocer%20la%20plataforma."
-    target="_blank"
-    rel="noopener"
-    aria-label="Contactar por WhatsApp"
->
-    💬
-</a>
+class="nav-button"
+href="https://albeservicios.github.io/GESBASE/login.html"
 
+«»
 
+Ingresar
 
-<script>
+</a></nav><div class="menu">☰</div></div></header><main><!-- HERO --><section class="hero"><div class="container hero-grid"><div><h1>
+Gestioná tu empresa con
+<span>GESBASE.</span>
+</h1><p>
+Una plataforma para organizar tu negocio, administrar clientes,
+presupuestos, trabajos, empleados, gastos, cobros y mucho más
+desde un solo lugar.
+</p><div class="buttons"><a
+class="btn btn-primary"
+href="https://albeservicios.github.io/GESBASE/registro.html"
 
-/* Año */
+«»
 
-document.getElementById("year").textContent =
-    new Date().getFullYear();
+Crear mi cuenta
 
+</a><a
+class="btn btn-light"
+href="#accesos"
 
-/* Menú móvil */
+«»
 
-function toggleMenu(){
+Ver accesos
 
-    const menu =
-        document.getElementById("mobileMenu");
+</a></div></div><div class="hero-card"><h3>Todo conectado en un solo lugar</h3><div class="hero-item">
+<span class="hero-icon">📋</span>
+<span>Presupuestos y clientes</span>
+</div><div class="hero-item">
+<span class="hero-icon">👷</span>
+<span>Trabajos y empleados</span>
+</div><div class="hero-item">
+<span class="hero-icon">📍</span>
+<span>Fichaje con ubicación GPS</span>
+</div><div class="hero-item">
+<span class="hero-icon">💰</span>
+<span>Gastos, cobros y rentabilidad</span>
+</div></div></div></section><!-- FUNCIONES --><section id="funciones"><div class="container"><div class="section-title"><h2>Todo lo que necesitás para administrar</h2><p>
+GESBASE centraliza la información de tu negocio para que puedas
+trabajar de manera más organizada.
+</p></div><div class="features"><div class="card">
+<div class="card-icon">📋</div>
+<h3>Presupuestos</h3>
+<p>Creá y gestioná presupuestos para tus clientes.</p>
+</div><div class="card">
+<div class="card-icon">👥</div>
+<h3>Clientes</h3>
+<p>Tené toda la información de tus clientes organizada.</p>
+</div><div class="card">
+<div class="card-icon">🏗️</div>
+<h3>Trabajos</h3>
+<p>Controlá cada trabajo desde el inicio hasta su finalización.</p>
+</div><div class="card">
+<div class="card-icon">👷</div>
+<h3>Empleados</h3>
+<p>Administrá tu equipo y sus actividades.</p>
+</div><div class="card">
+<div class="card-icon">📍</div>
+<h3>Fichaje GPS</h3>
+<p>Registrá entradas y salidas con ubicación.</p>
+</div><div class="card">
+<div class="card-icon">💸</div>
+<h3>Gastos</h3>
+<p>Controlá los gastos relacionados con cada trabajo.</p>
+</div><div class="card">
+<div class="card-icon">💵</div>
+<h3>Cobros</h3>
+<p>Registrá cobros, saldos pendientes y pagos.</p>
+</div><div class="card">
+<div class="card-icon">📊</div>
+<h3>Rentabilidad</h3>
+<p>Conocé cuánto ganás realmente en cada trabajo.</p>
+</div><div class="card">
+<div class="card-icon">📦</div>
+<h3>Inventario</h3>
+<p>Controlá productos, materiales y existencias.</p>
+</div><div class="card">
+<div class="card-icon">🛒</div>
+<h3>Compras</h3>
+<p>Registrá compras y proveedores.</p>
+</div><div class="card">
+<div class="card-icon">🧾</div>
+<h3>Facturación</h3>
+<p>Organizá tus operaciones y comprobantes.</p>
+</div><div class="card">
+<div class="card-icon">📸</div>
+<h3>Fotos</h3>
+<p>Guardá evidencia y documentación de tus trabajos.</p>
+</div></div></div></section><!-- ACCESOS --><section id="accesos" class="access-section"><div class="container"><div class="section-title"><h2>Accedé a GESBASE</h2><p>
+Elegí el acceso que corresponde a tu función.
+</p></div><div class="access"><div class="access-card"><div class="access-icon">🏢</div><h3>Empresa</h3><p>
+Administrá clientes, presupuestos, trabajos, empleados,
+gastos, cobros y rentabilidad.
+</p><a
+class="access-btn"
+href="https://albeservicios.github.io/GESBASE/login.html"
 
-    menu.classList.toggle("active");
+«»
 
-}
+Ingresar como Empresa
 
+</a></div><div class="access-card"><div class="access-icon">👷</div><h3>Empleado</h3><p>
+Accedé a tus tareas y registrá entrada y salida
+mediante el sistema de fichaje GPS.
+</p><a
+class="access-btn"
+href="https://albeservicios.github.io/GESBASE/empleado-login.html"
 
-/* Red GESBASE */
+«»
 
-function redComingSoon(event){
+Ingresar como Empleado
 
-    event.preventDefault();
+</a></div><div class="access-card red"><div class="access-icon">🌐</div><h3>Red GESBASE</h3><p>
+Conectate con personas, empresas y oportunidades
+laborales dentro de la red.
+</p><a
+class="access-btn"
+href="https://albeservicios.github.io/GESBASE/red.html"
 
-    alert(
-        "🌐 Red GESBASE\n\n" +
-        "Estamos preparando este nuevo espacio. " +
-        "Muy pronto vas a poder conectarte con personas, " +
-        "empresas y oportunidades laborales."
-    );
+«»
 
-}
+Entrar a Red GESBASE
 
+</a></div></div></div></section><!-- RED GESBASE --><section id="red" class="red-section"><div class="container red-grid"><div class="red-content"><h2>
+Conocé la nueva
+<span>Red GESBASE</span>
+</h2><p>
+Un espacio complementario a GESBASE para conectar empresas,
+contratistas y trabajadores.
+</p><ul class="red-list"><li>✓ Creá tu perfil</li><li>✓ Conectate con otras personas y empresas</li><li>✓ Buscá oportunidades laborales</li><li>✓ Publicá oportunidades de trabajo</li><li>✓ Construí tu reputación laboral</li></ul><a
+class="btn btn-light"
+href="https://albeservicios.github.io/GESBASE/red.html"
 
-/* Formulario */
+«»
 
-document
-    .getElementById("contactForm")
-    .addEventListener("submit", function(event){
+Explorar Red GESBASE
 
-        event.preventDefault();
+</a></div><div class="red-box"><h3>
+Una red pensada para el mundo laboral
+</h3><div class="red-feature"><span>👤</span>
 
-        const nombre =
-            document.getElementById("nombre")
-                .value
-                .trim();
+<div>
+<strong>Perfiles</strong>
+<span>Mostrá quién sos y a qué te dedicás.</span>
+</div></div><div class="red-feature"><span>🤝</span>
 
-        const email =
-            document.getElementById("email")
-                .value
-                .trim();
+<div>
+<strong>Conexiones</strong>
+<span>Conectá con trabajadores y empresas.</span>
+</div></div><div class="red-feature"><span>💼</span>
 
-        const mensaje =
-            document.getElementById("mensaje")
-                .value
-                .trim();
+<div>
+<strong>Oportunidades</strong>
+<span>Encontrá o publicá oportunidades laborales.</span>
+</div></div><div class="red-feature"><span>⭐</span>
 
+<div>
+<strong>Reputación</strong>
+<span>Construí confianza a través de relaciones laborales verificadas.</span>
+</div></div></div></div></section><!-- RUBROS --><section id="rubros"><div class="container"><div class="section-title"><h2>Para distintos tipos de negocios</h2><p>
+GESBASE se adapta a diferentes actividades y formas de trabajar.
+</p></div><div class="rubros"><div class="rubro">🏗️ Construcción</div><div class="rubro">⚡ Electricidad</div><div class="rubro">🎨 Pintura</div><div class="rubro">🔧 Mantenimiento</div><div class="rubro">👕 Indumentaria</div><div class="rubro">👟 Calzado</div><div class="rubro">💄 Accesorios</div><div class="rubro">🚚 Distribuidoras</div><div class="rubro">🛒 Almacenes</div><div class="rubro">🍽️ Gastronomía</div><div class="rubro">🔩 Ferreterías</div><div class="rubro">💼 Servicios</div><div class="rubro">🏪 Comercios</div><div class="rubro">➕ Otros negocios</div></div></div></section><!-- BENEFICIOS --><section><div class="container"><div class="section-title"><h2>Más control. Menos complicaciones.</h2><p>
+La información de tu negocio organizada para ayudarte a tomar mejores decisiones.
+</p></div><div class="benefits"><div class="benefit"><strong>📱 Desde cualquier dispositivo</strong>
 
-        if(
-            !nombre ||
-            !email ||
-            !mensaje
-        ){
+<p>
+Accedé a tu información desde tu celular, tablet o computadora.
+</p></div><div class="benefit"><strong>📍 Control con GPS</strong>
 
-            alert(
-                "Completá todos los campos."
-            );
+<p>
+Registrá el fichaje de empleados junto con su ubicación.
+</p></div><div class="benefit"><strong>📊 Más información para decidir</strong>
 
-            return;
+<p>
+Visualizá ingresos, gastos, saldos y rentabilidad.
+</p></div></div></div></section><!-- CTA --><section class="cta" id="contacto"><h2>
+Empezá a gestionar mejor tu negocio.
+</h2><p>
+Creá tu cuenta en GESBASE y comenzá a organizar tu empresa
+desde un solo lugar.
+</p><div class="buttons" style="justify-content:center;"><a
+class="btn btn-light"
+href="https://albeservicios.github.io/GESBASE/registro.html"
 
-        }
+«»
 
+Crear cuenta
 
-        const asunto =
-            encodeURIComponent(
-                "Consulta GESBASE - " + nombre
-            );
+</a><a
+class="btn btn-primary"
+href="https://albeservicios.github.io/GESBASE/red.html"
 
-        const cuerpo =
-            encodeURIComponent(
-                "Nombre: " +
-                nombre +
-                "\nEmail: " +
-                email +
-                "\n\nMensaje:\n" +
-                mensaje
-            );
+«»
 
+Entrar a Red GESBASE
 
-        window.location.href =
-            "mailto:gesbase0@gmail.com" +
-            "?subject=" +
-            asunto +
-            "&body=" +
-            cuerpo;
+</a></div></section></main><!-- FOOTER --><footer><div class="container footer-grid"><div><div class="footer-brand">
+GESBASE
+</div><p>
+Gestión empresarial y conexión laboral.
+</p><p>
+© 2026 GESBASE. Todos los derechos reservados.
+</p></div><div class="footer-links"><a href="#funciones">Funciones</a>
 
-    });
+<a href="#accesos">Accesos</a>
 
-</script>
+<a href="#red">Red GESBASE</a>
 
+<a href="#rubros">Rubros</a>
 
-</body>
+<a href="mailto:gesbase0@gmail.com">
+Contacto
+</a></div></div></footer><a
+class="whatsapp"
+href="https://wa.me/542993263793"
+target="_blank"
+aria-label="WhatsApp"
 
-</html>
+«»
+
+💬
+
+</a></body></html>
