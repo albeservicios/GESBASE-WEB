@@ -3,466 +3,376 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
 
-<meta
-    name="theme-color"
-    content="#111827"
->
+    <meta
+        name="theme-color"
+        content="#111827"
+    >
 
-<meta
-    name="description"
-    content="Descargá la aplicación GESBASE para Android"
->
+    <meta
+        name="description"
+        content="Descargá la aplicación GESBASE y gestioná tu empresa desde tu celular."
+    >
 
-<title>Descargar App - GESBASE</title>
+    <title>Descargar App - GESBASE</title>
 
-<style>
+    <style>
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#111827;
-    color:#f9fafb;
-    min-height:100vh;
-}
+        body {
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
 
-.contenedor{
-    width:100%;
-    max-width:700px;
-    margin:auto;
-    padding:25px 18px 40px;
-}
+            min-height: 100vh;
 
-.encabezado{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    margin-bottom:30px;
-}
+            background:
+                radial-gradient(
+                    circle at top,
+                    #1f2937 0%,
+                    #111827 45%,
+                    #030712 100%
+                );
 
-.logo{
-    width:52px;
-    height:52px;
-    border-radius:14px;
-    background:#2563eb;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:27px;
-    font-weight:bold;
-    box-shadow:0 8px 25px rgba(37,99,235,.35);
-}
+            color: #ffffff;
 
-.nombre{
-    font-size:24px;
-    font-weight:700;
-}
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-.subnombre{
-    color:#9ca3af;
-    font-size:14px;
-    margin-top:3px;
-}
+            padding: 20px;
+        }
 
-.tarjeta{
-    background:#1f2937;
-    border:1px solid #374151;
-    border-radius:22px;
-    padding:30px 22px;
-    text-align:center;
-    box-shadow:0 15px 40px rgba(0,0,0,.25);
-}
+        .contenedor {
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+        }
 
-.icono-app{
-    width:90px;
-    height:90px;
-    margin:0 auto 20px;
-    border-radius:24px;
-    background:linear-gradient(135deg,#2563eb,#1d4ed8);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:45px;
-    box-shadow:0 12px 30px rgba(37,99,235,.3);
-}
+        .logo {
+            width: 82px;
+            height: 82px;
 
-h1{
-    font-size:28px;
-    margin-bottom:10px;
-}
+            margin: 0 auto 22px;
 
-.descripcion{
-    color:#d1d5db;
-    line-height:1.6;
-    font-size:16px;
-    margin-bottom:25px;
-}
+            border-radius: 22px;
 
-.version{
-    display:inline-block;
-    background:#111827;
-    border:1px solid #374151;
-    color:#9ca3af;
-    padding:8px 14px;
-    border-radius:30px;
-    font-size:13px;
-    margin-bottom:25px;
-}
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-.boton-descarga{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    width:100%;
-    min-height:58px;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    border-radius:14px;
-    font-size:17px;
-    font-weight:bold;
-    transition:.2s;
-    box-shadow:0 8px 25px rgba(37,99,235,.3);
-}
+            background: linear-gradient(
+                135deg,
+                #2563eb,
+                #06b6d4
+            );
 
-.boton-descarga:hover{
-    background:#1d4ed8;
-    transform:translateY(-1px);
-}
+            font-size: 48px;
+            font-weight: 900;
 
-.boton-descarga:active{
-    transform:scale(.98);
-}
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.45),
+                0 0 30px rgba(37, 99, 235, 0.25);
+        }
 
-.mensaje-dispositivo{
-    display:none;
-    background:#111827;
-    border:1px solid #374151;
-    border-radius:16px;
-    padding:20px;
-    margin-top:5px;
-}
+        h1 {
+            font-size: 34px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.8px;
+        }
 
-.mensaje-dispositivo .icono{
-    font-size:38px;
-    margin-bottom:12px;
-}
+        .subtitulo {
+            color: #cbd5e1;
+            font-size: 18px;
+            margin-bottom: 28px;
+        }
 
-.mensaje-dispositivo h2{
-    font-size:20px;
-    margin-bottom:10px;
-}
+        .tarjeta {
+            background: rgba(17, 24, 39, 0.82);
 
-.mensaje-dispositivo p{
-    color:#d1d5db;
-    line-height:1.6;
-    font-size:15px;
-}
+            border: 1px solid rgba(255, 255, 255, 0.10);
 
-.info{
-    margin-top:25px;
-    padding:16px;
-    border-radius:14px;
-    background:#111827;
-    border:1px solid #374151;
-    text-align:left;
-}
+            border-radius: 24px;
 
-.info strong{
-    display:block;
-    margin-bottom:8px;
-}
+            padding: 30px 24px;
 
-.info p{
-    color:#9ca3af;
-    font-size:14px;
-    line-height:1.5;
-}
+            box-shadow:
+                0 25px 60px rgba(0, 0, 0, 0.45);
 
-.pasos{
-    margin-top:25px;
-    text-align:left;
-}
+            backdrop-filter: blur(12px);
+        }
 
-.paso{
-    display:flex;
-    gap:12px;
-    margin-bottom:15px;
-    color:#d1d5db;
-    line-height:1.5;
-}
+        .icono {
+            font-size: 52px;
+            margin-bottom: 18px;
+        }
 
-.numero{
-    min-width:28px;
-    height:28px;
-    border-radius:50%;
-    background:#2563eb;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-    font-size:13px;
-}
+        .tarjeta h2 {
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
 
-.volver{
-    display:block;
-    text-align:center;
-    margin-top:25px;
-    color:#93c5fd;
-    text-decoration:none;
-    font-size:15px;
-}
+        .descripcion {
+            color: #cbd5e1;
+            line-height: 1.6;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
 
-.volver:hover{
-    text-decoration:underline;
-}
+        .boton-descarga {
+            display: flex;
 
-.pie{
-    text-align:center;
-    margin-top:30px;
-    color:#6b7280;
-    font-size:12px;
-}
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
 
-@media(max-width:480px){
+            width: 100%;
 
-    .contenedor{
-        padding:20px 14px 35px;
-    }
+            padding: 17px 20px;
 
-    .tarjeta{
-        padding:25px 17px;
-    }
+            border-radius: 14px;
 
-    h1{
-        font-size:25px;
-    }
+            background: linear-gradient(
+                135deg,
+                #2563eb,
+                #0891b2
+            );
 
-}
+            color: #ffffff;
 
-</style>
+            text-decoration: none;
+
+            font-size: 18px;
+            font-weight: 800;
+
+            box-shadow:
+                0 10px 25px rgba(37, 99, 235, 0.30);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .boton-descarga:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 15px 35px rgba(37, 99, 235, 0.45);
+        }
+
+        .boton-descarga:active {
+            transform: scale(0.98);
+        }
+
+        .nota {
+            margin-top: 20px;
+
+            color: #94a3b8;
+
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .pasos {
+            margin-top: 25px;
+
+            text-align: left;
+
+            background: rgba(255, 255, 255, 0.04);
+
+            border-radius: 16px;
+
+            padding: 18px;
+        }
+
+        .pasos h3 {
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .paso {
+            display: flex;
+            gap: 10px;
+
+            color: #cbd5e1;
+
+            font-size: 14px;
+
+            margin-bottom: 9px;
+        }
+
+        .paso:last-child {
+            margin-bottom: 0;
+        }
+
+        .numero {
+            min-width: 23px;
+            height: 23px;
+
+            border-radius: 50%;
+
+            background: #2563eb;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        footer {
+            margin-top: 25px;
+
+            color: #64748b;
+
+            font-size: 12px;
+        }
+
+        .marca {
+            color: #94a3b8;
+            font-weight: 700;
+        }
+
+        @media (max-width: 480px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .logo {
+                width: 72px;
+                height: 72px;
+                font-size: 42px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .tarjeta {
+                padding: 25px 18px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
 
 <body>
 
-<div class="contenedor">
-
-
-    <header class="encabezado">
+    <main class="contenedor">
 
         <div class="logo">
             G
         </div>
 
-        <div>
+        <h1>GESBASE</h1>
 
-            <div class="nombre">
-                GESBASE
-            </div>
-
-            <div class="subnombre">
-                Tu empresa. Todo organizado.
-            </div>
-
-        </div>
-
-    </header>
-
-
-    <main class="tarjeta">
-
-
-        <div class="icono-app">
-            📱
-        </div>
-
-
-        <h1>
-            Aplicación GESBASE
-        </h1>
-
-
-        <p class="descripcion">
-            Accedé a GESBASE desde tu dispositivo
-            Android y gestioná tu empresa desde cualquier lugar.
+        <p class="subtitulo">
+            Tu empresa. Todo organizado.
         </p>
 
 
-        <div class="version">
-            Versión actual: GESBASE 1.0
-        </div>
-
-
-        <!-- =========================================
-             SOLO SE MUESTRA EN ANDROID
-        ========================================== -->
-
-        <div id="android">
-
-            <a
-                href="https://drive.google.com/uc?export=download&id=13iHpZ5cTRsLL2z4zW2qngik2fjJkshVy"
-                class="boton-descarga"
-            >
-                📥 Descargar GESBASE
-            </a>
-
-
-            <div class="info">
-
-                <strong>
-                    📲 Instalación en Android
-                </strong>
-
-                <p>
-                    Descargá el archivo APK y abrilo desde
-                    tu dispositivo. Si Android solicita permiso
-                    para instalar aplicaciones desde esta fuente,
-                    habilitalo para completar la instalación.
-                </p>
-
-            </div>
-
-
-            <div class="pasos">
-
-                <div class="paso">
-
-                    <div class="numero">
-                        1
-                    </div>
-
-                    <div>
-                        Tocá <strong>“Descargar GESBASE”</strong>.
-                    </div>
-
-                </div>
-
-
-                <div class="paso">
-
-                    <div class="numero">
-                        2
-                    </div>
-
-                    <div>
-                        Esperá a que termine la descarga del APK.
-                    </div>
-
-                </div>
-
-
-                <div class="paso">
-
-                    <div class="numero">
-                        3
-                    </div>
-
-                    <div>
-                        Abrí el archivo descargado.
-                    </div>
-
-                </div>
-
-
-                <div class="paso">
-
-                    <div class="numero">
-                        4
-                    </div>
-
-                    <div>
-                        Seguí las instrucciones de Android para instalar GESBASE.
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- =========================================
-             SE MUESTRA EN PC / IPHONE / OTROS
-        ========================================== -->
-
-        <div
-            id="noAndroid"
-            class="mensaje-dispositivo"
-        >
+        <section class="tarjeta">
 
             <div class="icono">
                 📱
             </div>
 
             <h2>
-                GESBASE está disponible para Android
+                Descargá la App GESBASE
             </h2>
 
-            <p>
-                Actualmente la aplicación GESBASE está
-                disponible para dispositivos Android.
-                Ingresá nuevamente desde un dispositivo
-                Android para descargar e instalar la aplicación.
+            <p class="descripcion">
+                Llevá la gestión de tu empresa siempre con vos.
+                Accedé a tus herramientas de trabajo desde tu celular
+                de manera rápida y sencilla.
             </p>
 
-        </div>
 
+            <a
+                class="boton-descarga"
+                href="https://drive.google.com/file/d/13iHpZ5cTRsLL2z4zW2qngik2fjJkshVy/view?usp=drivesdk"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span>⬇️</span>
+                <span>DESCARGAR APP</span>
+            </a>
+
+
+            <p class="nota">
+                La descarga se realizará desde Google Drive.
+                Si Android muestra una advertencia de seguridad,
+                verificá que el archivo corresponda a GESBASE antes
+                de instalarlo.
+            </p>
+
+
+            <div class="pasos">
+
+                <h3>
+                    ¿Cómo instalar GESBASE?
+                </h3>
+
+                <div class="paso">
+                    <span class="numero">1</span>
+                    <span>
+                        Tocá el botón <strong>DESCARGAR APP</strong>.
+                    </span>
+                </div>
+
+                <div class="paso">
+                    <span class="numero">2</span>
+                    <span>
+                        Descargá el archivo APK desde Google Drive.
+                    </span>
+                </div>
+
+                <div class="paso">
+                    <span class="numero">3</span>
+                    <span>
+                        Abrí el archivo descargado para comenzar la instalación.
+                    </span>
+                </div>
+
+                <div class="paso">
+                    <span class="numero">4</span>
+                    <span>
+                        Instalá GESBASE y comenzá a utilizar la aplicación.
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            <span class="marca">GESBASE</span>
+            · Gestión empresarial
+        </footer>
 
     </main>
-
-
-    <a
-        href="index.html"
-        class="volver"
-    >
-        ← Volver a GESBASE
-    </a>
-
-
-    <div class="pie">
-        GESBASE · Tu empresa. Todo organizado.
-    </div>
-
-
-</div>
-
-
-<script>
-
-const esAndroid = /Android/i.test(navigator.userAgent);
-
-const android = document.getElementById("android");
-const noAndroid = document.getElementById("noAndroid");
-
-
-if(esAndroid){
-
-    android.style.display = "block";
-    noAndroid.style.display = "none";
-
-}else{
-
-    android.style.display = "none";
-    noAndroid.style.display = "block";
-
-}
-
-</script>
-
 
 </body>
 
